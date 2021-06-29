@@ -12,7 +12,7 @@ AddType application/ld+json .json
 # Rewrite engine setup
 RewriteEngine On
 #Change the path to the folder here
-RewriteBase https://github.com/AnneGoebels/ASB-ING_Ontology/tree/main/CoreOnt/
+RewriteBase https://annegoebels.github.io/
 
 # Rewrite rule to serve HTML content from the vocabulary URI if requested
 RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
