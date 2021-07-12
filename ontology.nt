@@ -826,8 +826,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/asbingowl/core#Dokument_Inhalt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/asbingowl/core#Dokument_Inhalt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/asbingowl/core#hatSchluesselKennung> .
 <https://w3id.org/asbingowl/core#Dokument_Inhalt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/asbingowl/core#Dokument> .
-<https://w3id.org/asbingowl/core#Dokument_Inhalt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;> .
-<https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/asbingowl/core#Dokument_Inhalt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;> .
+<https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/asbingowl/core#Dokument_Inhalt> <http://www.w3.org/2000/01/rdf-schema#label> "Dokument_Inhalt"@de .
 # 
 # https://w3id.org/asbingowl/core#EinfacheBauteilart_Art
@@ -8194,11 +8194,11 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/asbingowl/core#achsbezogeneDaten> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/asbingowl/core#achsbezogeneDaten> <http://www.w3.org/2000/01/rdf-schema#label> "achsbezogeneDaten"@de .
 # 
-# https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B
-<https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence_lt;Bit_gt;"@de .
+# https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B
+<https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence_lt;Bit_gt;"@de .
 # 
-# https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;
+# https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;
 # 
 # 
 # 

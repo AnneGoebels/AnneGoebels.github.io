@@ -4648,7 +4648,7 @@
     "@value" : "Dokument_Inhalt"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;"
+    "@id" : "https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/asbingowl/core#hatSchluesselKennung"
@@ -17836,13 +17836,13 @@
     "@id" : "https://w3id.org/asbingowl/core#Tunnel"
   } ]
 }, {
-  "@id" : "https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B",
+  "@id" : "https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "de",
     "@value" : "Sequence_lt;Bit_gt;"
   } ]
 }, {
-  "@id" : "https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;",
+  "@id" : "https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

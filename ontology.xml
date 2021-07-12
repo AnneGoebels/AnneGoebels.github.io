@@ -1434,7 +1434,7 @@ Haben mehrere aufeinander folgende Felder einen gleichen Querschnitt und mehrere
     <ObjectProperty rdf:about="https://w3id.org/asbingowl/core#Dokument_Inhalt">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/asbingowl/core#hatSchluesselKennung"/>
         <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#Dokument"/>
-        <rdfs:range rdf:resource="https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;"/>
+        <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;"/>
         <rdfs:label xml:lang="de">Dokument_Inhalt</rdfs:label>
     </ObjectProperty>
     
@@ -15145,19 +15145,19 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
     
 
 
-    <!-- https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B -->
+    <!-- https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B -->
 
 
-    <Class rdf:about="https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B">
+    <Class rdf:about="https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B">
         <rdfs:label xml:lang="de">Sequence_lt;Bit_gt;</rdfs:label>
     </Class>
     
 
 
-    <!-- https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt; -->
+    <!-- https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt; -->
 
 
-    <Class rdf:about="https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;"/>
+    <Class rdf:about="https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;"/>
     
 
 

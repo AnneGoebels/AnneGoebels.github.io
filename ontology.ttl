@@ -947,7 +947,7 @@ Haben mehrere aufeinander folgende Felder einen gleichen Querschnitt und mehrere
 <https://w3id.org/asbingowl/core#Dokument_Inhalt> rdf:type owl:ObjectProperty ;
                                                   rdfs:subPropertyOf <https://w3id.org/asbingowl/core#hatSchluesselKennung> ;
                                                   rdfs:domain <https://w3id.org/asbingowl/core#Dokument> ;
-                                                  rdfs:range <https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;> ;
+                                                  rdfs:range <https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;> ;
                                                   rdfs:label "Dokument_Inhalt"@de .
 
 
@@ -9729,13 +9729,13 @@ Der komplexe Datentyp <i>Dauer</i> ermoeglicht die Angabe einer Zeitdauer in ver
                                                     rdfs:label "achsbezogeneDaten"@de .
 
 
-###  https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B
-<https://w3id.org/asbingowl/core/ontology#Sequence_lt%3BBit_gt%3B> rdf:type owl:Class ;
+###  https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B
+<https://w3id.org/asbingowl/core#Sequence_lt%3BBit_gt%3B> rdf:type owl:Class ;
                                                                    rdfs:label "Sequence_lt;Bit_gt;"@de .
 
 
-###  https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;
-<https://w3id.org/asbingowl/core/ontology#Sequence_lt;Bit_gt;> rdf:type owl:Class .
+###  https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;
+<https://w3id.org/asbingowl/core#Sequence_lt;Bit_gt;> rdf:type owl:Class .
 
 
 #################################################################
