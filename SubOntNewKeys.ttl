@@ -472,14 +472,14 @@ asbkey:ArmaturenBrueckenseilKabel_sonstige a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "6" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtAnderesRueckhaltesystem_%26gt%3B15Cm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtAnderesRueckhaltesystem_%26gt%3B15Cm> a owl:Class ;
     rdfs:label "&gt; 15 cm"@de ;
     rdfs:subClassOf asb:ArtAnderesRueckhaltesystem,
         asbkey:ArtAnderesRueckhaltesystem_Bord,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtAnderesRueckhaltesystem_%26lt%3B%3D15Cm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtAnderesRueckhaltesystem_%26lt%3B%3D15Cm> a owl:Class ;
     rdfs:label "&lt;= 15 cm"@de ;
     rdfs:subClassOf asb:ArtAnderesRueckhaltesystem,
         asbkey:ArtAnderesRueckhaltesystem_Bord,
@@ -755,7 +755,7 @@ asbkey:ArtBauholz_Bankirai a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtBauholz_Bongossi_Azob%C3%A9> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtBauholz_Bongossi_Azob%C3%A9> a owl:Class ;
     rdfs:label "Bongossi / Azobé"@de ;
     rdfs:subClassOf asb:ArtBauholz,
         asbkey:ArtBauholz_tropischesHolz,
@@ -976,7 +976,7 @@ asbkey:ArtBekaempfungsmassnahmeSchaedlinge_Schwammsperrmittel a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtBekaempfungsmassnahmeSchaedlinge_langsamWirkend_%26gt%3B3MonateUnd%26lt%3B%3D12Monate_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtBekaempfungsmassnahmeSchaedlinge_langsamWirkend_%26gt%3B3MonateUnd%26lt%3B%3D12Monate_> a owl:Class ;
     rdfs:label "langsam wirkend (&gt; 3 Monate und &lt;= 12 Monate)"@de ;
     rdfs:subClassOf asb:ArtBekaempfungsmassnahmeSchaedlinge,
         asbkey:ArtBekaempfungsmassnahmeSchaedlinge_bekaempfendWirkendesHolzschutzmittel,
@@ -990,7 +990,7 @@ asbkey:ArtBekaempfungsmassnahmeSchaedlinge_mitVerzoegerterWirkung a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.3" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtBekaempfungsmassnahmeSchaedlinge_schnellWirkend_%26lt%3B3Monate_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtBekaempfungsmassnahmeSchaedlinge_schnellWirkend_%26lt%3B3Monate_> a owl:Class ;
     rdfs:label "schnell wirkend (&lt; 3 Monate)"@de ;
     rdfs:subClassOf asb:ArtBekaempfungsmassnahmeSchaedlinge,
         asbkey:ArtBekaempfungsmassnahmeSchaedlinge_bekaempfendWirkendesHolzschutzmittel,
@@ -1389,14 +1389,14 @@ asbkey:ArtEinbringungsverfahrenChemischerHolzschutz_Traenkung_Tauchung a owl:Cla
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_%26gt%3B50M> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_%26gt%3B50M> a owl:Class ;
     rdfs:label "&gt; 50 m"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
         asbkey:ArtEinfacheBauteilart_Schachtabstand,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.9.2.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_%26lt%3B%3D50M> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_%26lt%3B%3D50M> a owl:Class ;
     rdfs:label "&lt;= 50 m"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
         asbkey:ArtEinfacheBauteilart_Schachtabstand,
@@ -1406,7 +1406,7 @@ asbkey:ArtEinbringungsverfahrenChemischerHolzschutz_Traenkung_Tauchung a owl:Cla
 asbkey:ArtEinfacheBauteilart_Ablauf a owl:Class ;
     rdfs:label "Ablauf"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.4" .
 
@@ -1651,7 +1651,7 @@ asbkey:ArtEinfacheBauteilart_Dienstwegbeschilderung a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Dillatationskasten a owl:Class ;
     rdfs:label "Dillatationskasten"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.7" .
 
@@ -1741,7 +1741,7 @@ asbkey:ArtEinfacheBauteilart_Erdung a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Fallleitung a owl:Class ;
     rdfs:label "Fallleitung"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.3" .
 
@@ -1942,7 +1942,7 @@ asbkey:ArtEinfacheBauteilart_KunstAmBau a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Laengsleitung a owl:Class ;
     rdfs:label "Laengsleitung"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.1" .
 
@@ -2054,7 +2054,7 @@ asbkey:ArtEinfacheBauteilart_Pflanzbehaelter a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Prallteller a owl:Class ;
     rdfs:label "Prallteller"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.6" .
 
@@ -2083,7 +2083,7 @@ asbkey:ArtEinfacheBauteilart_Pumpenanlage a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Querleitung a owl:Class ;
     rdfs:label "Querleitung"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.2" .
 
@@ -2125,7 +2125,7 @@ asbkey:ArtEinfacheBauteilart_Revisionsoeffnung a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Rinne a owl:Class ;
     rdfs:label "Rinne"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.8" .
 
@@ -2139,7 +2139,7 @@ asbkey:ArtEinfacheBauteilart_Rueckhalteelement a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Schacht a owl:Class ;
     rdfs:label "Schacht"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.5" .
 
@@ -2449,7 +2449,7 @@ asbkey:ArtEinfacheBauteilart_befestigtIn_anDerTragkonstruktion a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5.2.2.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_breit_%26gt%3B3Mm_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_breit_%26gt%3B3Mm_> a owl:Class ;
     rdfs:label "breit (&gt; 3 mm)"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
         asbkey:ArtEinfacheBauteilart_Schlitzbreite,
@@ -2490,7 +2490,7 @@ asbkey:ArtEinfacheBauteilart_ohneKameraueberwachung a owl:Class ;
     owl:sameAs asbkey13:240014520000000_OhneKameraueberwachung ;
     asbkey:Kennung "7.5.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_schmal_%26lt%3B3Mm_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_schmal_%26lt%3B3Mm_> a owl:Class ;
     rdfs:label "schmal (&lt; 3 mm)"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
         asbkey:ArtEinfacheBauteilart_Schlitzbreite,
@@ -3229,7 +3229,7 @@ asbkey:ArtFuge_innenLiegend a owl:Class ;
 asbkey:ArtFuge_mitDichtstoff a owl:Class ;
     rdfs:label "mit Dichtstoff"@de ;
     rdfs:subClassOf asb:ArtFuge,
-        <https://w3id.org/asbingowl/2016/keys#ArtFuge_Raumfuge_b%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtFuge_Raumfuge_b%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "6.1" .
 
@@ -3243,7 +3243,7 @@ asbkey:ArtFuge_mitFugenband a owl:Class ;
 asbkey:ArtFuge_mitVerguss a owl:Class ;
     rdfs:label "mit Verguss"@de ;
     rdfs:subClassOf asb:ArtFuge,
-        <https://w3id.org/asbingowl/2016/keys#ArtFuge_Raumfuge_b%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtFuge_Raumfuge_b%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "6.2" .
 
@@ -3679,7 +3679,7 @@ asbkey:ArtHaushalt_sonstiges a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtKonstruktiverSchutz_DachMitUeberstand%26gt%3B30GradRegenFalllinie> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtKonstruktiverSchutz_DachMitUeberstand%26gt%3B30GradRegenFalllinie> a owl:Class ;
     rdfs:label "Dach mit Ueberstand &gt; 30 Grad-Regen-Falllinie"@de ;
     rdfs:subClassOf asb:ArtKonstruktiverSchutz,
         asbkey:Schluesseltabellen ;
@@ -3776,7 +3776,7 @@ asbkey:ArtKunststoff_CA_celluloseacetat_ a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtKunststoff_CIIR_chlorIsobutenIsopren%E2%80%93kautschuk_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtKunststoff_CIIR_chlorIsobutenIsopren%E2%80%93kautschuk_> a owl:Class ;
     rdfs:label "CIIR (Chlor-Isobuten-Isopren–Kautschuk)"@de ;
     rdfs:subClassOf asb:ArtKunststoff,
         asbkey:ArtKunststoff_Elastomer,
@@ -4594,7 +4594,7 @@ asbkey:ArtLeitung_Glasfaserkabel a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5.5" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtLeitung_Hochdruck_%26gt%3B1000Hpa%5B%26gt%3B1Bar%5D_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtLeitung_Hochdruck_%26gt%3B1000Hpa%5B%26gt%3B1Bar%5D_> a owl:Class ;
     rdfs:label "Hochdruck (&gt; 1000 hPa [&gt; 1 bar])"@de ;
     rdfs:subClassOf asb:ArtLeitung,
         asbkey:ArtLeitung_Erdgas,
@@ -4608,7 +4608,7 @@ asbkey:ArtLeitung_Hochspannung_60KvBis110Kv_ a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.1.3" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtLeitung_Hoechstspannung_%26gt%3B110Kv_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtLeitung_Hoechstspannung_%26gt%3B110Kv_> a owl:Class ;
     rdfs:label "Hoechstspannung (&gt; 110 kV)"@de ;
     rdfs:subClassOf asb:ArtLeitung,
         asbkey:ArtLeitung_Fernleitung,
@@ -4652,7 +4652,7 @@ asbkey:ArtLeitung_Mineraloel a owl:Class ;
     owl:sameAs asbkey13:260011500000000_Mineraloelversorgungsleitung ;
     asbkey:Kennung "8" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtLeitung_Mitteldruck_100Bis1000Hpa%5B0_1Bis1Bar%5D_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtLeitung_Mitteldruck_100Bis1000Hpa%5B0_1Bis1Bar%5D_> a owl:Class ;
     rdfs:label "Mitteldruck (100 bis 1000 hPa [0,1 bis 1 bar])"@de ;
     rdfs:subClassOf asb:ArtLeitung,
         asbkey:ArtLeitung_Erdgas,
@@ -4666,14 +4666,14 @@ asbkey:ArtLeitung_Mittelspannung_3KvBis30Kv_ a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.1.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtLeitung_Niederdruck_%26lt%3B%3D100Hpa%5B%26lt%3B%3D0_1Bar%5D_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtLeitung_Niederdruck_%26lt%3B%3D100Hpa%5B%26lt%3B%3D0_1Bar%5D_> a owl:Class ;
     rdfs:label "Niederdruck (&lt;= 100 hPa [&lt;= 0,1 bar])"@de ;
     rdfs:subClassOf asb:ArtLeitung,
         asbkey:ArtLeitung_Erdgas,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.1.1" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtLeitung_Niederpannung_%26lt%3B%3D1Kv_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtLeitung_Niederpannung_%26lt%3B%3D1Kv_> a owl:Class ;
     rdfs:label "Niederpannung (&lt;= 1 kV)"@de ;
     rdfs:subClassOf asb:ArtLeitung,
         asbkey:ArtLeitung_Fernleitung,
@@ -4824,7 +4824,7 @@ asbkey:ArtNachweisKonzept_DINEn1337 a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5.3.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtNachweisKonzept_DINEn19912%2BNationalesAnwendungsdokument2012> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtNachweisKonzept_DINEn19912%2BNationalesAnwendungsdokument2012> a owl:Class ;
     rdfs:label "DIN EN 1991-2 + Nationales Anwendungsdokument 2012"@de ;
     rdfs:subClassOf asb:ArtNachweisKonzept,
         asbkey:ArtNachweisKonzept_Eurocode,
@@ -5061,7 +5061,7 @@ asbkey:ArtQuerschnittBruecke_sonstiges a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "10" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtSchaden_%2BMarkeUeberschritten> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtSchaden_%2BMarkeUeberschritten> a owl:Class ;
     rdfs:label "+ Marke ueberschritten"@de ;
     rdfs:subClassOf asb:ArtSchaden,
         asbkey:ArtSchaden_Groessenangabe_Messwert,
@@ -5229,14 +5229,14 @@ asbkey:ArtSchaden_Bindefehler a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4.2.2.5.2" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtSchaden_BlasenHoehe%26gt%3B5Cm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtSchaden_BlasenHoehe%26gt%3B5Cm> a owl:Class ;
     rdfs:label "Blasen Hoehe &gt; 5 cm"@de ;
     rdfs:subClassOf asb:ArtSchaden,
         asbkey:ArtSchaden_AenderungDurchBlasenbildung,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3.1.8.3" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtSchaden_BlasenHoehe%26lt%3B2Cm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtSchaden_BlasenHoehe%26lt%3B2Cm> a owl:Class ;
     rdfs:label "Blasen Hoehe &lt; 2 cm"@de ;
     rdfs:subClassOf asb:ArtSchaden,
         asbkey:ArtSchaden_AenderungDurchBlasenbildung,
@@ -5796,14 +5796,14 @@ asbkey:ArtSchaden_SpielZuKlein a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "9.31" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtSchaden_Spurrinnen_Tiefe%26gt%3B3Cm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtSchaden_Spurrinnen_Tiefe%26gt%3B3Cm> a owl:Class ;
     rdfs:label "Spurrinnen, Tiefe &gt; 3 cm"@de ;
     rdfs:subClassOf asb:ArtSchaden,
         asbkey:ArtSchaden_AenderungDurchSpurrinnen_belagsschaeden,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3.1.9.3" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtSchaden_Spurrinnen_Tiefe0_5Bis%26lt%3B1Cm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtSchaden_Spurrinnen_Tiefe0_5Bis%26lt%3B1Cm> a owl:Class ;
     rdfs:label "Spurrinnen, Tiefe 0,5 bis &lt; 1 cm"@de ;
     rdfs:subClassOf asb:ArtSchaden,
         asbkey:ArtSchaden_AenderungDurchSpurrinnen_belagsschaeden,
@@ -7569,7 +7569,7 @@ asbkey:ArtSonstigerBaustoff_Strassenbaubitumen a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "20.1" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtSonstigerBaustoff_Teer_Pech%E2%80%99> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtSonstigerBaustoff_Teer_Pech%E2%80%99> a owl:Class ;
     rdfs:label "Teer/Pech’"@de ;
     rdfs:subClassOf asb:ArtSonstigerBaustoff,
         asbkey:Schluesseltabellen ;
@@ -7585,7 +7585,7 @@ asbkey:ArtSonstigerBaustoff_Ton a owl:Class ;
 asbkey:ArtSonstigerBaustoff_Verpressmoertel a owl:Class ;
     rdfs:label "Verpressmoertel"@de ;
     rdfs:subClassOf asb:ArtSonstigerBaustoff,
-        <https://w3id.org/asbingowl/2016/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
+        <https://w3id.org/asbingowl/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
         asbkey:Schluesseltabellen ;
     owl:sameAs asbkey13:320018110000000_Verpressmoertel ;
     asbkey:Kennung "1.1" .
@@ -7655,7 +7655,7 @@ asbkey:ArtSonstigerBaustoff_polymermodifizierterBeton a owl:Class ;
 asbkey:ArtSonstigerBaustoff_polymermodifizierterMoertel a owl:Class ;
     rdfs:label "polymermodifizierter Moertel"@de ;
     rdfs:subClassOf asb:ArtSonstigerBaustoff,
-        <https://w3id.org/asbingowl/2016/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
+        <https://w3id.org/asbingowl/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.4" .
 
@@ -7669,7 +7669,7 @@ asbkey:ArtSonstigerBaustoff_polymermodifiziertesBitumen a owl:Class ;
 asbkey:ArtSonstigerBaustoff_sonstige a owl:Class ;
     rdfs:label "sonstige"@de ;
     rdfs:subClassOf asb:ArtSonstigerBaustoff,
-        <https://w3id.org/asbingowl/2016/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
+        <https://w3id.org/asbingowl/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.5",
         "22" .
@@ -8730,14 +8730,14 @@ asbkey:ArtVerkehrslastmodell_Lastmodell1_hauptlastmodellLm1_ a owl:Class ;
 asbkey:ArtVerkehrslastmodell_Lastmodell1_hauptlastmodellLmm_ a owl:Class ;
     rdfs:label "Lastmodell 1 (Hauptlastmodell - LMM)"@de ;
     rdfs:subClassOf asb:ArtVerkehrslastmodell,
-        <https://w3id.org/asbingowl/2016/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012>,
+        <https://w3id.org/asbingowl/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.1.1" .
 
 asbkey:ArtVerkehrslastmodell_Lastmodell4_menschenansammlungen_ a owl:Class ;
     rdfs:label "Lastmodell 4 (Menschenansammlungen)"@de ;
     rdfs:subClassOf asb:ArtVerkehrslastmodell,
-        <https://w3id.org/asbingowl/2016/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012>,
+        <https://w3id.org/asbingowl/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012>,
         asbkey:ArtVerkehrslastmodell_DINFachbericht101_2003_2009_,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.1.2",
@@ -10008,13 +10008,13 @@ asbkey:BaustoffgueteBauholz_S7_ms7 a owl:Class ;
     owl:sameAs asbkey13:320135180000000_C16 ;
     asbkey:Kennung "2.1.1" .
 
-<https://w3id.org/asbingowl/2016/keys#BaustoffgueteBaustahl_%26gt%3BS460> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BaustoffgueteBaustahl_%26gt%3BS460> a owl:Class ;
     rdfs:label "&gt; S 460"@de ;
     rdfs:subClassOf asb:BaustoffgueteBaustahl,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "7" .
 
-<https://w3id.org/asbingowl/2016/keys#BaustoffgueteBaustahl_%26lt%3BS235> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BaustoffgueteBaustahl_%26lt%3BS235> a owl:Class ;
     rdfs:label "&lt; S 235"@de ;
     rdfs:subClassOf asb:BaustoffgueteBaustahl,
         asbkey:Schluesseltabellen ;
@@ -10070,14 +10070,14 @@ asbkey:BaustoffgueteBaustahl_sonstigeStaehleZBGussstahl a owl:Class ;
 asbkey:BaustoffgueteBetonstahl_B500A a owl:Class ;
     rdfs:label "B500A"@de ;
     rdfs:subClassOf asb:BaustoffgueteBetonstahl,
-        <https://w3id.org/asbingowl/2016/keys#BaustoffgueteBetonstahl_DIN4881%3A200908>,
+        <https://w3id.org/asbingowl/keys#BaustoffgueteBetonstahl_DIN4881%3A200908>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4.1" .
 
 asbkey:BaustoffgueteBetonstahl_B500B a owl:Class ;
     rdfs:label "B500B"@de ;
     rdfs:subClassOf asb:BaustoffgueteBetonstahl,
-        <https://w3id.org/asbingowl/2016/keys#BaustoffgueteBetonstahl_DIN4881%3A200908>,
+        <https://w3id.org/asbingowl/keys#BaustoffgueteBetonstahl_DIN4881%3A200908>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4.2" .
 
@@ -10304,13 +10304,13 @@ asbkey:BauverfahrenTunnel_Spritzbetonbauweise a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#BauverfahrenTunnel_WandDeckelBauweise%5BzBBohrpfahlwandMitHerstellungDerDeckeVorAushub%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BauverfahrenTunnel_WandDeckelBauweise%5BzBBohrpfahlwandMitHerstellungDerDeckeVorAushub%5D> a owl:Class ;
     rdfs:label "Wand-Deckel-Bauweise [z.B. Bohrpfahlwand mit Herstellung der Decke vor Aushub] "@de ;
     rdfs:subClassOf asb:BauverfahrenTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#BauverfahrenTunnel_WandSohleBauweise%5BzBSpundwandkastenMitUnterwasserbetonsohle%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BauverfahrenTunnel_WandSohleBauweise%5BzBSpundwandkastenMitUnterwasserbetonsohle%5D> a owl:Class ;
     rdfs:label "Wand-Sohle-Bauweise [z.B. Spundwandkasten mit Unterwasserbetonsohle] "@de ;
     rdfs:subClassOf asb:BauverfahrenTunnel,
         asbkey:Schluesseltabellen ;
@@ -11611,14 +11611,14 @@ asbkey:BauwerksartTunnel_bogenartigeKonstruktion a owl:Class ;
         "2.5.4",
         "2.6.4" .
 
-<https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_geschlosseneLaenge%26gt%3B%3D80M> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BauwerksartTunnel_geschlosseneLaenge%26gt%3B%3D80M> a owl:Class ;
     rdfs:label "geschlossene Laenge &gt;= 80 m"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
         asbkey:BauwerksartTunnel_TunnelInGeschlossenerBauweise,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.2" .
 
-<https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_geschlosseneLaenge%26lt%3B80M> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BauwerksartTunnel_geschlosseneLaenge%26lt%3B80M> a owl:Class ;
     rdfs:label "geschlossene Laenge &lt; 80 m"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
         asbkey:BauwerksartTunnel_TunnelInGeschlossenerBauweise,
@@ -11789,7 +11789,7 @@ asbkey:BefestigungSchilderSignalgeber_sonstige a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3" .
 
-<https://w3id.org/asbingowl/2016/keys#BegehbarkeitUeberbau_begehbar_h%26gt%3B%3D1_8M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BegehbarkeitUeberbau_begehbar_h%26gt%3B%3D1_8M_> a owl:Class ;
     rdfs:label "begehbar (h &gt;= 1,8 m)"@de ;
     rdfs:subClassOf asb:BegehbarkeitUeberbau,
         asbkey:Schluesseltabellen ;
@@ -11801,7 +11801,7 @@ asbkey:BegehbarkeitUeberbau_bekriechbar_hAb0_5Bis1_8M_ a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#BegehbarkeitUeberbau_nichtBegehOderBekriechbar_h%26lt%3B%3D0_5M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BegehbarkeitUeberbau_nichtBegehOderBekriechbar_h%26lt%3B%3D0_5M_> a owl:Class ;
     rdfs:label "nicht begeh- oder bekriechbar (h &lt;= 0,5 m)"@de ;
     rdfs:subClassOf asb:BegehbarkeitUeberbau,
         asbkey:Schluesseltabellen ;
@@ -11814,7 +11814,7 @@ asbkey:BegehbarkeitUeberbau_nichtZugaenglich a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4.2" .
 
-<https://w3id.org/asbingowl/2016/keys#BegehbarkeitUeberbau_undBegehbar_h%26gt%3B%3D1_8M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BegehbarkeitUeberbau_undBegehbar_h%26gt%3B%3D1_8M_> a owl:Class ;
     rdfs:label "und begehbar (h &gt;= 1,8 m)"@de ;
     rdfs:subClassOf asb:BegehbarkeitUeberbau,
         asbkey:BegehbarkeitUeberbau_beiBedarfZugaenglich,
@@ -11828,7 +11828,7 @@ asbkey:BegehbarkeitUeberbau_undBekriechbar_hAb0_5Bis1_8M_ a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4.1.2" .
 
-<https://w3id.org/asbingowl/2016/keys#BegehbarkeitUeberbau_undNichtBegehOderBekriechbar_h%26lt%3B%3D0_5M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BegehbarkeitUeberbau_undNichtBegehOderBekriechbar_h%26lt%3B%3D0_5M_> a owl:Class ;
     rdfs:label "und nicht begeh- oder bekriechbar (h &lt;= 0,5 m)"@de ;
     rdfs:subClassOf asb:BegehbarkeitUeberbau,
         asbkey:BegehbarkeitUeberbau_beiBedarfZugaenglich,
@@ -12084,7 +12084,7 @@ asbkey:BezugssystemAbsoluteHoehe_76_130_BW_NormalorthometrischeHoeheImSystemDhhn
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.1" .
 
-<https://w3id.org/asbingowl/2016/keys#BezugssystemAbsoluteHoehe_77_140_HB_NormalorthometrischeHoeheImSystemDhhn85%3F%3F%3F> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BezugssystemAbsoluteHoehe_77_140_HB_NormalorthometrischeHoeheImSystemDhhn85%3F%3F%3F> a owl:Class ;
     rdfs:label "77/140/HB/Normalorthometrische Hoehe im System DHHN85???"@de ;
     rdfs:subClassOf asb:BezugssystemAbsoluteHoehe,
         asbkey:BezugssystemAbsoluteHoehe_FreieHansestadtBremen,
@@ -12407,7 +12407,7 @@ asbkey:Einsehbarkeit_nichtGegeben a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#Entwaesserungsart_%26gt%3B50M> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Entwaesserungsart_%26gt%3B50M> a owl:Class ;
     rdfs:label "&gt; 50 m"@de ;
     rdfs:subClassOf asb:Entwaesserungsart,
         asbkey:Entwaesserungsart_Schachtabstand,
@@ -12415,7 +12415,7 @@ asbkey:Einsehbarkeit_nichtGegeben a owl:Class ;
     asbkey:Kennung "8.2.2.2",
         "8.3.2.2" .
 
-<https://w3id.org/asbingowl/2016/keys#Entwaesserungsart_%26lt%3B%3D50M> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Entwaesserungsart_%26lt%3B%3D50M> a owl:Class ;
     rdfs:label "&lt;= 50 m"@de ;
     rdfs:subClassOf asb:Entwaesserungsart,
         asbkey:Entwaesserungsart_Schachtabstand,
@@ -12497,7 +12497,7 @@ asbkey:Entwaesserungsart_aufDerAuflagerbank a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5.4" .
 
-<https://w3id.org/asbingowl/2016/keys#Entwaesserungsart_breite_%26gt%3B3Mm_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Entwaesserungsart_breite_%26gt%3B3Mm_> a owl:Class ;
     rdfs:label "breite (&gt; 3 mm)"@de ;
     rdfs:subClassOf asb:Entwaesserungsart,
         asbkey:Entwaesserungsart_Schlitzbreite,
@@ -12554,7 +12554,7 @@ asbkey:Entwaesserungsart_offeneRinne a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5.6" .
 
-<https://w3id.org/asbingowl/2016/keys#Entwaesserungsart_schmal_%26lt%3B3Mm_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Entwaesserungsart_schmal_%26lt%3B3Mm_> a owl:Class ;
     rdfs:label "schmal (&lt; 3 mm)"@de ;
     rdfs:subClassOf asb:Entwaesserungsart,
         asbkey:Entwaesserungsart_Schlitzbreite,
@@ -12635,109 +12635,109 @@ asbkey:Fahrtzweckgruppe_Werktage a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_Bus%3ABusseMitMehrAls9Sitzplaetzen> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_Bus%3ABusseMitMehrAls9Sitzplaetzen> a owl:Class ;
     rdfs:label "Bus: Busse mit mehr als 9 Sitzplaetzen"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "12" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_Kfz%3APkwae%2BLkwae> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_Kfz%3APkwae%2BLkwae> a owl:Class ;
     rdfs:label "Kfz: PkwAe + LkwAe"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "14" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_Krad%3AMotorraeder> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_Krad%3AMotorraeder> a owl:Class ;
     rdfs:label "Krad: Motorraeder"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_Lfw%3ALieferwagen> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_Lfw%3ALieferwagen> a owl:Class ;
     rdfs:label "Lfw: Lieferwagen"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_Lkw%3ALkwMitEinemZulaessigenGesamtgewichtVonMehrAls3_5t> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_Lkw%3ALkwMitEinemZulaessigenGesamtgewichtVonMehrAls3_5t> a owl:Class ;
     rdfs:label "Lkw: Lkw mit einem zulaessigen Gesamtgewicht von mehr als 3,5t"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_LkwA%3ALkwa_grund_%2BSattelKfz> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_LkwA%3ALkwa_grund_%2BSattelKfz> a owl:Class ;
     rdfs:label "LkwA: LkwA (grund) + Sattel-Kfz"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "11" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_LkwA_grund_%3ALkwMitAnhaenger> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_LkwA_grund_%3ALkwMitAnhaenger> a owl:Class ;
     rdfs:label "LkwA (grund): Lkw mit Anhaenger"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "9" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_LkwAe%3APkwa%2BLkw%2BLkwa%2BBus> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_LkwAe%3APkwa%2BLkw%2BLkwa%2BBus> a owl:Class ;
     rdfs:label "LkwAe: PkwA + Lkw + LkwA + Bus"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "13" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_Pkw%3AKrad%2BPkw_grund_%2BLfw> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_Pkw%3AKrad%2BPkw_grund_%2BLfw> a owl:Class ;
     rdfs:label "Pkw: Krad + Pkw (grund) + Lfw"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_PkwA%3APkwUndLfwMitAnhaenger> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_PkwA%3APkwUndLfwMitAnhaenger> a owl:Class ;
     rdfs:label "PkwA: Pkw und Lfw mit Anhaenger"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "7" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_PkwAe%3APkw%2BNkKfz> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_PkwAe%3APkw%2BNkKfz> a owl:Class ;
     rdfs:label "PkwAe: Pkw + nk Kfz"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "6" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_Pkw_grund_%3APkw> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_Pkw_grund_%3APkw> a owl:Class ;
     rdfs:label "Pkw (grund): Pkw"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_SattelKfz%3ASattelkraftfahrzeuge> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_SattelKfz%3ASattelkraftfahrzeuge> a owl:Class ;
     rdfs:label "Sattel-Kfz: Sattelkraftfahrzeuge"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "10" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeugart_nkKfz%3ANichtKlassifizierbareFahrzeuge_sonstige_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeugart_nkKfz%3ANichtKlassifizierbareFahrzeuge_sonstige_> a owl:Class ;
     rdfs:label "nk Kfz: nicht klassifizierbare Fahrzeuge (sonstige)"@de ;
     rdfs:subClassOf asb:Fahrzeugart,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeuggruppe_GV%3ALieferwagen_LkwOhneAnhaenger_Lastzuege> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeuggruppe_GV%3ALieferwagen_LkwOhneAnhaenger_Lastzuege> a owl:Class ;
     rdfs:label "GV: Lieferwagen, Lkw ohne Anhaenger, Lastzuege"@de ;
     rdfs:subClassOf asb:Fahrzeuggruppe,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeuggruppe_KFZ%3APv%2BGv> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeuggruppe_KFZ%3APv%2BGv> a owl:Class ;
     rdfs:label "KFZ: PV + GV"@de ;
     rdfs:subClassOf asb:Fahrzeuggruppe,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeuggruppe_PV%3AMotorisierteZweiraeder_Pkw_Busse> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeuggruppe_PV%3AMotorisierteZweiraeder_Pkw_Busse> a owl:Class ;
     rdfs:label "PV: motorisierte Zweiraeder, Pkw, Busse"@de ;
     rdfs:subClassOf asb:Fahrzeuggruppe,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Fahrzeuggruppe_SV%3ABusse_LkwOhneAnhaenger_Lastzuege> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Fahrzeuggruppe_SV%3ABusse_LkwOhneAnhaenger_Lastzuege> a owl:Class ;
     rdfs:label "SV: Busse, Lkw ohne Anhaenger, Lastzuege"@de ;
     rdfs:subClassOf asb:Fahrzeuggruppe,
         asbkey:Schluesseltabellen ;
@@ -14449,10 +14449,10 @@ asbkey:KruemmungUeberbau_aufgeweitet a owl:Class ;
     rdfs:label "aufgeweitet"@de,
         "aufgeweitet "@de ;
     rdfs:subClassOf asb:KruemmungUeberbau,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_gekruemmt_r%26lt%3B500M_>,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_leichtGekruemmt_r%26lt%3B1500M_>,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_nichtGekruemmt_r%26gt%3B%3D1500M_>,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_starkGekruemmt_r%26lt%3B100M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_gekruemmt_r%26lt%3B500M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_leichtGekruemmt_r%26lt%3B1500M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_nichtGekruemmt_r%26gt%3B%3D1500M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_starkGekruemmt_r%26lt%3B100M_>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.2",
         "2.2",
@@ -14462,10 +14462,10 @@ asbkey:KruemmungUeberbau_aufgeweitet a owl:Class ;
 asbkey:KruemmungUeberbau_nichtAufgeweitet a owl:Class ;
     rdfs:label "nicht aufgeweitet"@de ;
     rdfs:subClassOf asb:KruemmungUeberbau,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_gekruemmt_r%26lt%3B500M_>,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_leichtGekruemmt_r%26lt%3B1500M_>,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_nichtGekruemmt_r%26gt%3B%3D1500M_>,
-        <https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_starkGekruemmt_r%26lt%3B100M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_gekruemmt_r%26lt%3B500M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_leichtGekruemmt_r%26lt%3B1500M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_nichtGekruemmt_r%26gt%3B%3D1500M_>,
+        <https://w3id.org/asbingowl/keys#KruemmungUeberbau_starkGekruemmt_r%26lt%3B100M_>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.1",
         "2.1",
@@ -14824,39 +14824,39 @@ asbkey:Lage_rechtsAusserhalb a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "48" .
 
-<https://w3id.org/asbingowl/2016/keys#LampenartTunnel_HQL%3DQuecksilberdampfhochdrucklampen> a owl:Class ;
+<https://w3id.org/asbingowl/keys#LampenartTunnel_HQL%3DQuecksilberdampfhochdrucklampen> a owl:Class ;
     rdfs:label "HQL = Quecksilberdampfhochdrucklampen"@de ;
     rdfs:subClassOf asb:LampenartTunnel,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#810054000000000_HQL%3DQuecksilberdampfhochdrucklampen> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#810054000000000_HQL%3DQuecksilberdampfhochdrucklampen> ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#LampenartTunnel_LED%3DLichtemittierendeDioden> a owl:Class ;
+<https://w3id.org/asbingowl/keys#LampenartTunnel_LED%3DLichtemittierendeDioden> a owl:Class ;
     rdfs:label "LED = lichtemittierende Dioden"@de ;
     rdfs:subClassOf asb:LampenartTunnel,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#810055000000000_LED%3DLichtemitierendeDioden> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#810055000000000_LED%3DLichtemitierendeDioden> ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#LampenartTunnel_NL%3DNiederdruckleuchtstofflampen> a owl:Class ;
+<https://w3id.org/asbingowl/keys#LampenartTunnel_NL%3DNiederdruckleuchtstofflampen> a owl:Class ;
     rdfs:label "NL = Niederdruckleuchtstofflampen"@de ;
     rdfs:subClassOf asb:LampenartTunnel,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#810051000000000_NL%3DNiederdruckleuchtstofflampen> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#810051000000000_NL%3DNiederdruckleuchtstofflampen> ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#LampenartTunnel_NaH%3DNatriumdampfhochdrucklampen> a owl:Class ;
+<https://w3id.org/asbingowl/keys#LampenartTunnel_NaH%3DNatriumdampfhochdrucklampen> a owl:Class ;
     rdfs:label "NaH = Natriumdampfhochdrucklampen"@de ;
     rdfs:subClassOf asb:LampenartTunnel,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#810052000000000_NaH%3DNatriumdampfhochdrucklampen> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#810052000000000_NaH%3DNatriumdampfhochdrucklampen> ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#LampenartTunnel_NaN%3DNatriumdampfniederdrucklampen> a owl:Class ;
+<https://w3id.org/asbingowl/keys#LampenartTunnel_NaN%3DNatriumdampfniederdrucklampen> a owl:Class ;
     rdfs:label "NaN = Natriumdampfniederdrucklampen"@de ;
     rdfs:subClassOf asb:LampenartTunnel,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#810053000000000_NaN%3DNatriumdampfniederdrucklampen> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#810053000000000_NaN%3DNatriumdampfniederdrucklampen> ;
     asbkey:Kennung "3" .
 
 asbkey:LueftungsartRettungsstollen_Schleuse a owl:Class ;
@@ -15127,7 +15127,7 @@ asbkey:Massnahmekategorie_Instandsetzung a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3.2" .
 
-<https://w3id.org/asbingowl/2016/keys#Massnahmekategorie_Neubau%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Massnahmekategorie_Neubau%E2%80%98> a owl:Class ;
     rdfs:label "Neubau‘"@de ;
     rdfs:subClassOf asb:Massnahmekategorie,
         asbkey:Schluesseltabellen ;
@@ -17162,109 +17162,109 @@ asbkey:QuerschnittStreifenartVES_Zusatzfahrstreifen_zfs_ a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_10T_lw%3D9_00M__%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_10T_lw%3D9_00M__%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
     rdfs:label "10 T (LW = 9,00 m),  [gemaess RABT 2003 (RAS-Q 1996)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "18" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_10_5T_lw%3D9_50M__%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_10_5T_lw%3D9_50M__%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
     rdfs:label "10,5 T (LW = 9,50 m), [gemaess RABT 2003 (RAS-Q 1996)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "17" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_11T_lw%3D9_50M_%5BgemaessRal2012%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_11T_lw%3D9_50M_%5BgemaessRal2012%5D> a owl:Class ;
     rdfs:label "11 t (LW = 9,50 m) [gemaess RAL 2012] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "16" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_12T_lw%3D10_00M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_12T_lw%3D10_00M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
     rdfs:label "12 T (LW = 10,00 m) [gemaess RABT 1985 (RAS-Q 1982)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "14" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_12T_lw%3D9_50M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_12T_lw%3D9_50M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
     rdfs:label "12 t (LW = 9,50 m) [gemaess RABT 1985 (RAS-Q 1982)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "15" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_26T_lw%3D12_00M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_26T_lw%3D12_00M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
     rdfs:label "26 T (LW = 12,00 m) [gemaess RABT 1985 (RAS-Q 1982)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "11" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_26T_lw%3D9_50M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_26T_lw%3D9_50M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
     rdfs:label "26 t (LW = 9,50 m) [gemaess RABT 1985 (RAS-Q 1982)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "12" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_26Tr_lw%3D11_00M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_26Tr_lw%3D11_00M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
     rdfs:label "26 Tr (LW = 11,00 m) [gemaess RABT 2003 (RAS-Q 1996)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "13" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_29T_lw%3D13_00M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_29T_lw%3D13_00M_%5BgemaessRabt1985_rasQ1982_%5D> a owl:Class ;
     rdfs:label "29 T (LW = 13,00 m) [gemaess RABT 1985 (RAS-Q 1982)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "10" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_29_5T_lw%3D13_50M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_29_5T_lw%3D13_50M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
     rdfs:label "29,5 T (LW = 13,50 m) [gemaess RABT 2003 (RAS-Q 1996)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "9" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_31T%2B_lw%3D14_00M_%5BgemaessRaa2008%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_31T%2B_lw%3D14_00M_%5BgemaessRaa2008%5D> a owl:Class ;
     rdfs:label "31 T+ (LW = 14,00 m) [gemaess RAA 2008] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_31T_lw%3D12_00M_%5BgemaessRaa2008%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_31T_lw%3D12_00M_%5BgemaessRaa2008%5D> a owl:Class ;
     rdfs:label "31 T (LW = 12,00 m) [gemaess RAA 2008] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "6" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_31T_lw%3D9_50M_%5BgemaessRaa2008%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_31T_lw%3D9_50M_%5BgemaessRaa2008%5D> a owl:Class ;
     rdfs:label "31 t (LW = 9,50 m)  [gemaess RAA 2008] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "7" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_31Tr_lw%3D11_00M_%5BgemaessRaa2008%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_31Tr_lw%3D11_00M_%5BgemaessRaa2008%5D> a owl:Class ;
     rdfs:label "31 Tr (LW = 11,00 m) [gemaess RAA 2008] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_33T_lw%3D13_00M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_33T_lw%3D13_00M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
     rdfs:label "33 t (LW = 13,00 m) [gemaess RABT 2003 (RAS-Q 1996)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_33T_lw%3D15_50M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_33T_lw%3D15_50M_%5BgemaessRabt2003_rasQ1996_%5D> a owl:Class ;
     rdfs:label "33 T (LW = 15,50 m) [gemaess RABT 2003 (RAS-Q 1996)] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_36T_lw%3D13_00_M_%5BgemaessRaa2008%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_36T_lw%3D13_00_M_%5BgemaessRaa2008%5D> a owl:Class ;
     rdfs:label "36 t (LW = 13,00) m) [gemaess RAA 2008] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#QuerschnittTunnel_36T_lw%3D15_50M_%5BgemaessRaa2008%5D> a owl:Class ;
+<https://w3id.org/asbingowl/keys#QuerschnittTunnel_36T_lw%3D15_50M_%5BgemaessRaa2008%5D> a owl:Class ;
     rdfs:label "36 T (LW = 15,50 m) [gemaess RAA 2008] "@de ;
     rdfs:subClassOf asb:QuerschnittTunnel,
         asbkey:Schluesseltabellen ;
@@ -17354,31 +17354,31 @@ asbkey:Rissart_allgemein a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Rissbreitenklasse_%26gt%3B%3D1Mm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Rissbreitenklasse_%26gt%3B%3D1Mm> a owl:Class ;
     rdfs:label "&gt;= 1 mm"@de ;
     rdfs:subClassOf asb:Rissbreitenklasse,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "5" .
 
-<https://w3id.org/asbingowl/2016/keys#Rissbreitenklasse_%26lt%3B0_1Mm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Rissbreitenklasse_%26lt%3B0_1Mm> a owl:Class ;
     rdfs:label "&lt; 0,1 mm"@de ;
     rdfs:subClassOf asb:Rissbreitenklasse,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Rissbreitenklasse_0_1Bis%26lt%3B0_2Mm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Rissbreitenklasse_0_1Bis%26lt%3B0_2Mm> a owl:Class ;
     rdfs:label "0,1 bis &lt; 0,2 mm"@de ;
     rdfs:subClassOf asb:Rissbreitenklasse,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#Rissbreitenklasse_0_2Bis%26lt%3B0_4Mm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Rissbreitenklasse_0_2Bis%26lt%3B0_4Mm> a owl:Class ;
     rdfs:label "0,2 bis &lt; 0,4 mm"@de ;
     rdfs:subClassOf asb:Rissbreitenklasse,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3" .
 
-<https://w3id.org/asbingowl/2016/keys#Rissbreitenklasse_0_4Bis%26lt%3B1Mm> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Rissbreitenklasse_0_4Bis%26lt%3B1Mm> a owl:Class ;
     rdfs:label "0,4 bis &lt; 1 mm"@de ;
     rdfs:subClassOf asb:Rissbreitenklasse,
         asbkey:Schluesseltabellen ;
@@ -18012,18 +18012,18 @@ asbkey:Seilaufbau_Runddraht a owl:Class ;
     owl:sameAs asbkey13:180131000000000_Runddraht ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Seilaufbau_Runddraht%2BKeildraht%2BZDraht> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Seilaufbau_Runddraht%2BKeildraht%2BZDraht> a owl:Class ;
     rdfs:label "Runddraht + Keildraht + Z-Draht"@de ;
     rdfs:subClassOf asb:Seilaufbau,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#180133000000000_Runddraht%2BKeildraht%2BZDraht> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#180133000000000_Runddraht%2BKeildraht%2BZDraht> ;
     asbkey:Kennung "3" .
 
-<https://w3id.org/asbingowl/2016/keys#Seilaufbau_Runddraht%2BZDraht> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Seilaufbau_Runddraht%2BZDraht> a owl:Class ;
     rdfs:label "Runddraht + Z-Draht"@de ;
     rdfs:subClassOf asb:Seilaufbau,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#180132000000000_Runddraht%2BZDraht> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#180132000000000_Runddraht%2BZDraht> ;
     asbkey:Kennung "2" .
 
 asbkey:Seilverfuellmittel_LeinoelBleimennige a owl:Class ;
@@ -18616,7 +18616,7 @@ asbkey:StatischesSystemQuerBruecke_sonstigesSystem a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#StatischesSystemQuerLaermschutzSchutzbauwerk_gesonderteTraggliederFuerLaengsUndQuerabtragung_pfosten%2BElement_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#StatischesSystemQuerLaermschutzSchutzbauwerk_gesonderteTraggliederFuerLaengsUndQuerabtragung_pfosten%2BElement_> a owl:Class ;
     rdfs:label "gesonderte Tragglieder fuer Laengs- und Querabtragung (Pfosten + Element)"@de ;
     rdfs:subClassOf asb:StatischesSystemQuerLaermschutzSchutzbauwerk,
         asbkey:Schluesseltabellen ;
@@ -19006,8 +19006,8 @@ asbkey:StatusKoppelfugen_alternativeBerechnungDurchgefuehrt a owl:Class ;
     rdfs:label "alternative Berechnung durchgefuehrt"@de ;
     rdfs:subClassOf asb:StatusKoppelfugen,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
     asbkey:Kennung "1.5",
         "2.5" .
 
@@ -19015,8 +19015,8 @@ asbkey:StatusKoppelfugen_erforderlicheErtuechtigungAusgefuehrt a owl:Class ;
     rdfs:label "erforderliche Ertuechtigung ausgefuehrt"@de ;
     rdfs:subClassOf asb:StatusKoppelfugen,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
     asbkey:Kennung "1.4",
         "2.4" .
 
@@ -19024,8 +19024,8 @@ asbkey:StatusKoppelfugen_erforderlicheErtuechtigungNochNichtAusgefuehrt a owl:Cl
     rdfs:label "erforderliche Ertuechtigung noch nicht ausgefuehrt"@de ;
     rdfs:subClassOf asb:StatusKoppelfugen,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
     asbkey:Kennung "1.3",
         "2.3" .
 
@@ -19033,8 +19033,8 @@ asbkey:StatusKoppelfugen_keineErtuechtigungGemaessNachrechnungErforderlich a owl
     rdfs:label "keine Ertuechtigung gemaess Nachrechnung erforderlich"@de ;
     rdfs:subClassOf asb:StatusKoppelfugen,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
     asbkey:Kennung "1.2",
         "2.2" .
 
@@ -19042,8 +19042,8 @@ asbkey:StatusKoppelfugen_keineNachrechnungDurchgefuehrt a owl:Class ;
     rdfs:label "keine Nachrechnung durchgefuehrt"@de ;
     rdfs:subClassOf asb:StatusKoppelfugen,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
-        <https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26gt%3B1980>,
+        <https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> ;
     asbkey:Kennung "1.1",
         "2.1" .
 
@@ -19189,7 +19189,7 @@ asbkey:StatusSpannungsrisskorrosion_AnkuendigungsverhaltenNichtUntersucht a owl:
     rdfs:label "Ankuendigungsverhalten nicht untersucht"@de ;
     rdfs:subClassOf asb:StatusSpannungsrisskorrosion,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> ;
     asbkey:Kennung "2.1" .
 
 asbkey:StatusSpannungsrisskorrosion_durchMaterialuntersuchung a owl:Class ;
@@ -19203,7 +19203,7 @@ asbkey:StatusSpannungsrisskorrosion_keinAnkuendigungsverhaltenVorhanden a owl:Cl
     rdfs:label "kein Ankuendigungsverhalten vorhanden"@de ;
     rdfs:subClassOf asb:StatusSpannungsrisskorrosion,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> ;
     asbkey:Kennung "2.3" .
 
 asbkey:StatusSpannungsrisskorrosion_keineSprkGefaehrdung a owl:Class ;
@@ -19641,25 +19641,25 @@ asbkey:VerkehrsfuehrungTeilbauwerk_weitraeumigeUmleitungInFremderBaulast a owl:C
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#VerkehrskategorieEurocode_HauptstrassenMitGeringemLkwAnteil_0_125X10%5E6_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#VerkehrskategorieEurocode_HauptstrassenMitGeringemLkwAnteil_0_125X10%5E6_> a owl:Class ;
     rdfs:label "Hauptstrassen mit geringem LKW-Anteil (0,125 x 10^6)"@de ;
     rdfs:subClassOf asb:VerkehrskategorieEurocode,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3" .
 
-<https://w3id.org/asbingowl/2016/keys#VerkehrskategorieEurocode_StrassenUndAutobahnenMitMittleremLkwAnteil_0_5X10%5E6_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#VerkehrskategorieEurocode_StrassenUndAutobahnenMitMittleremLkwAnteil_0_5X10%5E6_> a owl:Class ;
     rdfs:label "Strassen und Autobahnen mit mittlerem LKW-Anteil (0,5 x 10^6)"@de ;
     rdfs:subClassOf asb:VerkehrskategorieEurocode,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#VerkehrskategorieEurocode_StrassenUndAutobahnenMitZweiOderMehrFahrstreifenJeFahrtrichtungMitHohemLkwAnteil_2_0X10%5E6_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#VerkehrskategorieEurocode_StrassenUndAutobahnenMitZweiOderMehrFahrstreifenJeFahrtrichtungMitHohemLkwAnteil_2_0X10%5E6_> a owl:Class ;
     rdfs:label "Strassen und Autobahnen mit zwei oder mehr Fahrstreifen je Fahrtrichtung mit hohem LKW-Anteil (2,0 x 10^6)"@de ;
     rdfs:subClassOf asb:VerkehrskategorieEurocode,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#VerkehrskategorieEurocode_oertlicheStrasseMitGeringemLkwAnteil_0_05X10%5E6_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#VerkehrskategorieEurocode_oertlicheStrasseMitGeringemLkwAnteil_0_05X10%5E6_> a owl:Class ;
     rdfs:label "oertliche Strasse mit geringem LKW-Anteil (0,05 x 10^6)"@de ;
     rdfs:subClassOf asb:VerkehrskategorieEurocode,
         asbkey:Schluesseltabellen ;
@@ -20246,7 +20246,7 @@ asbkey:Zementart_EisenportlandzementEpz a owl:Class ;
     rdfs:label "Eisenportlandzement EPZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320022200000000_EisenportlandzementEpz ;
     asbkey:Kennung "2.2" .
 
@@ -20254,7 +20254,7 @@ asbkey:Zementart_Flugaschehuettenzement a owl:Class ;
     rdfs:label "Flugaschehuettenzement"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320022700000000_Flugaschehuettenzement ;
     asbkey:Kennung "2.7" .
 
@@ -20262,7 +20262,7 @@ asbkey:Zementart_Flugaschezement a owl:Class ;
     rdfs:label "Flugaschezement"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320022400000000_Flugaschezement ;
     asbkey:Kennung "2.4" .
 
@@ -20270,7 +20270,7 @@ asbkey:Zementart_HochofenzementHoz a owl:Class ;
     rdfs:label "Hochofenzement HOZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320022800000000_HochofenzementHoz ;
     asbkey:Kennung "2.8" .
 
@@ -20278,7 +20278,7 @@ asbkey:Zementart_PhonolitzementPuz a owl:Class ;
     rdfs:label "Phonolitzement PUZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
     owl:sameAs asbkey13:320023100000000_PhonolitzementPuz ;
     asbkey:Kennung "3.1" .
 
@@ -20294,7 +20294,7 @@ asbkey:Zementart_PortlandoelschieferzementPoez a owl:Class ;
     rdfs:label "Portlandoelschieferzement POeZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320022500000000_PortlandoelschieferzementPoez ;
     asbkey:Kennung "2.5" .
 
@@ -20310,7 +20310,7 @@ asbkey:Zementart_PortlandzementCemI a owl:Class ;
     rdfs:label "Portlandzement CEM I"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320021253000000_PortlandkalksteinzementCemIi_aLl ;
     asbkey:Kennung "1.1" .
 
@@ -20318,7 +20318,7 @@ asbkey:Zementart_PortlandzementPz a owl:Class ;
     rdfs:label "Portlandzement PZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320022100000000_PortlandzementPz ;
     asbkey:Kennung "2.1" .
 
@@ -20326,7 +20326,7 @@ asbkey:Zementart_Sulfatzement a owl:Class ;
     rdfs:label "Sulfatzement"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320024100000000_Sulfatzement ;
     asbkey:Kennung "4.1" .
 
@@ -20334,7 +20334,7 @@ asbkey:Zementart_Tonerdeschmelzzement a owl:Class ;
     rdfs:label "Tonerdeschmelzzement"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320024300000000_Tonerdeschmelzzement ;
     asbkey:Kennung "4.3" .
 
@@ -20342,7 +20342,7 @@ asbkey:Zementart_Tonerdezement a owl:Class ;
     rdfs:label "Tonerdezement"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320024200000000_Tonerdezement ;
     asbkey:Kennung "4.2" .
 
@@ -20350,7 +20350,7 @@ asbkey:Zementart_TrassHochofenzementNw_hs a owl:Class ;
     rdfs:label "Trass-Hochofenzement NW/HS"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
     owl:sameAs asbkey13:320023300000000_TrassHochofenzementNw_hs ;
     asbkey:Kennung "3.3" .
 
@@ -20358,7 +20358,7 @@ asbkey:Zementart_TrassHochofenzementTrhoz a owl:Class ;
     rdfs:label "Trass-Hochofenzement TrHOZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
     owl:sameAs asbkey13:320023200000000_TrassHochofenzementTrhoz ;
     asbkey:Kennung "3.2" .
 
@@ -20366,7 +20366,7 @@ asbkey:Zementart_TrasszementTrz a owl:Class ;
     rdfs:label "Trasszement TrZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320022300000000_TrasszementTrz ;
     asbkey:Kennung "2.3" .
 
@@ -20374,7 +20374,7 @@ asbkey:Zementart_Vulkanzement_lavazement_Vkz a owl:Class ;
     rdfs:label "Vulkanzement (Lavazement) VKZ"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
     owl:sameAs asbkey13:320023400000000_Vulkanzement_lavazement_Vkz ;
     asbkey:Kennung "3.4" .
 
@@ -20382,7 +20382,7 @@ asbkey:Zementart_sonstigeZemente a owl:Class ;
     rdfs:label "sonstige Zemente"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> ;
     owl:sameAs asbkey13:320023500000000_SonstigeZemente ;
     asbkey:Kennung "3.5" .
 
@@ -20662,7 +20662,7 @@ asbkey:Zementart_PuzzolanzementCemIv a owl:Class ;
     rdfs:label "Puzzolanzement CEM IV"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320021400000000_PuzzolanzementCemIv ;
     asbkey:Kennung "1.4" .
 
@@ -20763,7 +20763,7 @@ asbkey:ArtEinfacheBauteilart_Blitzschutz_Erdung a owl:Class ;
 asbkey:ArtEinfacheBauteilart_Drainage a owl:Class ;
     rdfs:label "Drainage"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
-        <https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "8.9" .
 
@@ -20907,7 +20907,7 @@ asbkey:ArtFuge_Fugenabdeckung a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "7" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtFuge_Raumfuge_b%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtFuge_Raumfuge_b%E2%80%98> a owl:Class ;
     rdfs:label "Raumfuge,b‘"@de ;
     rdfs:subClassOf asb:ArtFuge,
         asbkey:Schluesseltabellen ;
@@ -21161,7 +21161,7 @@ asbkey:ArtVerkehrslastmodell_Eurocode a owl:Class ;
 asbkey:ArtVerkehrslastmodell_GehUndRadweg a owl:Class ;
     rdfs:label "Geh- und Radweg"@de ;
     rdfs:subClassOf asb:ArtVerkehrslastmodell,
-        <https://w3id.org/asbingowl/2016/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012>,
+        <https://w3id.org/asbingowl/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012>,
         asbkey:ArtVerkehrslastmodell_DINFachbericht101_2003_2009_,
         asbkey:ArtVerkehrslastmodell_Regelklassen,
         asbkey:Schluesseltabellen ;
@@ -21264,7 +21264,7 @@ asbkey:BaustoffgueteBetonstahl_BSt42_50 a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.3" .
 
-<https://w3id.org/asbingowl/2016/keys#BaustoffgueteBetonstahl_DIN4881%3A200908> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BaustoffgueteBetonstahl_DIN4881%3A200908> a owl:Class ;
     rdfs:label "DIN 488-1:2009-08"@de ;
     rdfs:subClassOf asb:BaustoffgueteBetonstahl,
         asbkey:Schluesseltabellen ;
@@ -21339,7 +21339,7 @@ asbkey:BauwerksartTunnel_TunnelInGeschlossenerBauweise a owl:Class ;
 asbkey:BauwerksartTunnel_TunnelMitGewoelbequerschnitt a owl:Class ;
     rdfs:label "Tunnel mit Gewoelbequerschnitt"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
-        <https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
+        <https://w3id.org/asbingowl/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.2" .
 
@@ -21521,25 +21521,25 @@ asbkey:Holzschutz_chemischerHolzschutz a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "6" .
 
-<https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_gekruemmt_r%26lt%3B500M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#KruemmungUeberbau_gekruemmt_r%26lt%3B500M_> a owl:Class ;
     rdfs:label "gekruemmt (R &lt; 500 m) "@de ;
     rdfs:subClassOf asb:KruemmungUeberbau,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "3" .
 
-<https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_leichtGekruemmt_r%26lt%3B1500M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#KruemmungUeberbau_leichtGekruemmt_r%26lt%3B1500M_> a owl:Class ;
     rdfs:label "leicht gekruemmt (R &lt; 1500 m) "@de ;
     rdfs:subClassOf asb:KruemmungUeberbau,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2" .
 
-<https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_nichtGekruemmt_r%26gt%3B%3D1500M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#KruemmungUeberbau_nichtGekruemmt_r%26gt%3B%3D1500M_> a owl:Class ;
     rdfs:label "nicht gekruemmt (R &gt;= 1500 m)"@de ;
     rdfs:subClassOf asb:KruemmungUeberbau,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#KruemmungUeberbau_starkGekruemmt_r%26lt%3B100M_> a owl:Class ;
+<https://w3id.org/asbingowl/keys#KruemmungUeberbau_starkGekruemmt_r%26lt%3B100M_> a owl:Class ;
     rdfs:label "stark gekruemmt (R &lt; 100 m) "@de ;
     rdfs:subClassOf asb:KruemmungUeberbau,
         asbkey:Schluesseltabellen ;
@@ -21911,7 +21911,7 @@ asbkey:StatusSpannungsrisskorrosion_AnkuendigungsverhaltenNachgewiesen a owl:Cla
     rdfs:label "Ankuendigungsverhalten nachgewiesen"@de ;
     rdfs:subClassOf asb:StatusSpannungsrisskorrosion,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> ;
     asbkey:Kennung "2.2" .
 
 asbkey:Verwaltungsebene_Eisenbahninfrastrukturunternehmen_eiu_ a owl:Class ;
@@ -21924,7 +21924,7 @@ asbkey:Zementart_KompositzementCemV a owl:Class ;
     rdfs:label "Kompositzement CEM V"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320021500000000_KompositzementCemV ;
     asbkey:Kennung "1.5" .
 
@@ -22250,7 +22250,7 @@ asbkey:ArtSchaden_abgesackt_Setzung a owl:Class ;
 asbkey:ArtSonstigerBaustoff_Mauermoertel a owl:Class ;
     rdfs:label "Mauermoertel"@de ;
     rdfs:subClassOf asb:ArtSonstigerBaustoff,
-        <https://w3id.org/asbingowl/2016/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
+        <https://w3id.org/asbingowl/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.3" .
 
@@ -22323,7 +22323,7 @@ asbkey:ArtVerbindungsmittel_HVSchrauben a owl:Class ;
     owl:sameAs asbkey13:320142100000000_HVSchrauben ;
     asbkey:Kennung "2.1" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtVerkehrslastmodell_DINEn19912%2BNationalesAnwendungsdokument2012> a owl:Class ;
     rdfs:label "DIN EN 1991-2 + Nationales Anwendungsdokument 2012"@de ;
     rdfs:subClassOf asb:ArtVerkehrslastmodell,
         asbkey:ArtVerkehrslastmodell_Eurocode,
@@ -22432,7 +22432,7 @@ asbkey:BauwerksartTrogbauwerk_MassivwandUndMassivsohle a owl:Class ;
 asbkey:BauwerksartTunnel_TunnelMitRechteckquerschnitt a owl:Class ;
     rdfs:label "Tunnel mit Rechteckquerschnitt"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
-        <https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
+        <https://w3id.org/asbingowl/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.1" .
 
@@ -22620,7 +22620,7 @@ asbkey:StatischesSystemQuerTunnel_untenOffen a owl:Class ;
     asbkey:Kennung "1.1",
         "2.1" .
 
-<https://w3id.org/asbingowl/2016/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#StatusSpannungsrisskorrosion_SpRKGefaehrdung_b%E2%80%98> a owl:Class ;
     rdfs:label "SpRK-Gefaehrdung,b‘"@de ;
     rdfs:subClassOf asb:StatusSpannungsrisskorrosion,
         asbkey:Schluesseltabellen ;
@@ -22631,11 +22631,11 @@ asbkey:Zementart_HochofenzementCemIii a owl:Class ;
     rdfs:label "Hochofenzement CEM III"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320021300000000_HochofenzementCemIii ;
     asbkey:Kennung "1.3" .
 
-<https://w3id.org/asbingowl/2016/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Zementart_nichtMehrZulaessigeZemente%E2%80%9Ab%E2%80%98> a owl:Class ;
     rdfs:label "nicht mehr zulaessige Zemente‚b‘"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen ;
@@ -23002,7 +23002,7 @@ asbkey:Zementart_Portlandkalksteinzement a owl:Class ;
     rdfs:label "Portlandkalksteinzement"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98>,
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98>,
         asbkey:Zementart_zusammengesetzteZementeCemIi ;
     owl:sameAs asbkey13:320021250000000_Portlandkalksteinzement,
         asbkey13:320022600000000_Portlandkalksteinzement ;
@@ -23104,7 +23104,7 @@ asbkey:ArtSonstigerBaustoff_Korngemisch a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "14" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b> a owl:Class ;
     rdfs:label "Moertel/Putz/Suspensionen,‘b"@de ;
     rdfs:subClassOf asb:ArtSonstigerBaustoff,
         asbkey:Schluesseltabellen ;
@@ -23128,7 +23128,7 @@ asbkey:ArtSonstigerBaustoff_Normalmoertel a owl:Class ;
 asbkey:ArtSonstigerBaustoff_Putz a owl:Class ;
     rdfs:label "Putz"@de ;
     rdfs:subClassOf asb:ArtSonstigerBaustoff,
-        <https://w3id.org/asbingowl/2016/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
+        <https://w3id.org/asbingowl/keys#ArtSonstigerBaustoff_Moertel_Putz_Suspensionen_%E2%80%98b>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1.2" .
 
@@ -23215,21 +23215,21 @@ asbkey:BauwerksartStuetzkonstruktion_stuetzwandartigeVerbundkonstruktion a owl:C
 asbkey:BauwerksartTunnel_Galeriebauwerk a owl:Class ;
     rdfs:label "Galeriebauwerk"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
-        <https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
+        <https://w3id.org/asbingowl/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.6" .
 
 asbkey:BauwerksartTunnel_Kreuzungsbauwerk a owl:Class ;
     rdfs:label "Kreuzungsbauwerk"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
-        <https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
+        <https://w3id.org/asbingowl/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.5" .
 
 asbkey:BauwerksartTunnel_oberirdischeEinhausungVonStrassen a owl:Class ;
     rdfs:label "oberirdische Einhausung von Strassen"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
-        <https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
+        <https://w3id.org/asbingowl/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.4" .
 
@@ -23304,13 +23304,13 @@ asbkey:StatusDerNachrechnung_NachrechnungDurchgefuehrt a owl:Class ;
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26gt%3B1980> a owl:Class ;
+<https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26gt%3B1980> a owl:Class ;
     rdfs:label "Baujahr &gt; 1980"@de ;
     rdfs:subClassOf asb:StatusKoppelfugen,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> a owl:Class ;
+<https://w3id.org/asbingowl/keys#StatusKoppelfugen_Baujahr%26lt%3B%3D1980> a owl:Class ;
     rdfs:label "Baujahr &lt;= 1980"@de ;
     rdfs:subClassOf asb:StatusKoppelfugen,
         asbkey:Schluesseltabellen ;
@@ -23323,14 +23323,14 @@ asbkey:VorspanngradVorspannung_VorspannungGemaessDinFachbericht102 a owl:Class ;
     owl:sameAs asbkey13:150034000000000_VorspannungGemaessDinFachbericht102 ;
     asbkey:Kennung "4" .
 
-<https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> a owl:Class ;
     rdfs:label "genormt nach DIN 1164,1 Ausgabe 10/1994 bzw. EN 197-1:2000‚b‘"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen ;
-    owl:sameAs <https://w3id.org/asbingowl/2013/keys#320021000000000_GenormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000> ;
+    owl:sameAs <https://w3id.org/asbingowl/keys/2013#320021000000000_GenormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000> ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Zementart_zugelassen_nichtGenormt_NachDin1164_1Ausgabe1994%E2%80%9AB%E2%80%98> a owl:Class ;
     rdfs:label "zugelassen (nicht genormt) nach DIN 1164,1 Ausgabe 1994‚ b‘"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen ;
@@ -23458,11 +23458,11 @@ asbkey:BauwerksartBruecke_Gewoelbe_Bogen a owl:Class ;
 asbkey:BauwerksartTunnel_TeilabgedecktesUnterOderOberirdischesVerkehrsbauwerk a owl:Class ;
     rdfs:label "Teilabgedecktes unter- oder oberirdisches Verkehrsbauwerk"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
-        <https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
+        <https://w3id.org/asbingowl/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M>,
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "2.3" .
 
-<https://w3id.org/asbingowl/2016/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M> a owl:Class ;
+<https://w3id.org/asbingowl/keys#BauwerksartTunnel_TunnelInOffenerBauweise%26gt%3B%3D80M> a owl:Class ;
     rdfs:label "Tunnel in offener Bauweise &gt;= 80 m"@de ;
     rdfs:subClassOf asb:BauwerksartTunnel,
         asbkey:Schluesseltabellen ;
@@ -23807,7 +23807,7 @@ asbkey:StatischesSystemQuerBruecke_balkenartigeUndPlattenartigeTragwerke_RahmenU
         asbkey:Schluesseltabellen ;
     asbkey:Kennung "1" .
 
-<https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe1990UndFrueher%E2%80%9Ab%E2%80%98> a owl:Class ;
     rdfs:label "genormt nach DIN 1164,1 Ausgabe 1990 und frueher‚b‘"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen ;
@@ -23818,7 +23818,7 @@ asbkey:Zementart_zusammengesetzteZementeCemIi a owl:Class ;
     rdfs:label "zusammengesetzte Zemente CEM II"@de ;
     rdfs:subClassOf asb:Zementart,
         asbkey:Schluesseltabellen,
-        <https://w3id.org/asbingowl/2016/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
+        <https://w3id.org/asbingowl/keys#Zementart_genormtNachDin1164_1Ausgabe10_1994BzwEn1971%3A2000%E2%80%9Ab%E2%80%98> ;
     owl:sameAs asbkey13:320021200000000_ZusammengesetzteZementeCemIi ;
     asbkey:Kennung "1.2" .
 
@@ -23841,7 +23841,7 @@ asbkey:ArtEinfacheBauteilart_Besichtigungseinrichtung_Befestigungseinrichtung a 
     owl:sameAs asbkey13:240015000000000_Besichtigungseinrichtung_Befestigungseinrichtung ;
     asbkey:Kennung "9" .
 
-<https://w3id.org/asbingowl/2016/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98> a owl:Class ;
+<https://w3id.org/asbingowl/keys#ArtEinfacheBauteilart_Entwaesserungsdetails%E2%80%9Ab%E2%80%98> a owl:Class ;
     rdfs:label "Entwaesserungsdetails‚b‘"@de ;
     rdfs:subClassOf asb:ArtEinfacheBauteilart,
         asbkey:Schluesseltabellen ;
