@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/asbingowl/core","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/asbingowl/core","name":"ASB-ING Ontology", "headline":"Document describing the ontology https://w3id.org/asbingowl/core", "datePublished":"Wed Sep 22 10:00:00 CEST 2021", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Anne Göbels"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/asbingowl/core","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/asbingowl/core","name":"ASB-ING Ontology", "headline":"Document describing the ontology https://w3id.org/asbingowl/core", "datePublished":"06.12.2021", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Anne Göbels"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -52,24 +52,25 @@ function loadTOC(){
 <div class="container">
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-<h2>ASB-ING Ontology</h2>
+<h1>ASB-ING Ontology</h1>
+<h2>Release  06.12.2021</h2>
 
 
 <dl>
-<dt>This version:</dt>
+<dt>Latest version:</dt>
 <dd><a href="https://w3id.org/asbingowl/core">https://w3id.org/asbingowl/core</a></dd>
 <dt>Authors:</dt>
 <dd>Anne Göbels, RWTH Aachen, Design Computation</dd>
 
-<dt>Imported Ontologies:</dt>
-<dd><a href="http://www.w3.org/2002/07/owl#">Web Ontology Language</a></dd><dd><a href="http://www.w3.org/2000/01/rdf-schema#">RDF-Schema</a></dd><dd><a href="http://www.w3.org/2001/XMLSchema#">XML-Schema</a></dd>
 
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt>
-<dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://www.w3.org/2002/07/owl#">Web Ontology Language</a></dd><dd><a href="http://www.w3.org/2000/01/rdf-schema#">RDF Schema</a></dd><dd><a href="http://www.w3.org/2001/XMLSchema#">XSD Schema </a></dd><dd><a href="https://w3id.org/aoi#AreaOfInterest">Area Of Interest Ontology</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd>
 <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
 <img src="https://img.shields.io/badge/License-CreativeCommons-blue.svg" style="border-width:0" alt="License" />
 </a>
-<br/></dd><dt>Visualization:</dt><dd><a href="http://www.visualdataweb.de/webvowl/#iri=https://w3id.org/asbingowl/core" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
 
 <hr/>
@@ -78,13 +79,17 @@ function loadTOC(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div><div id="toc"></div> 
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+   The ASB-ING Ontology provides a framework for documenting and processing infrastructure inspection data in Linked Data formats. It is directly derived from the ASB-ING UML model.
+   This is the first published version of the ontology.</span>
+</div>
+<div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-   The ASB-ING Ontology provides a framework for documenting and processing infrastructure inspection data in Linked Data formats. It is directly derived from the ASB-ING UML model.
-   This is the first published version of the ontology.</span>
+The ASB-ING is a German standard for documenting inspection data of bridges and tunnels. The ASB-ING Ontology is a Linked-Data compatible version of it, which allows to represent the inspeciton data in RDF Graphs, which can contribute to a Digital Twin of an existing infrastructure asset. 
+To support this conversion process, some classes are added to the original ASB-ING model, which are marked accordingly.   </span>
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
@@ -92,11 +97,11 @@ function loadTOC(){
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
 <tr><td><b>asb</b></td><td>&lt;https://w3id.org/asbingowl/core&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>aoi</b></td><td>&lt;https://w3id.org/aoi&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-<tr><td><b>ontology</b></td><td>&lt;https://w3id.org/asbingowl/core/ontology&gt;</td></tr>
-<tr><td><b>default namespace</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
 </tbody>
 </table>
 </div>
@@ -426,6 +431,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#ArtZugangsbeschraenkung"
          title="https://w3id.org/asbingowl/core#ArtZugangsbeschraenkung">ArtZugangsbeschraenkung</a>
+   </li>
+   <li>
+      <a href="#ASBING13_BauteilDefinition"
+         title="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition">asb:ASBING13_BauteilDefinition</a>
    </li>
    <li>
       <a href="#ASBObjekt" title="https://w3id.org/asbingowl/core#ASBObjekt">
@@ -1042,6 +1051,14 @@ This ontology has the following classes and properties.</span>
       <a href="#Leitung" title="https://w3id.org/asbingowl/core#Leitung">Leitung</a>
    </li>
    <li>
+      <a href="#LongitudinalCentralArea"
+         title="https://w3id.org/asbingowl/core#LongitudinalCentralArea">LongitudinalCentralArea</a>
+   </li>
+   <li>
+      <a href="#LongitudinalPeriphalArea"
+         title="https://w3id.org/asbingowl/core#LongitudinalPeriphalArea">LongitudinalPeriphalArea</a>
+   </li>
+   <li>
       <a href="#LueftungsartRettungsstollen"
          title="https://w3id.org/asbingowl/core#LueftungsartRettungsstollen">LueftungsartRettungsstollen</a>
    </li>
@@ -1344,6 +1361,9 @@ This ontology has the following classes and properties.</span>
       <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">
          <span>Schaden</span>
       </a>
+   </li>
+   <li>
+      <a href="#SchadenObjekt" title="https://w3id.org/asbingowl/core#SchadenObjekt">SchadenObjekt</a>
    </li>
    <li>
       <a href="#Schadensbeispiel"
@@ -2584,10 +2604,24 @@ This ontology has the following classes and properties.</span>
       <a href="#Gruendung_Art" title="https://w3id.org/asbingowl/core#Gruendung_Art">Gruendung_Art</a>
    </li>
    <li>
+      <a href="#hasLaterState" title="https://w3id.org/asbingowl/core#hasLaterState">hasLaterState</a>
+   </li>
+   <li>
+      <a href="#hasPriorState" title="https://w3id.org/asbingowl/core#hasPriorState">hasPriorState</a>
+   </li>
+   <li>
       <a href="#hatSchluesselKennung"
          title="https://w3id.org/asbingowl/core#hatSchluesselKennung">
          <span>hat schluessel kennung</span>
       </a>
+   </li>
+   <li>
+      <a href="#hatBauteilDefinition"
+         title="https://w3id.org/asbingowl/core#hatBauteilDefinition">hatBauteilDefinition</a>
+   </li>
+   <li>
+      <a href="#hatPruefDokumentation"
+         title="https://w3id.org/asbingowl/core#hatPruefDokumentation">hatPruefDokumentation</a>
    </li>
    <li>
       <a href="#Haushaltsbezug_ArtHaushalt"
@@ -2832,10 +2866,6 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/asbingowl/core#Multigeometrie_Liniengeometrie">Multigeometrie_Liniengeometrie</a>
    </li>
    <li>
-      <a href="#Multigeometrie_Punktgeometrie"
-         title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
-   </li>
-   <li>
       <a href="#Multigeometrie_Volumenkoerper"
          title="https://w3id.org/asbingowl/core#Multigeometrie_Volumenkoerper">Multigeometrie_Volumenkoerper</a>
    </li>
@@ -3015,6 +3045,10 @@ This ontology has the following classes and properties.</span>
       <a href="#Schaden_Schaden" title="https://w3id.org/asbingowl/core#Schaden_Schaden">Schaden_Schaden</a>
    </li>
    <li>
+      <a href="#Schaden_Schadensbeispiel"
+         title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
+   </li>
+   <li>
       <a href="#Schaden_Schadensursache"
          title="https://w3id.org/asbingowl/core#Schaden_Schadensursache">Schaden_Schadensursache</a>
    </li>
@@ -3048,30 +3082,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Schadensbeispiel_Rissart"
          title="https://w3id.org/asbingowl/core#Schadensbeispiel_Rissart">Schadensbeispiel_Rissart</a>
-   </li>
-   <li>
-      <a href="#Schadensbeispiel_SchadensbewertungDMax"
-         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
-   </li>
-   <li>
-      <a href="#Schadensbeispiel_SchadensbewertungDMin"
-         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
-   </li>
-   <li>
-      <a href="#Schadensbeispiel_SchadensbewertungSMax"
-         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
-   </li>
-   <li>
-      <a href="#Schadensbeispiel_SchadensbewertungSMin"
-         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
-   </li>
-   <li>
-      <a href="#Schadensbeispiel_SchadensbewertungVMax"
-         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
-   </li>
-   <li>
-      <a href="#Schadensbeispiel_SchadensbewertungVMin"
-         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
    </li>
    <li>
       <a href="#Schicht_Dicke" title="https://w3id.org/asbingowl/core#Schicht_Dicke">Schicht_Dicke</a>
@@ -4238,7 +4248,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#ASBING13_AnzahlBauteile"
-         title="https://w3id.org/asbingowl/core#ASBING13_AnzahlBauteile">ASBING13_Winkelrichtung</a>
+         title="https://w3id.org/asbingowl/core#ASBING13_AnzahlBauteile">ASBING13_AnzahlBauteile</a>
    </li>
    <li>
       <a href="#ASBObjekt_Bearbeiter"
@@ -4557,8 +4567,7 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/asbingowl/core#DTV_Gesamtstunden">DTV_Gesamtstunden</a>
    </li>
    <li>
-      <a href="#DTV_Schaetzwert"
-         title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
+      <a href="#DTV_Schaetzwert" title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
    </li>
    <li>
       <a href="#DTV_Zaehltage" title="https://w3id.org/asbingowl/core#DTV_Zaehltage">DTV_Zaehltage</a>
@@ -4788,6 +4797,10 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/asbingowl/core#MilitaerischeLastenklasse_SchwaechstesBauglied">MilitaerischeLastenklasse_SchwaechstesBauglied</a>
    </li>
    <li>
+      <a href="#Multigeometrie_Punktgeometrie"
+         title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
+   </li>
+   <li>
       <a href="#NachrechnungErtuechtigung_LaufendeNummerBund"
          title="https://w3id.org/asbingowl/core#NachrechnungErtuechtigung_LaufendeNummerBund">NachrechnungErtuechtigung_LaufendeNummerBund</a>
    </li>
@@ -4943,10 +4956,6 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/asbingowl/core#Schaden_ID-Nummer-Schaden">Schaden_ID-Nummer-Schaden</a>
    </li>
    <li>
-      <a href="#Schaden_Schadensbeispiel"
-         title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
-   </li>
-   <li>
       <a href="#Schaden_SchadensbewertungDauerhaftigkeit"
          title="https://w3id.org/asbingowl/core#Schaden_SchadensbewertungDauerhaftigkeit">Schaden_SchadensbewertungDauerhaftigkeit</a>
    </li>
@@ -4973,6 +4982,30 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Schadensbeispiel_Ordnungsnummer"
          title="https://w3id.org/asbingowl/core#Schadensbeispiel_Ordnungsnummer">Schadensbeispiel_Ordnungsnummer</a>
+   </li>
+   <li>
+      <a href="#Schadensbeispiel_SchadensbewertungDMax"
+         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
+   </li>
+   <li>
+      <a href="#Schadensbeispiel_SchadensbewertungDMin"
+         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
+   </li>
+   <li>
+      <a href="#Schadensbeispiel_SchadensbewertungSMax"
+         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
+   </li>
+   <li>
+      <a href="#Schadensbeispiel_SchadensbewertungSMin"
+         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
+   </li>
+   <li>
+      <a href="#Schadensbeispiel_SchadensbewertungVMax"
+         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
+   </li>
+   <li>
+      <a href="#Schadensbeispiel_SchadensbewertungVMin"
+         title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
    </li>
    <li>
       <a href="#Schadensursache_Verwendbarkeit"
@@ -5441,12 +5474,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#ZustandBauteilgruppe_Zustandsnote"
          title="https://w3id.org/asbingowl/core#ZustandBauteilgruppe_Zustandsnote">ZustandBauteilgruppe_Zustandsnote</a>
-   </li>
-</ul><h4>Annotation Properties</h4><ul class="hlist">
-   <li>
-      <a href="#http://www.w3.org/2002/07/owl#maxCardinality" title="http://www.w3.org/2002/07/owl#maxCardinality">
-         <span>max cardinality</span>
-      </a>
    </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
@@ -5983,6 +6010,10 @@ This section provides details for each class and property defined by ASB-ING Ont
       <li>
          <a href="#ArtZugangsbeschraenkung"
             title="https://w3id.org/asbingowl/core#ArtZugangsbeschraenkung">ArtZugangsbeschraenkung</a>
+      </li>
+      <li>
+         <a href="#ASBING13_BauteilDefinition"
+            title="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition">asb:ASBING13_BauteilDefinition</a>
       </li>
       <li>
          <a href="#ASBObjekt" title="https://w3id.org/asbingowl/core#ASBObjekt">
@@ -6599,6 +6630,14 @@ This section provides details for each class and property defined by ASB-ING Ont
          <a href="#Leitung" title="https://w3id.org/asbingowl/core#Leitung">Leitung</a>
       </li>
       <li>
+         <a href="#LongitudinalCentralArea"
+            title="https://w3id.org/asbingowl/core#LongitudinalCentralArea">LongitudinalCentralArea</a>
+      </li>
+      <li>
+         <a href="#LongitudinalPeriphalArea"
+            title="https://w3id.org/asbingowl/core#LongitudinalPeriphalArea">LongitudinalPeriphalArea</a>
+      </li>
+      <li>
          <a href="#LueftungsartRettungsstollen"
             title="https://w3id.org/asbingowl/core#LueftungsartRettungsstollen">LueftungsartRettungsstollen</a>
       </li>
@@ -6901,6 +6940,9 @@ This section provides details for each class and property defined by ASB-ING Ont
          <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">
             <span>Schaden</span>
          </a>
+      </li>
+      <li>
+         <a href="#SchadenObjekt" title="https://w3id.org/asbingowl/core#SchadenObjekt">SchadenObjekt</a>
       </li>
       <li>
          <a href="#Schadensbeispiel"
@@ -9483,6 +9525,36 @@ This section provides details for each class and property defined by ASB-ING Ont
          </dd>
       </dl>
    </div>
+   <div class="entity" id="ASBING13_BauteilDefinition">
+      <h3>asb:ASBING13_BauteilDefinition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition</p>
+      <div class="comment">
+         <span class="markdown">Zusammenfassung des Bauteils,Konstruktionsteils, Bauteilgruppe, Bauteilergaenzung und bauteilbezogener Ortsangabe aus ASB-ING 2013 zur Beschreibung eines individuellen Bauteils der Bauwerks</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#ASBING13_Bauteil" title="https://w3id.org/asbingowl/core#ASBING13_Bauteil">ASBING13_Bauteil</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_Bauteilergaenzung"
+               title="https://w3id.org/asbingowl/core#ASBING13_Bauteilergaenzung">ASBING13_Bauteilergaenzung</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_Bauteilgruppe"
+               title="https://w3id.org/asbingowl/core#ASBING13_Bauteilgruppe">ASBING13_Bauteilgruppe</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_Konstruktionsteil"
+               title="https://w3id.org/asbingowl/core#ASBING13_Konstruktionsteil">ASBING13_Konstruktionsteil</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hatBauteilDefinition"
+               title="https://w3id.org/asbingowl/core#hatBauteilDefinition">hatBauteilDefinition</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ASBObjekt">
       <h3>ASBObjekt<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -9613,18 +9685,11 @@ This section provides details for each class and property defined by ASB-ING Ont
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#ASBING13_Bauteil" title="https://w3id.org/asbingowl/core#ASBING13_Bauteil">ASBING13_Bauteil</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_Bauteilergaenzung"
-               title="https://w3id.org/asbingowl/core#ASBING13_Bauteilergaenzung">ASBING13_Bauteilergaenzung</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_Bauteilgruppe"
-               title="https://w3id.org/asbingowl/core#ASBING13_Bauteilgruppe">ASBING13_Bauteilgruppe</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_Konstruktionsteil"
-               title="https://w3id.org/asbingowl/core#ASBING13_Konstruktionsteil">ASBING13_Konstruktionsteil</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_Winkelrichtung"
+            <a href="#ASBING13_AnzahlBauteile"
+               title="https://w3id.org/asbingowl/core#ASBING13_AnzahlBauteile">ASBING13_AnzahlBauteile</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#ASBING13_Winkelrichtung"
                title="https://w3id.org/asbingowl/core#ASBING13_Winkelrichtung">ASBING13_Winkelrichtung</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#ASBING13_AnzahlBauteile"
-               title="https://w3id.org/asbingowl/core#ASBING13_AnzahlBauteile">ASBING13_Winkelrichtung</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#ASBObjekt_ArtDerErfassung"
+            <sup class="type-op" title="object property">op</sup>, <a href="#ASBObjekt_ArtDerErfassung"
                title="https://w3id.org/asbingowl/core#ASBObjekt_ArtDerErfassung">ASBObjekt_ArtDerErfassung</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#ASBObjekt_ArtDerErfassungSonst"
                title="https://w3id.org/asbingowl/core#ASBObjekt_ArtDerErfassungSonst">ASBObjekt_ArtDerErfassungSonst</a>
@@ -12124,8 +12189,7 @@ This section provides details for each class and property defined by ASB-ING Ont
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">max</span> 1</dd>
          <dd>
-            <a href="#DTV_Schaetzwert"
-               title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
+            <a href="#DTV_Schaetzwert" title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">max</span> 1</dd>
          <dd>
@@ -12145,8 +12209,7 @@ This section provides details for each class and property defined by ASB-ING Ont
                title="https://w3id.org/asbingowl/core#DTV_Gesamtstunden">DTV_Gesamtstunden</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#DTV_Netzzuordnung"
                title="https://w3id.org/asbingowl/core#DTV_Netzzuordnung">DTV_Netzzuordnung</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#DTV_Schaetzwert"
-               title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#DTV_Schaetzwert" title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#DTV_Tagesgruppe" title="https://w3id.org/asbingowl/core#DTV_Tagesgruppe">DTV_Tagesgruppe</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#DTV_Zaehltage" title="https://w3id.org/asbingowl/core#DTV_Zaehltage">DTV_Zaehltage</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#DTV_hatBezugsrichtung"
@@ -13534,14 +13597,6 @@ This section provides details for each class and property defined by ASB-ING Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/asbingowl/core#GM_Point</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#Multigeometrie_Punktgeometrie"
-               title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="GM_Solid">
       <h3>GM_Solid<sup class="type-c" title="class">c</sup>
@@ -14856,6 +14911,42 @@ This section provides details for each class and property defined by ASB-ING Ont
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LongitudinalCentralArea">
+      <h3>LongitudinalCentralArea<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#LongitudinalCentralArea</p>
+      <div class="comment">
+         <span class="markdown">Hinzugefuegte Klasse zur AOI Ontolgoie zur Beruecksichtigung der Tiefe von Bauteilen</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/aoi#AreaOfInterest">area of interest</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LongitudinalPeriphalArea">
+      <h3>LongitudinalPeriphalArea<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#LongitudinalPeriphalArea</p>
+      <div class="comment">
+         <span class="markdown">Hinzugefuegte Klasse zur AOI Ontolgoie zur Beruecksichtigung der Tiefe von Bauteilen</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/aoi#AreaOfInterest">area of interest</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="LueftungsartRettungsstollen">
       <h3>LueftungsartRettungsstollen<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -15768,14 +15859,14 @@ This section provides details for each class and property defined by ASB-ING Ont
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">min</span> 1</dd>
          <dd>
-            <a href="#Multigeometrie_Punktgeometrie"
-               title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">min</span> 1</dd>
-         <dd>
             <a href="#Multigeometrie_Volumenkoerper"
                title="https://w3id.org/asbingowl/core#Multigeometrie_Volumenkoerper">Multigeometrie_Volumenkoerper</a>
             <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1</dd>
+         <dd>
+            <a href="#Multigeometrie_Punktgeometrie"
+               title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
+            <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">min</span> 1</dd>
          <dt>is in domain of</dt>
          <dd>
@@ -15785,7 +15876,7 @@ This section provides details for each class and property defined by ASB-ING Ont
                title="https://w3id.org/asbingowl/core#Multigeometrie_Liniengeometrie">Multigeometrie_Liniengeometrie</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#Multigeometrie_Punktgeometrie"
                title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Multigeometrie_Volumenkoerper"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#Multigeometrie_Volumenkoerper"
                title="https://w3id.org/asbingowl/core#Multigeometrie_Volumenkoerper">Multigeometrie_Volumenkoerper</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hatSchluesselKennung"
                title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
@@ -17450,6 +17541,11 @@ This section provides details for each class and property defined by ASB-ING Ont
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">max</span> 1</dd>
          <dd>
+            <a href="#Schaden_Schadensbeispiel"
+               title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
             <a href="#Schaden_ID-Nummer-Schaden"
                title="https://w3id.org/asbingowl/core#Schaden_ID-Nummer-Schaden">Schaden_ID-Nummer-Schaden</a>
             <sup class="type-dp" title="data property">dp</sup> 
@@ -17474,11 +17570,6 @@ This section provides details for each class and property defined by ASB-ING Ont
                title="https://w3id.org/asbingowl/core#Schaden_VormerkungFuerEinfachePruefung">Schaden_VormerkungFuerEinfachePruefung</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">min</span> 1</dd>
-         <dd>
-            <a href="#Schaden_Schadensbeispiel"
-               title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">max</span> 1</dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Bauteilbezugsobjekt"
@@ -17505,7 +17596,7 @@ This section provides details for each class and property defined by ASB-ING Ont
             <sup class="type-op" title="object property">op</sup>, <a href="#Schaden_Schaden" title="https://w3id.org/asbingowl/core#Schaden_Schaden">Schaden_Schaden</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#Schaden_Schadensbeispiel"
                title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#Schaden_SchadensbewertungDauerhaftigkeit"
+            <sup class="type-op" title="object property">op</sup>, <a href="#Schaden_SchadensbewertungDauerhaftigkeit"
                title="https://w3id.org/asbingowl/core#Schaden_SchadensbewertungDauerhaftigkeit">Schaden_SchadensbewertungDauerhaftigkeit</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#Schaden_SchadensbewertungStandsicherheit"
                title="https://w3id.org/asbingowl/core#Schaden_SchadensbewertungStandsicherheit">Schaden_SchadensbewertungStandsicherheit</a>
@@ -17517,6 +17608,8 @@ This section provides details for each class and property defined by ASB-ING Ont
             <sup class="type-op" title="object property">op</sup>, <a href="#Schaden_VormerkungFuerEinfachePruefung"
                title="https://w3id.org/asbingowl/core#Schaden_VormerkungFuerEinfachePruefung">Schaden_VormerkungFuerEinfachePruefung</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#associatedWith" title="https://w3id.org/asbingowl/core#associatedWith">associatedWith</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLaterState" title="https://w3id.org/asbingowl/core#hasLaterState">hasLaterState</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPriorState" title="https://w3id.org/asbingowl/core#hasPriorState">hasPriorState</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hatSchluesselKennung"
                title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
             <sup class="type-op" title="object property">op</sup>
@@ -17524,11 +17617,36 @@ This section provides details for each class and property defined by ASB-ING Ont
          <dt>is in range of</dt>
          <dd>
             <a href="#associatedWith" title="https://w3id.org/asbingowl/core#associatedWith">associatedWith</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLaterState" title="https://w3id.org/asbingowl/core#hasLaterState">hasLaterState</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPriorState" title="https://w3id.org/asbingowl/core#hasPriorState">hasPriorState</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hatPruefDokumentation"
+               title="https://w3id.org/asbingowl/core#hatPruefDokumentation">hatPruefDokumentation</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is also defined as</dt>
          <dd>
             <a href="#Schaden">named individual</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SchadenObjekt">
+      <h3>SchadenObjekt<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#SchadenObjekt</p>
+      <div class="comment">
+         <span class="markdown">Uebergeordnetes Schadenobjekt, dass sich ueber alle Pruefjahre zieht- hat Verbindung zu den einzelnen Versionen pro Jahr</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hatBauteilDefinition"
+               title="https://w3id.org/asbingowl/core#hatBauteilDefinition">hatBauteilDefinition</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hatPruefDokumentation"
+               title="https://w3id.org/asbingowl/core#hatPruefDokumentation">hatPruefDokumentation</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -17567,36 +17685,6 @@ This section provides details for each class and property defined by ASB-ING Ont
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">max</span> 1</dd>
          <dd>
-            <a href="#Schadensbeispiel_SchadensbewertungDMax"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#Schadensbeispiel_SchadensbewertungDMin"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#Schadensbeispiel_SchadensbewertungSMax"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#Schadensbeispiel_SchadensbewertungSMin"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#Schadensbeispiel_SchadensbewertungVMax"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
-            <a href="#Schadensbeispiel_SchadensbewertungVMin"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">max</span> 1</dd>
-         <dd>
             <a href="#Schadensbeispiel_Name"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_Name">Schadensbeispiel_Name</a>
             <sup class="type-dp" title="data property">dp</sup> 
@@ -17609,6 +17697,36 @@ This section provides details for each class and property defined by ASB-ING Ont
          <dd>
             <a href="#Schadensbeispiel_Bemerkung"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_Bemerkung">Schadensbeispiel_Bemerkung</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#Schadensbeispiel_SchadensbewertungDMax"
+               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#Schadensbeispiel_SchadensbewertungDMin"
+               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#Schadensbeispiel_SchadensbewertungSMax"
+               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#Schadensbeispiel_SchadensbewertungSMin"
+               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#Schadensbeispiel_SchadensbewertungVMax"
+               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">max</span> 1</dd>
+         <dd>
+            <a href="#Schadensbeispiel_SchadensbewertungVMin"
+               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">max</span> 1</dd>
          <dt>is in domain of</dt>
@@ -17635,18 +17753,24 @@ This section provides details for each class and property defined by ASB-ING Ont
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_Rissart">Schadensbeispiel_Rissart</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungDMax"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungDMin"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#Schadensbeispiel_SchadensbewertungDMin"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMax"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMax"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMin"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMin"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMax"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMax"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMin"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMin"
                title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hatSchluesselKennung"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hatSchluesselKennung"
                title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#Schaden_Schadensbeispiel"
+               title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -17658,24 +17782,6 @@ This section provides details for each class and property defined by ASB-ING Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbewertung</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#Schadensbeispiel_SchadensbewertungDMax"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungDMin"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMax"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMin"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMax"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMin"
-               title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="Schadensursache">
       <h3>Schadensursache<sup class="type-c" title="class">c</sup>
@@ -23715,10 +23821,24 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
          <a href="#Gruendung_Art" title="https://w3id.org/asbingowl/core#Gruendung_Art">Gruendung_Art</a>
       </li>
       <li>
+         <a href="#hasLaterState" title="https://w3id.org/asbingowl/core#hasLaterState">hasLaterState</a>
+      </li>
+      <li>
+         <a href="#hasPriorState" title="https://w3id.org/asbingowl/core#hasPriorState">hasPriorState</a>
+      </li>
+      <li>
          <a href="#hatSchluesselKennung"
             title="https://w3id.org/asbingowl/core#hatSchluesselKennung">
             <span>hat schluessel kennung</span>
          </a>
+      </li>
+      <li>
+         <a href="#hatBauteilDefinition"
+            title="https://w3id.org/asbingowl/core#hatBauteilDefinition">hatBauteilDefinition</a>
+      </li>
+      <li>
+         <a href="#hatPruefDokumentation"
+            title="https://w3id.org/asbingowl/core#hatPruefDokumentation">hatPruefDokumentation</a>
       </li>
       <li>
          <a href="#Haushaltsbezug_ArtHaushalt"
@@ -23963,10 +24083,6 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
             title="https://w3id.org/asbingowl/core#Multigeometrie_Liniengeometrie">Multigeometrie_Liniengeometrie</a>
       </li>
       <li>
-         <a href="#Multigeometrie_Punktgeometrie"
-            title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
-      </li>
-      <li>
          <a href="#Multigeometrie_Volumenkoerper"
             title="https://w3id.org/asbingowl/core#Multigeometrie_Volumenkoerper">Multigeometrie_Volumenkoerper</a>
       </li>
@@ -24146,6 +24262,10 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
          <a href="#Schaden_Schaden" title="https://w3id.org/asbingowl/core#Schaden_Schaden">Schaden_Schaden</a>
       </li>
       <li>
+         <a href="#Schaden_Schadensbeispiel"
+            title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
+      </li>
+      <li>
          <a href="#Schaden_Schadensursache"
             title="https://w3id.org/asbingowl/core#Schaden_Schadensursache">Schaden_Schadensursache</a>
       </li>
@@ -24179,30 +24299,6 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
       <li>
          <a href="#Schadensbeispiel_Rissart"
             title="https://w3id.org/asbingowl/core#Schadensbeispiel_Rissart">Schadensbeispiel_Rissart</a>
-      </li>
-      <li>
-         <a href="#Schadensbeispiel_SchadensbewertungDMax"
-            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
-      </li>
-      <li>
-         <a href="#Schadensbeispiel_SchadensbewertungDMin"
-            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
-      </li>
-      <li>
-         <a href="#Schadensbeispiel_SchadensbewertungSMax"
-            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
-      </li>
-      <li>
-         <a href="#Schadensbeispiel_SchadensbewertungSMin"
-            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
-      </li>
-      <li>
-         <a href="#Schadensbeispiel_SchadensbewertungVMax"
-            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
-      </li>
-      <li>
-         <a href="#Schadensbeispiel_SchadensbewertungVMin"
-            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
       </li>
       <li>
          <a href="#Schicht_Dicke" title="https://w3id.org/asbingowl/core#Schicht_Dicke">Schicht_Dicke</a>
@@ -26116,7 +26212,8 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ASBObjekt" title="https://w3id.org/asbingowl/core#ASBObjekt">ASBObjekt</a>
+               <a href="#ASBING13_BauteilDefinition"
+                  title="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition">asb:ASBING13_BauteilDefinition</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -26142,7 +26239,8 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ASBObjekt" title="https://w3id.org/asbingowl/core#ASBObjekt">ASBObjekt</a>
+               <a href="#ASBING13_BauteilDefinition"
+                  title="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition">asb:ASBING13_BauteilDefinition</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -26168,7 +26266,8 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ASBObjekt" title="https://w3id.org/asbingowl/core#ASBObjekt">ASBObjekt</a>
+               <a href="#ASBING13_BauteilDefinition"
+                  title="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition">asb:ASBING13_BauteilDefinition</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -26194,7 +26293,8 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ASBObjekt" title="https://w3id.org/asbingowl/core#ASBObjekt">ASBObjekt</a>
+               <a href="#ASBING13_BauteilDefinition"
+                  title="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition">asb:ASBING13_BauteilDefinition</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -30240,6 +30340,50 @@ Bei Ingenieurbauwerken mit einer Durchfahrtshoehe von weniger als 4,50 m ist die
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasLaterState">
+      <h3>hasLaterState<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#hasLaterState</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">Schaden</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">Schaden</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPriorState">
+      <h3>hasPriorState<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#hasPriorState</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">Schaden</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">Schaden</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hatSchluesselKennung">
       <h3>hat schluessel kennung<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -30549,8 +30693,6 @@ Bei Ingenieurbauwerken mit einer Durchfahrtshoehe von weniger als 4,50 m ist die
                   title="https://w3id.org/asbingowl/core#Multigeometrie_Flaechengeometrie">Multigeometrie_Flaechengeometrie</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#Multigeometrie_Liniengeometrie"
                   title="https://w3id.org/asbingowl/core#Multigeometrie_Liniengeometrie">Multigeometrie_Liniengeometrie</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Multigeometrie_Punktgeometrie"
-                  title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#Multigeometrie_Volumenkoerper"
                   title="https://w3id.org/asbingowl/core#Multigeometrie_Volumenkoerper">Multigeometrie_Volumenkoerper</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#NachrechnungErtuechtigung_Status"
@@ -30635,18 +30777,6 @@ Bei Ingenieurbauwerken mit einer Durchfahrtshoehe von weniger als 4,50 m ist die
                   title="https://w3id.org/asbingowl/core#Schadensbeispiel_OSAerforderlich">Schadensbeispiel_OSAerforderlich</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_Rissart"
                   title="https://w3id.org/asbingowl/core#Schadensbeispiel_Rissart">Schadensbeispiel_Rissart</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungDMax"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungDMin"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMax"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungSMin"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMax"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Schadensbeispiel_SchadensbewertungVMin"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#Schicht_Einbaudatum"
                   title="https://w3id.org/asbingowl/core#Schicht_Einbaudatum">Schicht_Einbaudatum</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#Schicht_Funktion"
@@ -31702,6 +31832,57 @@ Bei Ingenieurbauwerken mit einer Durchfahrtshoehe von weniger als 4,50 m ist die
             <dd>
                <a href="#GesamteSchluessel"
                   title="https://w3id.org/asbingowl/core#GesamteSchluessel">gesamte schluessel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hatBauteilDefinition">
+      <h3>hatBauteilDefinition<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#hatBauteilDefinition</p>
+      <div class="comment">
+         <span class="markdown">Verbindung von SchadenObjekt zur Bauteildefinition aus ASB-ING 2013</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SchadenObjekt" title="https://w3id.org/asbingowl/core#SchadenObjekt">SchadenObjekt</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ASBING13_BauteilDefinition"
+                  title="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition">asb:ASBING13_BauteilDefinition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hatPruefDokumentation">
+      <h3>hatPruefDokumentation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#hatPruefDokumentation</p>
+      <div class="comment">
+         <span class="markdown">Verbindung von SchadenObjekt zu den einzelnen Versionen/Dokumentation pro Pruefjahr</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SchadenObjekt" title="https://w3id.org/asbingowl/core#SchadenObjekt">SchadenObjekt</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">Schaden</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -33595,34 +33776,6 @@ Zu den Kosten zaehlen alle Ausgaben insbesondere fuer
          </dl>
       </div>
    </div>
-   <div class="entity" id="Multigeometrie_Punktgeometrie">
-      <h3>Multigeometrie_Punktgeometrie<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hatSchluesselKennung"
-                  title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Multigeometrie" title="https://w3id.org/asbingowl/core#Multigeometrie">Multigeometrie</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#GM_Point" title="https://w3id.org/asbingowl/core#GM_Point">GM_Point</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="Multigeometrie_Volumenkoerper">
       <h3>Multigeometrie_Volumenkoerper<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -34925,6 +35078,32 @@ Fuer die Zuordnung von Sachverhalten der klassifizierten Strassen gelten folgend
          </dl>
       </div>
    </div>
+   <div class="entity" id="Schaden_Schadensbeispiel">
+      <h3>Schaden_Schadensbeispiel<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel</p>
+      <div class="comment">
+         <span class="markdown">Kennzeichnung des Schadensbeispiels entsprechend der RI-EBW-PRUeF.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">Schaden</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Schadensbeispiel"
+                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="Schaden_Schadensursache">
       <h3>Schaden_Schadensursache<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -35186,186 +35365,6 @@ Fuer die Zuordnung von Sachverhalten der klassifizierten Strassen gelten folgend
             <dt>has range</dt>
             <dd>
                <a href="#Rissart" title="https://w3id.org/asbingowl/core#Rissart">Rissart</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="Schadensbeispiel_SchadensbewertungDMax">
-      <h3>Schadensbeispiel_SchadensbewertungDMax<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hatSchluesselKennung"
-                  title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Schadensbeispiel"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Schadensbewertung"
-                  title="https://w3id.org/asbingowl/core#Schadensbewertung">Schadensbewertung</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="Schadensbeispiel_SchadensbewertungDMin">
-      <h3>Schadensbeispiel_SchadensbewertungDMin<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hatSchluesselKennung"
-                  title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Schadensbeispiel"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Schadensbewertung"
-                  title="https://w3id.org/asbingowl/core#Schadensbewertung">Schadensbewertung</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="Schadensbeispiel_SchadensbewertungSMax">
-      <h3>Schadensbeispiel_SchadensbewertungSMax<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hatSchluesselKennung"
-                  title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Schadensbeispiel"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Schadensbewertung"
-                  title="https://w3id.org/asbingowl/core#Schadensbewertung">Schadensbewertung</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="Schadensbeispiel_SchadensbewertungSMin">
-      <h3>Schadensbeispiel_SchadensbewertungSMin<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hatSchluesselKennung"
-                  title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Schadensbeispiel"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Schadensbewertung"
-                  title="https://w3id.org/asbingowl/core#Schadensbewertung">Schadensbewertung</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="Schadensbeispiel_SchadensbewertungVMax">
-      <h3>Schadensbeispiel_SchadensbewertungVMax<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hatSchluesselKennung"
-                  title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Schadensbeispiel"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Schadensbewertung"
-                  title="https://w3id.org/asbingowl/core#Schadensbewertung">Schadensbewertung</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="Schadensbeispiel_SchadensbewertungVMin">
-      <h3>Schadensbeispiel_SchadensbewertungVMin<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hatSchluesselKennung"
-                  title="https://w3id.org/asbingowl/core#hatSchluesselKennung">hat schluessel kennung</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Schadensbeispiel"
-                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Schadensbewertung"
-                  title="https://w3id.org/asbingowl/core#Schadensbewertung">Schadensbewertung</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -42882,7 +42881,7 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
       </li>
       <li>
          <a href="#ASBING13_AnzahlBauteile"
-            title="https://w3id.org/asbingowl/core#ASBING13_AnzahlBauteile">ASBING13_Winkelrichtung</a>
+            title="https://w3id.org/asbingowl/core#ASBING13_AnzahlBauteile">ASBING13_AnzahlBauteile</a>
       </li>
       <li>
          <a href="#ASBObjekt_Bearbeiter"
@@ -43201,8 +43200,7 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
             title="https://w3id.org/asbingowl/core#DTV_Gesamtstunden">DTV_Gesamtstunden</a>
       </li>
       <li>
-         <a href="#DTV_Schaetzwert"
-            title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
+         <a href="#DTV_Schaetzwert" title="https://w3id.org/asbingowl/core#DTV_Schaetzwert">DTV_Schaetzwert</a>
       </li>
       <li>
          <a href="#DTV_Zaehltage" title="https://w3id.org/asbingowl/core#DTV_Zaehltage">DTV_Zaehltage</a>
@@ -43432,6 +43430,10 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
             title="https://w3id.org/asbingowl/core#MilitaerischeLastenklasse_SchwaechstesBauglied">MilitaerischeLastenklasse_SchwaechstesBauglied</a>
       </li>
       <li>
+         <a href="#Multigeometrie_Punktgeometrie"
+            title="https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie">Multigeometrie_Punktgeometrie</a>
+      </li>
+      <li>
          <a href="#NachrechnungErtuechtigung_LaufendeNummerBund"
             title="https://w3id.org/asbingowl/core#NachrechnungErtuechtigung_LaufendeNummerBund">NachrechnungErtuechtigung_LaufendeNummerBund</a>
       </li>
@@ -43587,10 +43589,6 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
             title="https://w3id.org/asbingowl/core#Schaden_ID-Nummer-Schaden">Schaden_ID-Nummer-Schaden</a>
       </li>
       <li>
-         <a href="#Schaden_Schadensbeispiel"
-            title="https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel">Schaden_Schadensbeispiel</a>
-      </li>
-      <li>
          <a href="#Schaden_SchadensbewertungDauerhaftigkeit"
             title="https://w3id.org/asbingowl/core#Schaden_SchadensbewertungDauerhaftigkeit">Schaden_SchadensbewertungDauerhaftigkeit</a>
       </li>
@@ -43617,6 +43615,30 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
       <li>
          <a href="#Schadensbeispiel_Ordnungsnummer"
             title="https://w3id.org/asbingowl/core#Schadensbeispiel_Ordnungsnummer">Schadensbeispiel_Ordnungsnummer</a>
+      </li>
+      <li>
+         <a href="#Schadensbeispiel_SchadensbewertungDMax"
+            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax">Schadensbeispiel_SchadensbewertungDMax</a>
+      </li>
+      <li>
+         <a href="#Schadensbeispiel_SchadensbewertungDMin"
+            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin">Schadensbeispiel_SchadensbewertungDMin</a>
+      </li>
+      <li>
+         <a href="#Schadensbeispiel_SchadensbewertungSMax"
+            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax">Schadensbeispiel_SchadensbewertungSMax</a>
+      </li>
+      <li>
+         <a href="#Schadensbeispiel_SchadensbewertungSMin"
+            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin">Schadensbeispiel_SchadensbewertungSMin</a>
+      </li>
+      <li>
+         <a href="#Schadensbeispiel_SchadensbewertungVMax"
+            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax">Schadensbeispiel_SchadensbewertungVMax</a>
+      </li>
+      <li>
+         <a href="#Schadensbeispiel_SchadensbewertungVMin"
+            title="https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin">Schadensbeispiel_SchadensbewertungVMin</a>
       </li>
       <li>
          <a href="#Schadensursache_Verwendbarkeit"
@@ -44997,7 +45019,7 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
       </div>
    </div>
    <div class="entity" id="ASBING13_AnzahlBauteile">
-      <h3>ASBING13_Winkelrichtung<sup class="type-dp" title="data property">dp</sup>
+      <h3>ASBING13_AnzahlBauteile<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -48175,6 +48197,27 @@ Die Koordinaten sind immer von Hand zu vergeben.</span>
          </dl>
       </div>
    </div>
+   <div class="entity" id="Multigeometrie_Punktgeometrie">
+      <h3>Multigeometrie_Punktgeometrie<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Multigeometrie_Punktgeometrie</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Multigeometrie" title="https://w3id.org/asbingowl/core#Multigeometrie">Multigeometrie</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="NachrechnungErtuechtigung_LaufendeNummerBund">
       <h3>NachrechnungErtuechtigung_LaufendeNummerBund<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -49073,30 +49116,6 @@ Die Koordinaten sind immer von Hand zu vergeben.</span>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Schaden_Schadensbeispiel">
-      <h3>Schaden_Schadensbeispiel<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schaden_Schadensbeispiel</p>
-      <div class="comment">
-         <span class="markdown">Kennzeichnung des Schadensbeispiels entsprechend der RI-EBW-PRUeF.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Schaden" title="https://w3id.org/asbingowl/core#Schaden">Schaden</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="Schaden_SchadensbewertungDauerhaftigkeit">
       <h3>Schaden_SchadensbewertungDauerhaftigkeit<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -49232,6 +49251,138 @@ Die Koordinaten sind immer von Hand zu vergeben.</span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_Ordnungsnummer</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schadensbeispiel"
+                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="Schadensbeispiel_SchadensbewertungDMax">
+      <h3>Schadensbeispiel_SchadensbewertungDMax<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMax</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schadensbeispiel"
+                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="Schadensbeispiel_SchadensbewertungDMin">
+      <h3>Schadensbeispiel_SchadensbewertungDMin<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungDMin</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schadensbeispiel"
+                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="Schadensbeispiel_SchadensbewertungSMax">
+      <h3>Schadensbeispiel_SchadensbewertungSMax<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMax</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schadensbeispiel"
+                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="Schadensbeispiel_SchadensbewertungSMin">
+      <h3>Schadensbeispiel_SchadensbewertungSMin<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungSMin</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schadensbeispiel"
+                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="Schadensbeispiel_SchadensbewertungVMax">
+      <h3>Schadensbeispiel_SchadensbewertungVMax<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMax</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schadensbeispiel"
+                  title="https://w3id.org/asbingowl/core#Schadensbeispiel">Schadensbeispiel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="Schadensbeispiel_SchadensbewertungVMin">
+      <h3>Schadensbeispiel_SchadensbewertungVMin<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/asbingowl/core#Schadensbeispiel_SchadensbewertungVMin</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -51854,23 +52005,6 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
             </dd>
          </dl>
       </div>
-   </div>
-</div><div id="annotationproperties">
-   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#http://www.w3.org/2002/07/owl#maxCardinality" title="http://www.w3.org/2002/07/owl#maxCardinality">
-            <span>max cardinality</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="http://www.w3.org/2002/07/owl#maxCardinality">
-      <h3>max cardinality<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2002/07/owl#maxCardinality</p>
    </div>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
