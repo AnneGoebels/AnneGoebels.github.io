@@ -6,8 +6,23 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/asbingowl/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/asbingowl/core"/>
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/asbingowl/core">
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:description xml:lang="de">&quot;The ASB-ING Ontology provides a framework for documenting and processing infrastructure inspection data in Linked Data formats.
+    It is directly derived from the ASB-ING UML model. This is the first published version of the ontology.</terms:description>
+        <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
+        <terms:title xml:lang="en">ASB-ING Ontology</terms:title>
+        <vann:preferredNamespacePrefix>asb</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/asbingowl/core#</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Anne Göbels</foaf:name>
+    </rdf:Description>
     
 
 
@@ -23,10 +38,59 @@
     
 
 
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
     
 
 
@@ -84,7 +148,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/asbingowl/core#ASBING13_Bauteilergaenzung">
-        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#ASBObjekt"/>
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#GesamteSchluessel"/>
         <rdfs:comment>Fuer Konvertierung hinzugefuegte Eigenschaften , nicht Teil des original ASB-ING Modells</rdfs:comment>
         <rdfs:label xml:lang="de">ASBING13_Bauteilergaenzung</rdfs:label>
@@ -4446,6 +4510,17 @@ Bei VZ-Bruecken ist der kleinste waagerechte Abstand zwischen der Bestandsachse 
     
 
 
+    <!-- https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung">
+        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#Systembezeichnung"/>
+        <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Schluesseltabellen"/>
+        <rdfs:label xml:lang="de">Systembezeichnung_Bezeichnung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/asbingowl/core#Systembezeichnung_Datum -->
 
 
@@ -6021,6 +6096,17 @@ Bei senkrechten Portalen entspricht die geschlossene Laenge der Tunnelroehre der
     
 
 
+    <!-- https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller">
+        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Schluesseltabellen"/>
+        <rdfs:label xml:lang="de">VerfahrenOberflaechenschutzsystem_Hersteller</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Schicht -->
 
 
@@ -6819,7 +6905,18 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Verkehrseinschraenkung"/>
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Verkehrsfuehrung"/>
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#ZusammengesetztesBauteil"/>
-        <rdfs:label>associatedWith</rdfs:label>
+        <rdfs:label xml:lang="de">associatedWith</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/asbingowl/core#beschreibtBauteil -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/asbingowl/core#beschreibtBauteil">
+        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition"/>
+        <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#AbstraktesBauteil"/>
+        <rdfs:label>beschreibtBauteil</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -6831,6 +6928,17 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
         <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#Schaden"/>
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Schaden"/>
         <rdfs:label>hasLaterState</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/asbingowl/core#hasModelRepresentation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/asbingowl/core#hasModelRepresentation">
+        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition"/>
+        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#AbstraktesBauteil"/>
+        <rdfs:label>hasModelRepresentation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -6854,18 +6962,6 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition"/>
         <rdfs:comment>Verbindung von SchadenObjekt zur Bauteildefinition aus ASB-ING 2013</rdfs:comment>
         <rdfs:label>hatBauteilDefinition</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/asbingowl/core#hatPruefDokumentation -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/asbingowl/core#hatPruefDokumentation">
-        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#SchadenObjekt"/>
-        <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Schaden"/>
-        <rdfs:comment>Verbindung von SchadenObjekt zu den einzelnen Versionen/Dokumentation pro Pruefjahr</rdfs:comment>
-        <rdfs:label>hatPruefDokumentation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -7044,7 +7140,7 @@ Bei Fluessen gilt: Grenzwasserstand (GW&lt;sub&gt;o&lt;/sub&gt;) = Wasserstand H
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Teilbauwerk"/>
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Trogbauwerk"/>
         <rdfs:range rdf:resource="https://w3id.org/asbingowl/core#Tunnel"/>
-        <rdfs:label>isPartOf</rdfs:label>
+        <rdfs:label xml:lang="de">isPartOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -9548,6 +9644,17 @@ Die Koordinaten sind immer von Hand zu vergeben.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/asbingowl/core#Schaden_Foto -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/asbingowl/core#Schaden_Foto">
+        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#Schaden"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="de">Schaden_Foto</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/asbingowl/core#Schaden_ID-Nummer-Schaden -->
 
 
@@ -10115,17 +10222,6 @@ Die Koordinaten sind immer von Hand zu vergeben.</rdfs:comment>
         <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#StrategieBMS"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label xml:lang="de">StrategieBMS_RelativesKostenNutzenVerhaeltnis</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung">
-        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#Systembezeichnung"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="de">Systembezeichnung_Bezeichnung</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -10703,17 +10799,6 @@ alt: Hier koennen die Angaben ueber Gefahren des Baugrundes (z.B. Bergsenkung), 
     
 
 
-    <!-- https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller">
-        <rdfs:domain rdf:resource="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="de">VerfahrenOberflaechenschutzsystem_Hersteller</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/asbingowl/core#Verkehrsanlage_AbweichendeZuordnung -->
 
 
@@ -11054,10 +11139,10 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
     
 
 
-    <!-- https://w3id.org/aoi#AreaOfInterest -->
+    <!-- http://xmlns.com/foaf/0.1/Person -->
 
 
-    <owl:Class rdf:about="https://w3id.org/aoi#AreaOfInterest"/>
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
     
 
 
@@ -14565,6 +14650,7 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
 
     <owl:Class rdf:about="https://w3id.org/asbingowl/core#GesamteSchluessel">
         <rdfs:comment>abstrakte Klasse fuer neue und alte Schluesseltabellen</rdfs:comment>
+        <rdfs:label>GesamteSchluessel</rdfs:label>
     </owl:Class>
     
 
@@ -15325,28 +15411,6 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/asbingowl/core#BauteilartOhneKatalog"/>
         <rdfs:label xml:lang="de">Leitung</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/asbingowl/core#LongitudinalCentralArea -->
-
-
-    <owl:Class rdf:about="https://w3id.org/asbingowl/core#LongitudinalCentralArea">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/aoi#AreaOfInterest"/>
-        <rdfs:comment>Hinzugefuegte Klasse zur AOI Ontolgoie zur Beruecksichtigung der Tiefe von Bauteilen</rdfs:comment>
-        <rdfs:label>LongitudinalCentralArea</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/asbingowl/core#LongitudinalPeriphalArea -->
-
-
-    <owl:Class rdf:about="https://w3id.org/asbingowl/core#LongitudinalPeriphalArea">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/aoi#AreaOfInterest"/>
-        <rdfs:comment>Hinzugefuegte Klasse zur AOI Ontolgoie zur Beruecksichtigung der Tiefe von Bauteilen</rdfs:comment>
-        <rdfs:label>LongitudinalPeriphalArea</rdfs:label>
     </owl:Class>
     
 
@@ -16937,6 +17001,13 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
     
 
 
+    <!-- https://w3id.org/asbingowl/core#Schluesseltabellen -->
+
+
+    <owl:Class rdf:about="https://w3id.org/asbingowl/core#Schluesseltabellen"/>
+    
+
+
     <!-- https://w3id.org/asbingowl/core#SchutzmassnahmenWasserTunnel -->
 
 
@@ -18034,14 +18105,14 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
     <owl:Class rdf:about="https://w3id.org/asbingowl/core#Systembezeichnung">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#Systembezeichnung_Datum"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#Systembezeichnung_Datum"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
@@ -19306,13 +19377,13 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Systembezeichnung"/>
+                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller"/>
+                <owl:onProperty rdf:resource="https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Systembezeichnung"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -20877,193 +20948,193 @@ Der komplexe Datentyp &lt;i&gt;Dauer&lt;/i&gt; ermoeglicht die Angabe einer Zeit
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    </rdf:Description>
-    <rdf:Description>
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">14</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     </rdf:Description>
     <rdf:Description>
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>

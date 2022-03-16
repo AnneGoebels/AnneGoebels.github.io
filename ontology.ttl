@@ -6,14 +6,52 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/asbingowl/core> .
 
-<https://w3id.org/asbingowl/core> rdf:type owl:Ontology .
+<https://w3id.org/asbingowl/core> rdf:type owl:Ontology ;
+                                   <http://purl.org/dc/terms/creator> _:genid1 ;
+                                   <http://purl.org/dc/terms/description> """\"The ASB-ING Ontology provides a framework for documenting and processing infrastructure inspection data in Linked Data formats.
+    It is directly derived from the ASB-ING UML model. This is the first published version of the ontology."""@de ;
+                                   <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                                   <http://purl.org/dc/terms/title> "ASB-ING Ontology"@en ;
+                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "asb" ;
+                                   <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/asbingowl/core#" .
+
+_:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/name> "Anne Göbels" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2002/07/owl#maxCardinality
 owl:maxCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -42,7 +80,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/asbingowl/core#ASBING13_Bauteilergaenzung
 :ASBING13_Bauteilergaenzung rdf:type owl:ObjectProperty ;
-                            rdfs:domain :ASBING13_BauteilDefinition ;
+                            rdfs:domain :ASBObjekt ;
                             rdfs:range :GesamteSchluessel ;
                             rdfs:comment "Fuer Konvertierung hinzugefuegte Eigenschaften , nicht Teil des original ASB-ING Modells" ;
                             rdfs:label "ASBING13_Bauteilergaenzung"@de .
@@ -2998,6 +3036,13 @@ Bei VZ-Bruecken ist der kleinste waagerechte Abstand zwischen der Bestandsachse 
                                       rdfs:label "StuetzwandModell_HoeheUndAbstandSpur"@de .
 
 
+###  https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung
+:Systembezeichnung_Bezeichnung rdf:type owl:ObjectProperty ;
+                               rdfs:domain :Systembezeichnung ;
+                               rdfs:range :Schluesseltabellen ;
+                               rdfs:label "Systembezeichnung_Bezeichnung"@de .
+
+
 ###  https://w3id.org/asbingowl/core#Systembezeichnung_Datum
 :Systembezeichnung_Datum rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf :hatSchluesselKennung ;
@@ -4065,6 +4110,13 @@ Bei senkrechten Portalen entspricht die geschlossene Laenge der Tunnelroehre der
                                                                rdfs:label "VerfahrenOberflaechenschutzsystem_ArtOberflaechenschutzsystem"@de .
 
 
+###  https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller
+:VerfahrenOberflaechenschutzsystem_Hersteller rdf:type owl:ObjectProperty ;
+                                              rdfs:domain :VerfahrenOberflaechenschutzsystem ;
+                                              rdfs:range :Schluesseltabellen ;
+                                              rdfs:label "VerfahrenOberflaechenschutzsystem_Hersteller"@de .
+
+
 ###  https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Schicht
 :VerfahrenOberflaechenschutzsystem_Schicht rdf:type owl:ObjectProperty ;
                                            rdfs:subPropertyOf :hatSchluesselKennung ;
@@ -4625,7 +4677,14 @@ Bei Fluessen gilt: Grenzwasserstand (GW<sub>o</sub>) = Wasserstand HSW (ggf. plu
                            :Verkehrseinschraenkung ,
                            :Verkehrsfuehrung ,
                            :ZusammengesetztesBauteil ;
-                rdfs:label "associatedWith" .
+                rdfs:label "associatedWith"@de .
+
+
+###  https://w3id.org/asbingowl/core#beschreibtBauteil
+:beschreibtBauteil rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ASBING13_BauteilDefinition ;
+                   rdfs:range :AbstraktesBauteil ;
+                   rdfs:label "beschreibtBauteil" .
 
 
 ###  https://w3id.org/asbingowl/core#hasLaterState
@@ -4633,6 +4692,13 @@ Bei Fluessen gilt: Grenzwasserstand (GW<sub>o</sub>) = Wasserstand HSW (ggf. plu
                rdfs:domain :Schaden ;
                rdfs:range :Schaden ;
                rdfs:label "hasLaterState" .
+
+
+###  https://w3id.org/asbingowl/core#hasModelRepresentation
+:hasModelRepresentation rdf:type owl:ObjectProperty ;
+                        rdfs:domain :ASBING13_BauteilDefinition ,
+                                    :AbstraktesBauteil ;
+                        rdfs:label "hasModelRepresentation" .
 
 
 ###  https://w3id.org/asbingowl/core#hasPriorState
@@ -4648,14 +4714,6 @@ Bei Fluessen gilt: Grenzwasserstand (GW<sub>o</sub>) = Wasserstand HSW (ggf. plu
                       rdfs:range :ASBING13_BauteilDefinition ;
                       rdfs:comment "Verbindung von SchadenObjekt zur Bauteildefinition aus ASB-ING 2013" ;
                       rdfs:label "hatBauteilDefinition" .
-
-
-###  https://w3id.org/asbingowl/core#hatPruefDokumentation
-:hatPruefDokumentation rdf:type owl:ObjectProperty ;
-                       rdfs:domain :SchadenObjekt ;
-                       rdfs:range :Schaden ;
-                       rdfs:comment "Verbindung von SchadenObjekt zu den einzelnen Versionen/Dokumentation pro Pruefjahr" ;
-                       rdfs:label "hatPruefDokumentation" .
 
 
 ###  https://w3id.org/asbingowl/core#hatSchluesselKennung
@@ -4826,7 +4884,7 @@ Bei Fluessen gilt: Grenzwasserstand (GW<sub>o</sub>) = Wasserstand HSW (ggf. plu
                      :Teilbauwerk ,
                      :Trogbauwerk ,
                      :Tunnel ;
-          rdfs:label "isPartOf" .
+          rdfs:label "isPartOf"@de .
 
 
 #################################################################
@@ -6436,6 +6494,13 @@ Die Koordinaten sind immer von Hand zu vergeben.""" ;
                                          rdfs:label "Rahmengeometrie_FusspunktAmEndeGelenkig"@de .
 
 
+###  https://w3id.org/asbingowl/core#Schaden_Foto
+:Schaden_Foto rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Schaden ;
+              rdfs:range xsd:string ;
+              rdfs:label "Schaden_Foto"@de .
+
+
 ###  https://w3id.org/asbingowl/core#Schaden_ID-Nummer-Schaden
 :Schaden_ID-Nummer-Schaden rdf:type owl:DatatypeProperty ;
                            rdfs:domain :Schaden ;
@@ -6801,13 +6866,6 @@ Die Koordinaten sind immer von Hand zu vergeben.""" ;
                                                rdfs:domain :StrategieBMS ;
                                                rdfs:range xsd:float ;
                                                rdfs:label "StrategieBMS_RelativesKostenNutzenVerhaeltnis"@de .
-
-
-###  https://w3id.org/asbingowl/core#Systembezeichnung_Bezeichnung
-:Systembezeichnung_Bezeichnung rdf:type owl:DatatypeProperty ;
-                               rdfs:domain :Systembezeichnung ;
-                               rdfs:range xsd:string ;
-                               rdfs:label "Systembezeichnung_Bezeichnung"@de .
 
 
 ###  https://w3id.org/asbingowl/core#Systembezeichnung_Regelwerk
@@ -7179,13 +7237,6 @@ alt: Hier koennen die Angaben ueber Gefahren des Baugrundes (z.B. Bergsenkung), 
                                       rdfs:label "VerfahrenKorrosionsschutz_Hersteller"@de .
 
 
-###  https://w3id.org/asbingowl/core#VerfahrenOberflaechenschutzsystem_Hersteller
-:VerfahrenOberflaechenschutzsystem_Hersteller rdf:type owl:DatatypeProperty ;
-                                              rdfs:domain :VerfahrenOberflaechenschutzsystem ;
-                                              rdfs:range xsd:string ;
-                                              rdfs:label "VerfahrenOberflaechenschutzsystem_Hersteller"@de .
-
-
 ###  https://w3id.org/asbingowl/core#Verkehrsanlage_AbweichendeZuordnung
 :Verkehrsanlage_AbweichendeZuordnung rdf:type owl:DatatypeProperty ;
                                      rdfs:domain :Verkehrsanlage ;
@@ -7406,8 +7457,8 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
 #    Classes
 #################################################################
 
-###  https://w3id.org/aoi#AreaOfInterest
-<https://w3id.org/aoi#AreaOfInterest> rdf:type owl:Class .
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
 
 
 ###  https://w3id.org/asbingowl/core#ASBING13_BauteilDefinition
@@ -9563,7 +9614,8 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
 
 ###  https://w3id.org/asbingowl/core#GesamteSchluessel
 :GesamteSchluessel rdf:type owl:Class ;
-                   rdfs:comment "abstrakte Klasse fuer neue und alte Schluesseltabellen" .
+                   rdfs:comment "abstrakte Klasse fuer neue und alte Schluesseltabellen" ;
+                   rdfs:label "GesamteSchluessel" .
 
 
 ###  https://w3id.org/asbingowl/core#Geschwindigkeit
@@ -10032,20 +10084,6 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
                              ] ;
          rdfs:subClassOf :BauteilartOhneKatalog ;
          rdfs:label "Leitung"@de .
-
-
-###  https://w3id.org/asbingowl/core#LongitudinalCentralArea
-:LongitudinalCentralArea rdf:type owl:Class ;
-                         rdfs:subClassOf <https://w3id.org/aoi#AreaOfInterest> ;
-                         rdfs:comment "Hinzugefuegte Klasse zur AOI Ontolgoie zur Beruecksichtigung der Tiefe von Bauteilen" ;
-                         rdfs:label "LongitudinalCentralArea" .
-
-
-###  https://w3id.org/asbingowl/core#LongitudinalPeriphalArea
-:LongitudinalPeriphalArea rdf:type owl:Class ;
-                          rdfs:subClassOf <https://w3id.org/aoi#AreaOfInterest> ;
-                          rdfs:comment "Hinzugefuegte Klasse zur AOI Ontolgoie zur Beruecksichtigung der Tiefe von Bauteilen" ;
-                          rdfs:label "LongitudinalPeriphalArea" .
 
 
 ###  https://w3id.org/asbingowl/core#LueftungsartRettungsstollen
@@ -11030,6 +11068,10 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
          rdfs:label "Schiene"@de .
 
 
+###  https://w3id.org/asbingowl/core#Schluesseltabellen
+:Schluesseltabellen rdf:type owl:Class .
+
+
 ###  https://w3id.org/asbingowl/core#SchutzmassnahmenWasserTunnel
 :SchutzmassnahmenWasserTunnel rdf:type owl:Class ;
                               rdfs:label "SchutzmassnahmenWasserTunnel"@de .
@@ -11702,12 +11744,12 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
 ###  https://w3id.org/asbingowl/core#Systembezeichnung
 :Systembezeichnung rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                         owl:onProperty :Systembezeichnung_Datum ;
-                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty :Systembezeichnung_Bezeichnung ;
                                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :Systembezeichnung_Datum ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :Systembezeichnung_Regelwerk ;
@@ -12520,11 +12562,11 @@ Fuer die WSV ist als Sachverhalt eine Bundeswasserstrasse zu erfassen. Dieser Sa
                                                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :VerfahrenOberflaechenschutzsystem_Systembezeichnung ;
+                                                         owl:onProperty :VerfahrenOberflaechenschutzsystem_Hersteller ;
                                                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :VerfahrenOberflaechenschutzsystem_Hersteller ;
+                                                         owl:onProperty :VerfahrenOberflaechenschutzsystem_Systembezeichnung ;
                                                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                        ] ;
                                    rdfs:label "VerfahrenOberflaechenschutzsystem"@de .
@@ -13546,193 +13588,193 @@ Der komplexe Datentyp <i>Dauer</i> ermoeglicht die Angabe einer Zeitdauer in ver
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
 [ owl:maxCardinality "14"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:maxCardinality "1"^^xsd:nonNegativeInteger
