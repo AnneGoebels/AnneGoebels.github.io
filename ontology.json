@@ -8646,7 +8646,7 @@
   "@id" : "_:genid871",
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "14"
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid872",
@@ -8734,7 +8734,7 @@
   "@id" : "_:genid884",
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+    "@value" : "14"
   } ]
 }, {
   "@id" : "_:genid885",
