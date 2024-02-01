@@ -1,0 +1,710 @@
+[ {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/reloc#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Anne Göbels"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "Relative Location Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#2D2DTopologicalRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/reloc#2DTopologicalRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "2D Topological Relation"
+  }, {
+    "@language" : "de",
+    "@value" : "2D Topologische Beziehung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#hasRelativeSpatialRelationTo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Bottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bottom"
+  }, {
+    "@language" : "de",
+    "@value" : "Unten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#VerticalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contained in"
+  }, {
+    "@language" : "de",
+    "@value" : "Enthalten in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#2D2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Bottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the lower area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im unteren Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Bottom"
+  }, {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Front",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the front area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im vorderen Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#Front"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Left",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the left area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im linken Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#Left"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Longitudinal_Center",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the longitudinal central area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im zentralen Längsbereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#LongitudinalCenter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Rear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the rear area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im hinteren Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#Rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the right area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im rechten Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#Right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Top",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the upper area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im oberen Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#Top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Transversal_Center",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the transversal central area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im zentralen Querbereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#TransversalCenter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#ContainedIn_Vertical_Center",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the vertical central area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im zentralen vertikalen Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#ContainedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#VerticalCenter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#DirectionalRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Directional Relation"
+  }, {
+    "@language" : "de",
+    "@value" : "Richtungsbezogene Relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#hasRelativeSpatialRelationTo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Equal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Equal"
+  }, {
+    "@language" : "de",
+    "@value" : "Gleich"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Equal_Longitudinal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has the same origin and lenght as"
+  }, {
+    "@language" : "de",
+    "@value" : "hat den gleichen Ursprung und die gleiche Länge wie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Equal_Transversal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has the same origin and width as"
+  }, {
+    "@language" : "de",
+    "@value" : "hat den gleichen Ursprung und die gleiche Breite wie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Equal_Vertical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has the same vertical origin and height as"
+  }, {
+    "@language" : "de",
+    "@value" : "hat den gleiche Ursprung und die gleiche Höhe wie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Front",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Front"
+  }, {
+    "@language" : "de",
+    "@value" : "Vorne"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#LongitudinalAxisRelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Anfang"
+  }, {
+    "@language" : "de",
+    "@value" : "Vorderseite"
+  }, {
+    "@language" : "de",
+    "@value" : "Vorn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Intersect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersect"
+  }, {
+    "@language" : "de",
+    "@value" : "überschneiden"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Intersect_Bottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects with the bottom of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die Unterseite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Bottom"
+  }, {
+    "@id" : "https://w3id.org/reloc#Intersect"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Intersect_Front",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersect with the front side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die Vorderseite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Front"
+  }, {
+    "@id" : "https://w3id.org/reloc#Intersect"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Intersect_Left",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects with the left side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die linke Seite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#Left"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Intersect_Rear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects with the rear side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die hintere Seite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#Rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Intersect_Right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects with the right side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die rechte Seite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#Right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Intersect_Top",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects with the top of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die Oberseite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#Top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Left",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Left"
+  }, {
+    "@language" : "de",
+    "@value" : "Links"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#TransversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#LongitudinalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Longitudinal Axis Relation"
+  }, {
+    "@language" : "de",
+    "@value" : "Längsachsenbezogene Relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#DirectionalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#LongitudinalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Longitudinal Center"
+  }, {
+    "@language" : "de",
+    "@value" : "Mitte der Längsachse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#LongitudinalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Meet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Berühren"
+  }, {
+    "@language" : "en",
+    "@value" : "Meet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Meet_Bottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly under"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt unter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Bottom"
+  }, {
+    "@id" : "https://w3id.org/reloc#Meet"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/reloc#Meet_Top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Meet_Front",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly in front of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt vor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Front"
+  }, {
+    "@id" : "https://w3id.org/reloc#Meet"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/reloc#Meet_Rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Meet_Left",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly left of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt links von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Left"
+  }, {
+    "@id" : "https://w3id.org/reloc#Meet"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/reloc#Meet_Right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Meet_Rear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly behind"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt hinter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Meet"
+  }, {
+    "@id" : "https://w3id.org/reloc#Rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Meet_Right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly right of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt rechts von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Meet"
+  }, {
+    "@id" : "https://w3id.org/reloc#Right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Meet_Top",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly on top of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt über"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#Meet"
+  }, {
+    "@id" : "https://w3id.org/reloc#Top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Rear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hinten"
+  }, {
+    "@language" : "en",
+    "@value" : "Rear"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#LongitudinalAxisRelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Ende"
+  }, {
+    "@language" : "de",
+    "@value" : "Rückseite"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#RelativeLocationWithOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "relative location with Offset"
+  }, {
+    "@language" : "de",
+    "@value" : "relativer Ort mit festem Abstand"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rechts"
+  }, {
+    "@language" : "en",
+    "@value" : "Right"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#TransversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#Top",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Oben"
+  }, {
+    "@language" : "en",
+    "@value" : "Top"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#VerticalAxisRelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Auf"
+  }, {
+    "@language" : "de",
+    "@value" : "Oberseite"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#TransversalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Querachsenbezogene Relation"
+  }, {
+    "@language" : "en",
+    "@value" : "TransversalAxisRelation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#DirectionalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#TransversalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mitte der Querachse"
+  }, {
+    "@language" : "en",
+    "@value" : "TransversalCenter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#TransversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#VerticalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ort entlang der Vertikalachse"
+  }, {
+    "@language" : "en",
+    "@value" : "VerticalAxisRelation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#DirectionalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#VerticalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mitte der Vertikalachse"
+  }, {
+    "@language" : "en",
+    "@value" : "VerticalCenter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#VerticalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#hasOffsetValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/reloc#RelativeLocationWithOffset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has measured distance value"
+  }, {
+    "@language" : "de",
+    "@value" : "hat gemessenen Abstandswert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#hasRelativeLocationWithOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has relative location with Offset"
+  }, {
+    "@language" : "de",
+    "@value" : "hat festen Abstand zu einem relativen Ort"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#hasRelativeSpatialRelationTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Relative Spatial Relation To"
+  }, {
+    "@language" : "de",
+    "@value" : "hat relativen räumlichen Bezug zu"
+  } ]
+} ]

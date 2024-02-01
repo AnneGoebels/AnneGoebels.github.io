@@ -1,0 +1,379 @@
+<https://w3id.org/reloc#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/reloc#> <http://purl.org/dc/elements/1.1/creator> "Anne Göbels" .
+<https://w3id.org/reloc#> <http://purl.org/dc/elements/1.1/title> "Relative Location Ontology" .
+<https://w3id.org/reloc#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/reloc#Bottom
+<https://w3id.org/reloc#Bottom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Bottom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#VerticalAxisRelation> .
+<https://w3id.org/reloc#Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "Bottom"@en .
+<https://w3id.org/reloc#Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "Unten"@de .
+# 
+# https://w3id.org/reloc#ContainedIn
+<https://w3id.org/reloc#ContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#2D2DTopologicalRelation> .
+<https://w3id.org/reloc#2D2DTopologicalRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/reloc#ContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Contained in"@en .
+<https://w3id.org/reloc#ContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Enthalten in"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Bottom
+<https://w3id.org/reloc#ContainedIn_Bottom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Bottom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Bottom> .
+<https://w3id.org/reloc#ContainedIn_Bottom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the lower area of"@en .
+<https://w3id.org/reloc#ContainedIn_Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "ist im unteren Bereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Front
+<https://w3id.org/reloc#ContainedIn_Front> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Front> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Front> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Front> .
+<https://w3id.org/reloc#ContainedIn_Front> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the front area of"@en .
+<https://w3id.org/reloc#ContainedIn_Front> <http://www.w3.org/2000/01/rdf-schema#label> "ist im vorderen Bereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Left
+<https://w3id.org/reloc#ContainedIn_Left> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Left> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Left> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Left> .
+<https://w3id.org/reloc#ContainedIn_Left> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the left area of"@en .
+<https://w3id.org/reloc#ContainedIn_Left> <http://www.w3.org/2000/01/rdf-schema#label> "ist im linken Bereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Longitudinal_Center
+<https://w3id.org/reloc#ContainedIn_Longitudinal_Center> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Longitudinal_Center> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Longitudinal_Center> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#LongitudinalCenter> .
+<https://w3id.org/reloc#ContainedIn_Longitudinal_Center> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the longitudinal central area of"@en .
+<https://w3id.org/reloc#ContainedIn_Longitudinal_Center> <http://www.w3.org/2000/01/rdf-schema#label> "ist im zentralen Längsbereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Rear
+<https://w3id.org/reloc#ContainedIn_Rear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Rear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Rear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Rear> .
+<https://w3id.org/reloc#ContainedIn_Rear> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the rear area of"@en .
+<https://w3id.org/reloc#ContainedIn_Rear> <http://www.w3.org/2000/01/rdf-schema#label> "ist im hinteren Bereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Right
+<https://w3id.org/reloc#ContainedIn_Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Right> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Right> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Right> .
+<https://w3id.org/reloc#ContainedIn_Right> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the right area of"@en .
+<https://w3id.org/reloc#ContainedIn_Right> <http://www.w3.org/2000/01/rdf-schema#label> "ist im rechten Bereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Top
+<https://w3id.org/reloc#ContainedIn_Top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Top> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Top> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Top> .
+<https://w3id.org/reloc#ContainedIn_Top> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the upper area of"@en .
+<https://w3id.org/reloc#ContainedIn_Top> <http://www.w3.org/2000/01/rdf-schema#label> "ist im oberen Bereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Transversal_Center
+<https://w3id.org/reloc#ContainedIn_Transversal_Center> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Transversal_Center> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Transversal_Center> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#TransversalCenter> .
+<https://w3id.org/reloc#ContainedIn_Transversal_Center> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the transversal central area of"@en .
+<https://w3id.org/reloc#ContainedIn_Transversal_Center> <http://www.w3.org/2000/01/rdf-schema#label> "ist im zentralen Querbereich von"@de .
+# 
+# https://w3id.org/reloc#ContainedIn_Vertical_Center
+<https://w3id.org/reloc#ContainedIn_Vertical_Center> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#ContainedIn_Vertical_Center> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#ContainedIn> .
+<https://w3id.org/reloc#ContainedIn_Vertical_Center> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#VerticalCenter> .
+<https://w3id.org/reloc#ContainedIn_Vertical_Center> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in the vertical central area of"@en .
+<https://w3id.org/reloc#ContainedIn_Vertical_Center> <http://www.w3.org/2000/01/rdf-schema#label> "ist im zentralen vertikalen Bereich von"@de .
+# 
+# https://w3id.org/reloc#DirectionalRelation
+<https://w3id.org/reloc#DirectionalRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#DirectionalRelation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#hasRelativeSpatialRelationTo> .
+<https://w3id.org/reloc#DirectionalRelation> <http://www.w3.org/2000/01/rdf-schema#label> "Directional Relation"@en .
+<https://w3id.org/reloc#DirectionalRelation> <http://www.w3.org/2000/01/rdf-schema#label> "Richtungsbezogene Relation"@de .
+# 
+# https://w3id.org/reloc#Equal
+<https://w3id.org/reloc#Equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Equal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation> .
+<https://w3id.org/reloc#Equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/reloc#Equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/reloc#Equal> <http://www.w3.org/2000/01/rdf-schema#label> "Equal"@en .
+<https://w3id.org/reloc#Equal> <http://www.w3.org/2000/01/rdf-schema#label> "Gleich"@de .
+# 
+# https://w3id.org/reloc#Equal_Longitudinal
+<https://w3id.org/reloc#Equal_Longitudinal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Equal_Longitudinal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation> .
+<https://w3id.org/reloc#Equal_Longitudinal> <http://www.w3.org/2000/01/rdf-schema#label> "has the same origin and lenght as"@en .
+<https://w3id.org/reloc#Equal_Longitudinal> <http://www.w3.org/2000/01/rdf-schema#label> "hat den gleichen Ursprung und die gleiche Länge wie"@de .
+# 
+# https://w3id.org/reloc#Equal_Transversal
+<https://w3id.org/reloc#Equal_Transversal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Equal_Transversal> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation> .
+<https://w3id.org/reloc#Equal_Transversal> <http://www.w3.org/2000/01/rdf-schema#label> "has the same origin and width as"@en .
+<https://w3id.org/reloc#Equal_Transversal> <http://www.w3.org/2000/01/rdf-schema#label> "hat den gleichen Ursprung und die gleiche Breite wie"@de .
+# 
+# https://w3id.org/reloc#Equal_Vertical
+<https://w3id.org/reloc#Equal_Vertical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Equal_Vertical> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation> .
+<https://w3id.org/reloc#Equal_Vertical> <http://www.w3.org/2000/01/rdf-schema#label> "has the same vertical origin and height as"@en .
+<https://w3id.org/reloc#Equal_Vertical> <http://www.w3.org/2000/01/rdf-schema#label> "hat den gleiche Ursprung und die gleiche Höhe wie"@de .
+# 
+# https://w3id.org/reloc#Front
+<https://w3id.org/reloc#Front> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Front> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#LongitudinalAxisRelation> .
+<https://w3id.org/reloc#Front> <http://www.w3.org/2000/01/rdf-schema#label> "Front"@en .
+<https://w3id.org/reloc#Front> <http://www.w3.org/2000/01/rdf-schema#label> "Vorne"@de .
+<https://w3id.org/reloc#Front> <http://www.w3.org/2004/02/skos/core#altLabel> "Anfang"@de .
+<https://w3id.org/reloc#Front> <http://www.w3.org/2004/02/skos/core#altLabel> "Vorderseite"@de .
+<https://w3id.org/reloc#Front> <http://www.w3.org/2004/02/skos/core#altLabel> "Vorn"@de .
+# 
+# https://w3id.org/reloc#Intersect
+<https://w3id.org/reloc#Intersect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Intersect> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#2DTopologicalRelation> .
+<https://w3id.org/reloc#Intersect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/reloc#Intersect> <http://www.w3.org/2000/01/rdf-schema#label> "Intersect"@en .
+<https://w3id.org/reloc#Intersect> <http://www.w3.org/2000/01/rdf-schema#label> "überschneiden"@de .
+# 
+# https://w3id.org/reloc#Intersect_Bottom
+<https://w3id.org/reloc#Intersect_Bottom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Intersect_Bottom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Bottom> .
+<https://w3id.org/reloc#Intersect_Bottom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Intersect> .
+<https://w3id.org/reloc#Intersect_Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "Intersects with the bottom of"@en .
+<https://w3id.org/reloc#Intersect_Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "schneidet die Unterseite von"@de .
+# 
+# https://w3id.org/reloc#Intersect_Front
+<https://w3id.org/reloc#Intersect_Front> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Intersect_Front> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Front> .
+<https://w3id.org/reloc#Intersect_Front> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Intersect> .
+<https://w3id.org/reloc#Intersect_Front> <http://www.w3.org/2000/01/rdf-schema#label> "Intersect with the front side of"@en .
+<https://w3id.org/reloc#Intersect_Front> <http://www.w3.org/2000/01/rdf-schema#label> "schneidet die Vorderseite von"@de .
+# 
+# https://w3id.org/reloc#Intersect_Left
+<https://w3id.org/reloc#Intersect_Left> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Intersect_Left> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Intersect> .
+<https://w3id.org/reloc#Intersect_Left> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Left> .
+<https://w3id.org/reloc#Intersect_Left> <http://www.w3.org/2000/01/rdf-schema#label> "Intersects with the left side of"@en .
+<https://w3id.org/reloc#Intersect_Left> <http://www.w3.org/2000/01/rdf-schema#label> "schneidet die linke Seite von"@de .
+# 
+# https://w3id.org/reloc#Intersect_Rear
+<https://w3id.org/reloc#Intersect_Rear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Intersect_Rear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Intersect> .
+<https://w3id.org/reloc#Intersect_Rear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Rear> .
+<https://w3id.org/reloc#Intersect_Rear> <http://www.w3.org/2000/01/rdf-schema#label> "Intersects with the rear side of"@en .
+<https://w3id.org/reloc#Intersect_Rear> <http://www.w3.org/2000/01/rdf-schema#label> "schneidet die hintere Seite von"@de .
+# 
+# https://w3id.org/reloc#Intersect_Right
+<https://w3id.org/reloc#Intersect_Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Intersect_Right> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Intersect> .
+<https://w3id.org/reloc#Intersect_Right> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Right> .
+<https://w3id.org/reloc#Intersect_Right> <http://www.w3.org/2000/01/rdf-schema#label> "Intersects with the right side of"@en .
+<https://w3id.org/reloc#Intersect_Right> <http://www.w3.org/2000/01/rdf-schema#label> "schneidet die rechte Seite von"@de .
+# 
+# https://w3id.org/reloc#Intersect_Top
+<https://w3id.org/reloc#Intersect_Top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Intersect_Top> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Intersect> .
+<https://w3id.org/reloc#Intersect_Top> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Top> .
+<https://w3id.org/reloc#Intersect_Top> <http://www.w3.org/2000/01/rdf-schema#label> "Intersects with the top of"@en .
+<https://w3id.org/reloc#Intersect_Top> <http://www.w3.org/2000/01/rdf-schema#label> "schneidet die Oberseite von"@de .
+# 
+# https://w3id.org/reloc#Left
+<https://w3id.org/reloc#Left> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Left> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#TransversalAxisRelation> .
+<https://w3id.org/reloc#Left> <http://www.w3.org/2000/01/rdf-schema#label> "Left"@en .
+<https://w3id.org/reloc#Left> <http://www.w3.org/2000/01/rdf-schema#label> "Links"@de .
+# 
+# https://w3id.org/reloc#LongitudinalAxisRelation
+<https://w3id.org/reloc#LongitudinalAxisRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#LongitudinalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#DirectionalRelation> .
+<https://w3id.org/reloc#LongitudinalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#label> "Longitudinal Axis Relation"@en .
+<https://w3id.org/reloc#LongitudinalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#label> "Längsachsenbezogene Relation"@de .
+# 
+# https://w3id.org/reloc#LongitudinalCenter
+<https://w3id.org/reloc#LongitudinalCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#LongitudinalCenter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#LongitudinalAxisRelation> .
+<https://w3id.org/reloc#LongitudinalCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Longitudinal Center"@en .
+<https://w3id.org/reloc#LongitudinalCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Mitte der Längsachse"@de .
+# 
+# https://w3id.org/reloc#Meet
+<https://w3id.org/reloc#Meet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Meet> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#2DTopologicalRelation> .
+<https://w3id.org/reloc#Meet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/reloc#Meet> <http://www.w3.org/2000/01/rdf-schema#label> "Berühren"@de .
+<https://w3id.org/reloc#Meet> <http://www.w3.org/2000/01/rdf-schema#label> "Meet"@en .
+# 
+# https://w3id.org/reloc#Meet_Bottom
+<https://w3id.org/reloc#Meet_Bottom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Meet_Bottom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Bottom> .
+<https://w3id.org/reloc#Meet_Bottom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Meet> .
+<https://w3id.org/reloc#Meet_Bottom> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/reloc#Meet_Top> .
+<https://w3id.org/reloc#Meet_Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "directly under"@en .
+<https://w3id.org/reloc#Meet_Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "direkt unter"@de .
+# 
+# https://w3id.org/reloc#Meet_Front
+<https://w3id.org/reloc#Meet_Front> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Meet_Front> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Front> .
+<https://w3id.org/reloc#Meet_Front> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Meet> .
+<https://w3id.org/reloc#Meet_Front> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/reloc#Meet_Rear> .
+<https://w3id.org/reloc#Meet_Front> <http://www.w3.org/2000/01/rdf-schema#label> "directly in front of"@en .
+<https://w3id.org/reloc#Meet_Front> <http://www.w3.org/2000/01/rdf-schema#label> "direkt vor"@de .
+# 
+# https://w3id.org/reloc#Meet_Left
+<https://w3id.org/reloc#Meet_Left> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Meet_Left> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Left> .
+<https://w3id.org/reloc#Meet_Left> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Meet> .
+<https://w3id.org/reloc#Meet_Left> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/reloc#Meet_Right> .
+<https://w3id.org/reloc#Meet_Left> <http://www.w3.org/2000/01/rdf-schema#label> "directly left of"@en .
+<https://w3id.org/reloc#Meet_Left> <http://www.w3.org/2000/01/rdf-schema#label> "direkt links von"@de .
+# 
+# https://w3id.org/reloc#Meet_Rear
+<https://w3id.org/reloc#Meet_Rear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Meet_Rear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Meet> .
+<https://w3id.org/reloc#Meet_Rear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Rear> .
+<https://w3id.org/reloc#Meet_Rear> <http://www.w3.org/2000/01/rdf-schema#label> "directly behind"@en .
+<https://w3id.org/reloc#Meet_Rear> <http://www.w3.org/2000/01/rdf-schema#label> "direkt hinter"@de .
+# 
+# https://w3id.org/reloc#Meet_Right
+<https://w3id.org/reloc#Meet_Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Meet_Right> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Meet> .
+<https://w3id.org/reloc#Meet_Right> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Right> .
+<https://w3id.org/reloc#Meet_Right> <http://www.w3.org/2000/01/rdf-schema#label> "directly right of"@en .
+<https://w3id.org/reloc#Meet_Right> <http://www.w3.org/2000/01/rdf-schema#label> "direkt rechts von"@de .
+# 
+# https://w3id.org/reloc#Meet_Top
+<https://w3id.org/reloc#Meet_Top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Meet_Top> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Meet> .
+<https://w3id.org/reloc#Meet_Top> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#Top> .
+<https://w3id.org/reloc#Meet_Top> <http://www.w3.org/2000/01/rdf-schema#label> "directly on top of"@en .
+<https://w3id.org/reloc#Meet_Top> <http://www.w3.org/2000/01/rdf-schema#label> "direkt über"@de .
+# 
+# https://w3id.org/reloc#Rear
+<https://w3id.org/reloc#Rear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Rear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#LongitudinalAxisRelation> .
+<https://w3id.org/reloc#Rear> <http://www.w3.org/2000/01/rdf-schema#label> "Hinten"@de .
+<https://w3id.org/reloc#Rear> <http://www.w3.org/2000/01/rdf-schema#label> "Rear"@en .
+<https://w3id.org/reloc#Rear> <http://www.w3.org/2004/02/skos/core#altLabel> "Ende"@de .
+<https://w3id.org/reloc#Rear> <http://www.w3.org/2004/02/skos/core#altLabel> "Rückseite"@de .
+# 
+# https://w3id.org/reloc#Right
+<https://w3id.org/reloc#Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Right> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#TransversalAxisRelation> .
+<https://w3id.org/reloc#Right> <http://www.w3.org/2000/01/rdf-schema#label> "Rechts"@de .
+<https://w3id.org/reloc#Right> <http://www.w3.org/2000/01/rdf-schema#label> "Right"@en .
+# 
+# https://w3id.org/reloc#Top
+<https://w3id.org/reloc#Top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#Top> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#VerticalAxisRelation> .
+<https://w3id.org/reloc#Top> <http://www.w3.org/2000/01/rdf-schema#label> "Oben"@de .
+<https://w3id.org/reloc#Top> <http://www.w3.org/2000/01/rdf-schema#label> "Top"@en .
+<https://w3id.org/reloc#Top> <http://www.w3.org/2004/02/skos/core#altLabel> "Auf"@de .
+<https://w3id.org/reloc#Top> <http://www.w3.org/2004/02/skos/core#altLabel> "Oberseite"@de .
+# 
+# https://w3id.org/reloc#TransversalAxisRelation
+<https://w3id.org/reloc#TransversalAxisRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#TransversalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#DirectionalRelation> .
+<https://w3id.org/reloc#TransversalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#label> "Querachsenbezogene Relation"@de .
+<https://w3id.org/reloc#TransversalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#label> "TransversalAxisRelation"@en .
+# 
+# https://w3id.org/reloc#TransversalCenter
+<https://w3id.org/reloc#TransversalCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#TransversalCenter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#TransversalAxisRelation> .
+<https://w3id.org/reloc#TransversalCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Mitte der Querachse"@de .
+<https://w3id.org/reloc#TransversalCenter> <http://www.w3.org/2000/01/rdf-schema#label> "TransversalCenter"@en .
+# 
+# https://w3id.org/reloc#VerticalAxisRelation
+<https://w3id.org/reloc#VerticalAxisRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#VerticalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#DirectionalRelation> .
+<https://w3id.org/reloc#VerticalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#label> "Ort entlang der Vertikalachse"@de .
+<https://w3id.org/reloc#VerticalAxisRelation> <http://www.w3.org/2000/01/rdf-schema#label> "VerticalAxisRelation"@en .
+# 
+# https://w3id.org/reloc#VerticalCenter
+<https://w3id.org/reloc#VerticalCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#VerticalCenter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#VerticalAxisRelation> .
+<https://w3id.org/reloc#VerticalCenter> <http://www.w3.org/2000/01/rdf-schema#label> "Mitte der Vertikalachse"@de .
+<https://w3id.org/reloc#VerticalCenter> <http://www.w3.org/2000/01/rdf-schema#label> "VerticalCenter"@en .
+# 
+# https://w3id.org/reloc#hasRelativeLocationWithOffset
+<https://w3id.org/reloc#hasRelativeLocationWithOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#hasRelativeLocationWithOffset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset> .
+<http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/reloc#hasRelativeLocationWithOffset> <http://www.w3.org/2000/01/rdf-schema#label> "has relative location with Offset"@en .
+<https://w3id.org/reloc#hasRelativeLocationWithOffset> <http://www.w3.org/2000/01/rdf-schema#label> "hat festen Abstand zu einem relativen Ort"@de .
+# 
+# https://w3id.org/reloc#hasRelativeSpatialRelationTo
+<https://w3id.org/reloc#hasRelativeSpatialRelationTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#hasRelativeSpatialRelationTo> <http://www.w3.org/2000/01/rdf-schema#label> "has Relative Spatial Relation To"@en .
+<https://w3id.org/reloc#hasRelativeSpatialRelationTo> <http://www.w3.org/2000/01/rdf-schema#label> "hat relativen räumlichen Bezug zu"@de .
+# 
+# https://w3id.org/reloc#2D2DTopologicalRelation
+# 
+# https://w3id.org/reloc#2DTopologicalRelation
+<https://w3id.org/reloc#2DTopologicalRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/reloc#2DTopologicalRelation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/reloc#hasRelativeSpatialRelationTo> .
+<https://w3id.org/reloc#2DTopologicalRelation> <http://www.w3.org/2000/01/rdf-schema#label> "2D Topological Relation"@en .
+<https://w3id.org/reloc#2DTopologicalRelation> <http://www.w3.org/2000/01/rdf-schema#label> "2D Topologische Beziehung"@de .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/reloc#hasOffsetValue
+<https://w3id.org/reloc#hasOffsetValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/reloc#hasOffsetValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/reloc#RelativeLocationWithOffset> .
+<https://w3id.org/reloc#hasOffsetValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/reloc#hasOffsetValue> <http://www.w3.org/2000/01/rdf-schema#label> "has measured distance value"@en .
+<https://w3id.org/reloc#hasOffsetValue> <http://www.w3.org/2000/01/rdf-schema#label> "hat gemessenen Abstandswert"@de .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset
+# 
+# https://w3id.org/reloc#RelativeLocationWithOffset
+<https://w3id.org/reloc#RelativeLocationWithOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/reloc#RelativeLocationWithOffset> <http://www.w3.org/2000/01/rdf-schema#label> "relative location with Offset"@en .
+<https://w3id.org/reloc#RelativeLocationWithOffset> <http://www.w3.org/2000/01/rdf-schema#label> "relativer Ort mit festem Abstand"@de .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

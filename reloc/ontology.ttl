@@ -1,0 +1,423 @@
+@prefix : <https://w3id.org/reloc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/reloc#> .
+
+<https://w3id.org/reloc#> rdf:type owl:Ontology ;
+                           <http://purl.org/dc/elements/1.1/creator> "Anne Göbels" ;
+                           <http://purl.org/dc/elements/1.1/title> "Relative Location Ontology" ;
+                           owl:versionInfo "0.0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation
+<http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/reloc#Bottom
+:Bottom rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :VerticalAxisRelation ;
+        rdfs:label "Bottom"@en ,
+                   "Unten"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn
+:ContainedIn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <https://w3id.org/reloc#2D2DTopologicalRelation> ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:label "Contained in"@en ,
+                        "Enthalten in"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Bottom
+:ContainedIn_Bottom rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :Bottom ,
+                                       :ContainedIn ;
+                    rdfs:label "is contained in the lower area of"@en ,
+                               "ist im unteren Bereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Front
+:ContainedIn_Front rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :ContainedIn ,
+                                      :Front ;
+                   rdfs:label "is contained in the front area of"@en ,
+                              "ist im vorderen Bereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Left
+:ContainedIn_Left rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :ContainedIn ,
+                                     :Left ;
+                  rdfs:label "is contained in the left area of"@en ,
+                             "ist im linken Bereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Longitudinal_Center
+:ContainedIn_Longitudinal_Center rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :ContainedIn ,
+                                                    :LongitudinalCenter ;
+                                 rdfs:label "is contained in the longitudinal central area of"@en ,
+                                            "ist im zentralen Längsbereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Rear
+:ContainedIn_Rear rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :ContainedIn ,
+                                     :Rear ;
+                  rdfs:label "is contained in the rear area of"@en ,
+                             "ist im hinteren Bereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Right
+:ContainedIn_Right rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :ContainedIn ,
+                                      :Right ;
+                   rdfs:label "is contained in the right area of"@en ,
+                              "ist im rechten Bereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Top
+:ContainedIn_Top rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :ContainedIn ,
+                                    :Top ;
+                 rdfs:label "is contained in the upper area of"@en ,
+                            "ist im oberen Bereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Transversal_Center
+:ContainedIn_Transversal_Center rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :ContainedIn ,
+                                                   :TransversalCenter ;
+                                rdfs:label "is contained in the transversal central area of"@en ,
+                                           "ist im zentralen Querbereich von"@de .
+
+
+###  https://w3id.org/reloc#ContainedIn_Vertical_Center
+:ContainedIn_Vertical_Center rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :ContainedIn ,
+                                                :VerticalCenter ;
+                             rdfs:label "is contained in the vertical central area of"@en ,
+                                        "ist im zentralen vertikalen Bereich von"@de .
+
+
+###  https://w3id.org/reloc#DirectionalRelation
+:DirectionalRelation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasRelativeSpatialRelationTo ;
+                     rdfs:label "Directional Relation"@en ,
+                                "Richtungsbezogene Relation"@de .
+
+
+###  https://w3id.org/reloc#Equal
+:Equal rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation> ;
+       rdf:type owl:SymmetricProperty ,
+                owl:TransitiveProperty ;
+       rdfs:label "Equal"@en ,
+                  "Gleich"@de .
+
+
+###  https://w3id.org/reloc#Equal_Longitudinal
+:Equal_Longitudinal rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation> ;
+                    rdfs:label "has the same origin and lenght as"@en ,
+                               "hat den gleichen Ursprung und die gleiche Länge wie"@de .
+
+
+###  https://w3id.org/reloc#Equal_Transversal
+:Equal_Transversal rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation> ;
+                   rdfs:label "has the same origin and width as"@en ,
+                              "hat den gleichen Ursprung und die gleiche Breite wie"@de .
+
+
+###  https://w3id.org/reloc#Equal_Vertical
+:Equal_Vertical rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation> ;
+                rdfs:label "has the same vertical origin and height as"@en ,
+                           "hat den gleiche Ursprung und die gleiche Höhe wie"@de .
+
+
+###  https://w3id.org/reloc#Front
+:Front rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :LongitudinalAxisRelation ;
+       rdfs:label "Front"@en ,
+                  "Vorne"@de ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "Anfang"@de ,
+                                                      "Vorderseite"@de ,
+                                                      "Vorn"@de .
+
+
+###  https://w3id.org/reloc#Intersect
+:Intersect rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <https://w3id.org/reloc#2DTopologicalRelation> ;
+           rdf:type owl:SymmetricProperty ;
+           rdfs:label "Intersect"@en ,
+                      "überschneiden"@de .
+
+
+###  https://w3id.org/reloc#Intersect_Bottom
+:Intersect_Bottom rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :Bottom ,
+                                     :Intersect ;
+                  rdfs:label "Intersects with the bottom of"@en ,
+                             "schneidet die Unterseite von"@de .
+
+
+###  https://w3id.org/reloc#Intersect_Front
+:Intersect_Front rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :Front ,
+                                    :Intersect ;
+                 rdfs:label "Intersect with the front side of"@en ,
+                            "schneidet die Vorderseite von"@de .
+
+
+###  https://w3id.org/reloc#Intersect_Left
+:Intersect_Left rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :Intersect ,
+                                   :Left ;
+                rdfs:label "Intersects with the left side of"@en ,
+                           "schneidet die linke Seite von"@de .
+
+
+###  https://w3id.org/reloc#Intersect_Rear
+:Intersect_Rear rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :Intersect ,
+                                   :Rear ;
+                rdfs:label "Intersects with the rear side of"@en ,
+                           "schneidet die hintere Seite von"@de .
+
+
+###  https://w3id.org/reloc#Intersect_Right
+:Intersect_Right rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :Intersect ,
+                                    :Right ;
+                 rdfs:label "Intersects with the right side of"@en ,
+                            "schneidet die rechte Seite von"@de .
+
+
+###  https://w3id.org/reloc#Intersect_Top
+:Intersect_Top rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :Intersect ,
+                                  :Top ;
+               rdfs:label "Intersects with the top of"@en ,
+                          "schneidet die Oberseite von"@de .
+
+
+###  https://w3id.org/reloc#Left
+:Left rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :TransversalAxisRelation ;
+      rdfs:label "Left"@en ,
+                 "Links"@de .
+
+
+###  https://w3id.org/reloc#LongitudinalAxisRelation
+:LongitudinalAxisRelation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :DirectionalRelation ;
+                          rdfs:label "Longitudinal Axis Relation"@en ,
+                                     "Längsachsenbezogene Relation"@de .
+
+
+###  https://w3id.org/reloc#LongitudinalCenter
+:LongitudinalCenter rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :LongitudinalAxisRelation ;
+                    rdfs:label "Longitudinal Center"@en ,
+                               "Mitte der Längsachse"@de .
+
+
+###  https://w3id.org/reloc#Meet
+:Meet rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf <https://w3id.org/reloc#2DTopologicalRelation> ;
+      rdf:type owl:SymmetricProperty ;
+      rdfs:label "Berühren"@de ,
+                 "Meet"@en .
+
+
+###  https://w3id.org/reloc#Meet_Bottom
+:Meet_Bottom rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :Bottom ,
+                                :Meet ;
+             owl:inverseOf :Meet_Top ;
+             rdfs:label "directly under"@en ,
+                        "direkt unter"@de .
+
+
+###  https://w3id.org/reloc#Meet_Front
+:Meet_Front rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :Front ,
+                               :Meet ;
+            owl:inverseOf :Meet_Rear ;
+            rdfs:label "directly in front of"@en ,
+                       "direkt vor"@de .
+
+
+###  https://w3id.org/reloc#Meet_Left
+:Meet_Left rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :Left ,
+                              :Meet ;
+           owl:inverseOf :Meet_Right ;
+           rdfs:label "directly left of"@en ,
+                      "direkt links von"@de .
+
+
+###  https://w3id.org/reloc#Meet_Rear
+:Meet_Rear rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :Meet ,
+                              :Rear ;
+           rdfs:label "directly behind"@en ,
+                      "direkt hinter"@de .
+
+
+###  https://w3id.org/reloc#Meet_Right
+:Meet_Right rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :Meet ,
+                               :Right ;
+            rdfs:label "directly right of"@en ,
+                       "direkt rechts von"@de .
+
+
+###  https://w3id.org/reloc#Meet_Top
+:Meet_Top rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :Meet ,
+                             :Top ;
+          rdfs:label "directly on top of"@en ,
+                     "direkt über"@de .
+
+
+###  https://w3id.org/reloc#Rear
+:Rear rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :LongitudinalAxisRelation ;
+      rdfs:label "Hinten"@de ,
+                 "Rear"@en ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "Ende"@de ,
+                                                     "Rückseite"@de .
+
+
+###  https://w3id.org/reloc#Right
+:Right rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :TransversalAxisRelation ;
+       rdfs:label "Rechts"@de ,
+                  "Right"@en .
+
+
+###  https://w3id.org/reloc#Top
+:Top rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf :VerticalAxisRelation ;
+     rdfs:label "Oben"@de ,
+                "Top"@en ;
+     <http://www.w3.org/2004/02/skos/core#altLabel> "Auf"@de ,
+                                                    "Oberseite"@de .
+
+
+###  https://w3id.org/reloc#TransversalAxisRelation
+:TransversalAxisRelation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :DirectionalRelation ;
+                         rdfs:label "Querachsenbezogene Relation"@de ,
+                                    "TransversalAxisRelation"@en .
+
+
+###  https://w3id.org/reloc#TransversalCenter
+:TransversalCenter rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :TransversalAxisRelation ;
+                   rdfs:label "Mitte der Querachse"@de ,
+                              "TransversalCenter"@en .
+
+
+###  https://w3id.org/reloc#VerticalAxisRelation
+:VerticalAxisRelation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :DirectionalRelation ;
+                      rdfs:label "Ort entlang der Vertikalachse"@de ,
+                                 "VerticalAxisRelation"@en .
+
+
+###  https://w3id.org/reloc#VerticalCenter
+:VerticalCenter rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :VerticalAxisRelation ;
+                rdfs:label "Mitte der Vertikalachse"@de ,
+                           "VerticalCenter"@en .
+
+
+###  https://w3id.org/reloc#hasRelativeLocationWithOffset
+:hasRelativeLocationWithOffset rdf:type owl:ObjectProperty ;
+                               rdfs:range <http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset> ;
+                               rdfs:label "has relative location with Offset"@en ,
+                                          "hat festen Abstand zu einem relativen Ort"@de .
+
+
+###  https://w3id.org/reloc#hasRelativeSpatialRelationTo
+:hasRelativeSpatialRelationTo rdf:type owl:ObjectProperty ;
+                              rdfs:label "has Relative Spatial Relation To"@en ,
+                                         "hat relativen räumlichen Bezug zu"@de .
+
+
+###  https://w3id.org/reloc#2D2DTopologicalRelation
+<https://w3id.org/reloc#2D2DTopologicalRelation> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/reloc#2DTopologicalRelation
+<https://w3id.org/reloc#2DTopologicalRelation> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf :hasRelativeSpatialRelationTo ;
+                                               rdfs:label "2D Topological Relation"@en ,
+                                                          "2D Topologische Beziehung"@de .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/reloc#hasOffsetValue
+:hasOffsetValue rdf:type owl:DatatypeProperty ;
+                rdfs:domain :RelativeLocationWithOffset ;
+                rdfs:range xsd:float ;
+                rdfs:label "has measured distance value"@en ,
+                           "hat gemessenen Abstandswert"@de .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset
+<http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset> rdf:type owl:Class .
+
+
+###  https://w3id.org/reloc#RelativeLocationWithOffset
+:RelativeLocationWithOffset rdf:type owl:Class ;
+                            rdfs:label "relative location with Offset"@en ,
+                                       "relativer Ort mit festem Abstand"@de .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
