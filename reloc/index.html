@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/reloc#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/reloc#","name":"Relative Location Ontology", "headline":"Document describing the ontology https://w3id.org/reloc#", "datePublished":"01.02.2024", "version":"0.0.1", "author":[{"@type":"Person","name":"Anne Göbels"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/reloc#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/reloc#","name":"Relative Location Ontology", "headline":"The Relative Location Ontology (RELOC) enables expressing the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.", "dateReleased":"2024-02-01", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Anne Göbels"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -42,7 +42,9 @@ function loadTOC(){
 	  t+='</ul>';
 	  $("#toc").html(t); 
 }
- $.fn.ignore = function(sel){
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  }; 
    </script> 
@@ -53,25 +55,20 @@ function loadTOC(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>Relative Location Ontology</h1>
-<h2>Release  01.02.2024</h2>
+<h2>Release: 2024-02-01</h2>
 
 
 <dl>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/reloc#">https://w3id.org/reloc#</a></dd>
 <dt>Revision:</dt>
-<dd>0.0.1</dd>
+<dd>1.0.0</dd>
 <dt>Authors:</dt>
-<dd>Anne Göbels, RWTH Aachen, Design Computation</dd>
+<dd>Anne Göbels</dd>
 
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd>
-<dt>License: </dt>
-</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> -->
-   <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
-      <img src="https://img.shields.io/badge/License-CreativeCommons-blue.svg" style="border-width:0" alt="License" />
-   </a>
-<dt>Cite as:</dt>
-<dd>Anne Göbels. Relative Location Ontology. Revision: 0.0.1.</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Anne Göbels. Relative Location Ontology. Revision: 1.0.0.</dd>
 </dl>
 
 <hr/>
@@ -81,80 +78,79 @@ function loadTOC(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-This is a place holder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+The Relative Location Ontology (RELOC) enables expressing the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.</span>
 </div>
-<div id="toc"></div> 
+<div id="toc"></div>  
 
 <!--INTRODUCTION SECTION-->
-    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
-<div id="namespacedeclarations">
-<h3 id="ns" class="list">Namespace declarations</h3>
-<div id="ns" align="center">
-<table>
-<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
-<tbody>
-<tr><td><b>reloc</b></td><td>&lt;https://w3id.org/reloc#&gt;</td></tr>
-<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
-<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
-<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
-<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
-<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-  
+<div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+   <div id="namespacedeclarations">
+   <h3 id="ns" class="list">Namespace declarations</h3>
+   <div id="ns" align="center">
+   <table>
+   <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+   <tbody>
+   <tr><td><b>reloc</b></td><td>&lt;https://w3id.org/reloc#&gt;</td></tr>
+   <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+   <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+   <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+   <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+   </tbody>
+   </table>
+   </div>
+   </div>
+   </div>
 
 <!--OVERVIEW SECTION-->
     <div id="overview"><h2 id="overv" class="list">Relative Location Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul class="hlist">
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
    <li>
       <a href="#RelativeLocationWithOffset"
          title="https://w3id.org/reloc#RelativeLocationWithOffset">relative location with Offset</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
    <li>
-      <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D Topological Relation</a>
+      <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
    </li>
    <li>
-      <a href="#Bottom" title="https://w3id.org/reloc#Bottom">Bottom</a>
+      <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
    </li>
    <li>
-      <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
+      <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
    </li>
    <li>
-      <a href="#DirectionalRelation" title="https://w3id.org/reloc#DirectionalRelation">Directional Relation</a>
+      <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
    </li>
    <li>
-      <a href="#Meet_Rear" title="https://w3id.org/reloc#Meet_Rear">directly behind</a>
+      <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
    </li>
    <li>
-      <a href="#Meet_Front" title="https://w3id.org/reloc#Meet_Front">directly in front of</a>
+      <a href="#meetFront" title="https://w3id.org/reloc#meetFront">directly in front of</a>
    </li>
    <li>
-      <a href="#Meet_Left" title="https://w3id.org/reloc#Meet_Left">directly left of</a>
+      <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
    </li>
    <li>
-      <a href="#Meet_Top" title="https://w3id.org/reloc#Meet_Top">directly on top of</a>
+      <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
    </li>
    <li>
-      <a href="#Meet_Right" title="https://w3id.org/reloc#Meet_Right">directly right of</a>
+      <a href="#meetRight" title="https://w3id.org/reloc#meetRight">directly right of</a>
    </li>
    <li>
-      <a href="#Meet_Bottom" title="https://w3id.org/reloc#Meet_Bottom">directly under</a>
+      <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
    </li>
    <li>
-      <a href="#Equal" title="https://w3id.org/reloc#Equal">Equal</a>
+      <a href="#equal" title="https://w3id.org/reloc#equal">equal</a>
    </li>
    <li>
-      <a href="#Front" title="https://w3id.org/reloc#Front">Front</a>
+      <a href="#front" title="https://w3id.org/reloc#front">front</a>
    </li>
    <li>
       <a href="#hasRelativeLocationWithOffset"
@@ -162,120 +158,108 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#hasRelativeSpatialRelationTo"
-         title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has Relative Spatial Relation To</a>
+         title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has relative spatial relation to</a>
    </li>
    <li>
-      <a href="#Equal_Longitudinal" title="https://w3id.org/reloc#Equal_Longitudinal">has the same origin and lenght as</a>
+      <a href="#equalLongitudinal" title="https://w3id.org/reloc#equalLongitudinal">has the same origin and lenght as</a>
    </li>
    <li>
-      <a href="#Equal_Transversal" title="https://w3id.org/reloc#Equal_Transversal">has the same origin and width as</a>
+      <a href="#equalTransversal" title="https://w3id.org/reloc#equalTransversal">has the same origin and width as</a>
    </li>
    <li>
-      <a href="#Equal_Vertical" title="https://w3id.org/reloc#Equal_Vertical">has the same vertical origin and height as</a>
+      <a href="#equalVertical" title="https://w3id.org/reloc#equalVertical">has the same vertical origin and height as</a>
    </li>
    <li>
-      <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
+      <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
    </li>
    <li>
-      <a href="#Intersect_Front" title="https://w3id.org/reloc#Intersect_Front">Intersect with the front side of</a>
+      <a href="#intersectFront" title="https://w3id.org/reloc#intersectFront">intersects the front side of</a>
    </li>
    <li>
-      <a href="#Intersect_Bottom" title="https://w3id.org/reloc#Intersect_Bottom">Intersects with the bottom of</a>
+      <a href="#intersectLeft" title="https://w3id.org/reloc#intersectLeft">Intersects the left side of</a>
    </li>
    <li>
-      <a href="#Intersect_Left" title="https://w3id.org/reloc#Intersect_Left">Intersects with the left side of</a>
+      <a href="#intersectRear" title="https://w3id.org/reloc#intersectRear">Intersects the rear side of</a>
    </li>
    <li>
-      <a href="#Intersect_Rear" title="https://w3id.org/reloc#Intersect_Rear">Intersects with the rear side of</a>
+      <a href="#intersectRight" title="https://w3id.org/reloc#intersectRight">Intersects the right side of</a>
    </li>
    <li>
-      <a href="#Intersect_Right" title="https://w3id.org/reloc#Intersect_Right">Intersects with the right side of</a>
+      <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
    </li>
    <li>
-      <a href="#Intersect_Top" title="https://w3id.org/reloc#Intersect_Top">Intersects with the top of</a>
+      <a href="#intersectTop" title="https://w3id.org/reloc#intersectTop">Intersects with the top of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Front" title="https://w3id.org/reloc#ContainedIn_Front">is contained in the front area of</a>
+      <a href="#containedInFront" title="https://w3id.org/reloc#containedInFront">is contained in the front area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Left" title="https://w3id.org/reloc#ContainedIn_Left">is contained in the left area of</a>
+      <a href="#containedInLeft" title="https://w3id.org/reloc#containedInLeft">is contained in the left area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Longitudinal_Center"
-         title="https://w3id.org/reloc#ContainedIn_Longitudinal_Center">is contained in the longitudinal central area of</a>
+      <a href="#containedInLongitudinalCenter"
+         title="https://w3id.org/reloc#containedInLongitudinalCenter">is contained in the longitudinal central area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Bottom" title="https://w3id.org/reloc#ContainedIn_Bottom">is contained in the lower area of</a>
+      <a href="#containedInBottom" title="https://w3id.org/reloc#containedInBottom">is contained in the lower area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Rear" title="https://w3id.org/reloc#ContainedIn_Rear">is contained in the rear area of</a>
+      <a href="#containedInRear" title="https://w3id.org/reloc#containedInRear">is contained in the rear area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Right" title="https://w3id.org/reloc#ContainedIn_Right">is contained in the right area of</a>
+      <a href="#containedInRight" title="https://w3id.org/reloc#containedInRight">is contained in the right area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Transversal_Center"
-         title="https://w3id.org/reloc#ContainedIn_Transversal_Center">is contained in the transversal central area of</a>
+      <a href="#containedInTransversalCenter"
+         title="https://w3id.org/reloc#containedInTransversalCenter">is contained in the transversal central area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Top" title="https://w3id.org/reloc#ContainedIn_Top">is contained in the upper area of</a>
+      <a href="#containedInTop" title="https://w3id.org/reloc#containedInTop">is contained in the upper area of</a>
    </li>
    <li>
-      <a href="#ContainedIn_Vertical_Center"
-         title="https://w3id.org/reloc#ContainedIn_Vertical_Center">is contained in the vertical central area of</a>
+      <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
    </li>
    <li>
-      <a href="#Left" title="https://w3id.org/reloc#Left">Left</a>
+      <a href="#left" title="https://w3id.org/reloc#left">left</a>
    </li>
    <li>
-      <a href="#LongitudinalAxisRelation" title="https://w3id.org/reloc#LongitudinalAxisRelation">Longitudinal Axis Relation</a>
+      <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
    </li>
    <li>
-      <a href="#LongitudinalCenter" title="https://w3id.org/reloc#LongitudinalCenter">Longitudinal Center</a>
+      <a href="#longitudinalCenter" title="https://w3id.org/reloc#longitudinalCenter">longitudinal center</a>
    </li>
    <li>
-      <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
+      <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
    </li>
    <li>
-      <a href="#Rear" title="https://w3id.org/reloc#Rear">Rear</a>
+      <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
    </li>
    <li>
-      <a href="#Right" title="https://w3id.org/reloc#Right">Right</a>
+      <a href="#right" title="https://w3id.org/reloc#right">right</a>
    </li>
    <li>
-      <a href="#Top" title="https://w3id.org/reloc#Top">Top</a>
+      <a href="#top" title="https://w3id.org/reloc#top">top</a>
    </li>
    <li>
-      <a href="#TransversalAxisRelation" title="https://w3id.org/reloc#TransversalAxisRelation">TransversalAxisRelation</a>
+      <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
    </li>
    <li>
-      <a href="#TransversalCenter" title="https://w3id.org/reloc#TransversalCenter">TransversalCenter</a>
+      <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
    </li>
    <li>
-      <a href="#VerticalAxisRelation" title="https://w3id.org/reloc#VerticalAxisRelation">VerticalAxisRelation</a>
+      <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
    </li>
    <li>
-      <a href="#VerticalCenter" title="https://w3id.org/reloc#VerticalCenter">VerticalCenter</a>
+      <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
    </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
    <li>
       <a href="#hasOffsetValue" title="https://w3id.org/reloc#hasOffsetValue">has measured distance value</a>
    </li>
-</ul><h4>Annotation Properties</h4><ul class="hlist">
    <li>
-      <a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel">
-         <span>alt label</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
-         <span>creator</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
-         <span>title</span>
-      </a>
+      <a href="#hasOffsetValueUnit" title="https://w3id.org/reloc#hasOffsetValueUnit">Indication of the offset value unit</a>
    </li>
 </ul>
 </div>
@@ -283,17 +267,25 @@ This ontology has the following classes and properties.</span>
 
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">Relative Location Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-      <img src="overview.png" alt="Overview diagram" width="1000">
-   <span class="markdown">
-   </span>
+      <div>
+   <div>
+   <h5>Graphical overview about the RELOC properties</h5> 
+   <img src="reloc_diagramm_tabellle.jpg" >
+   <h5>Technical overview about the RELOC Ontology</h5> 
+   <img src="technicalDiagramReloc.png" >
+   <h5>Application example of the RELOC Ontology</h5> 
+   <img src="beispielReloc.png" >
+</div>
 
 </div>
    
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Relative Location Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Relative Location Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Relative Location Ontology.
-<div id="classes">
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
@@ -308,52 +300,64 @@ This section provides details for each class and property defined by Relative Lo
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/reloc#RelativeLocationWithOffset</p>
+      <div class="comment">
+         <span class="markdown">abstract class to define an offset to a relative location , e.g."A is 10m away from the front front of element B"</span>
+      </div>
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasOffsetValue" title="https://w3id.org/reloc#hasOffsetValue">has measured distance value</a>
+            <a href="#hasOffsetValueUnit" title="https://w3id.org/reloc#hasOffsetValueUnit">Indication of the offset value unit</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOffsetValue" title="https://w3id.org/reloc#hasOffsetValue">has measured distance value</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasRelativeLocationWithOffset"
+               title="https://w3id.org/reloc#hasRelativeLocationWithOffset">has relative location with Offset</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-</div><div id="objectproperties">
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D Topological Relation</a>
+         <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
       </li>
       <li>
-         <a href="#Bottom" title="https://w3id.org/reloc#Bottom">Bottom</a>
+         <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
       </li>
       <li>
-         <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
+         <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
       </li>
       <li>
-         <a href="#DirectionalRelation" title="https://w3id.org/reloc#DirectionalRelation">Directional Relation</a>
+         <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
       </li>
       <li>
-         <a href="#Meet_Rear" title="https://w3id.org/reloc#Meet_Rear">directly behind</a>
+         <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
       </li>
       <li>
-         <a href="#Meet_Front" title="https://w3id.org/reloc#Meet_Front">directly in front of</a>
+         <a href="#meetFront" title="https://w3id.org/reloc#meetFront">directly in front of</a>
       </li>
       <li>
-         <a href="#Meet_Left" title="https://w3id.org/reloc#Meet_Left">directly left of</a>
+         <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
       </li>
       <li>
-         <a href="#Meet_Top" title="https://w3id.org/reloc#Meet_Top">directly on top of</a>
+         <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
       </li>
       <li>
-         <a href="#Meet_Right" title="https://w3id.org/reloc#Meet_Right">directly right of</a>
+         <a href="#meetRight" title="https://w3id.org/reloc#meetRight">directly right of</a>
       </li>
       <li>
-         <a href="#Meet_Bottom" title="https://w3id.org/reloc#Meet_Bottom">directly under</a>
+         <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
       </li>
       <li>
-         <a href="#Equal" title="https://w3id.org/reloc#Equal">Equal</a>
+         <a href="#equal" title="https://w3id.org/reloc#equal">equal</a>
       </li>
       <li>
-         <a href="#Front" title="https://w3id.org/reloc#Front">Front</a>
+         <a href="#front" title="https://w3id.org/reloc#front">front</a>
       </li>
       <li>
          <a href="#hasRelativeLocationWithOffset"
@@ -361,387 +365,424 @@ This section provides details for each class and property defined by Relative Lo
       </li>
       <li>
          <a href="#hasRelativeSpatialRelationTo"
-            title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has Relative Spatial Relation To</a>
+            title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has relative spatial relation to</a>
       </li>
       <li>
-         <a href="#Equal_Longitudinal" title="https://w3id.org/reloc#Equal_Longitudinal">has the same origin and lenght as</a>
+         <a href="#equalLongitudinal" title="https://w3id.org/reloc#equalLongitudinal">has the same origin and lenght as</a>
       </li>
       <li>
-         <a href="#Equal_Transversal" title="https://w3id.org/reloc#Equal_Transversal">has the same origin and width as</a>
+         <a href="#equalTransversal" title="https://w3id.org/reloc#equalTransversal">has the same origin and width as</a>
       </li>
       <li>
-         <a href="#Equal_Vertical" title="https://w3id.org/reloc#Equal_Vertical">has the same vertical origin and height as</a>
+         <a href="#equalVertical" title="https://w3id.org/reloc#equalVertical">has the same vertical origin and height as</a>
       </li>
       <li>
-         <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
+         <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
       </li>
       <li>
-         <a href="#Intersect_Front" title="https://w3id.org/reloc#Intersect_Front">Intersect with the front side of</a>
+         <a href="#intersectFront" title="https://w3id.org/reloc#intersectFront">intersects the front side of</a>
       </li>
       <li>
-         <a href="#Intersect_Bottom" title="https://w3id.org/reloc#Intersect_Bottom">Intersects with the bottom of</a>
+         <a href="#intersectLeft" title="https://w3id.org/reloc#intersectLeft">Intersects the left side of</a>
       </li>
       <li>
-         <a href="#Intersect_Left" title="https://w3id.org/reloc#Intersect_Left">Intersects with the left side of</a>
+         <a href="#intersectRear" title="https://w3id.org/reloc#intersectRear">Intersects the rear side of</a>
       </li>
       <li>
-         <a href="#Intersect_Rear" title="https://w3id.org/reloc#Intersect_Rear">Intersects with the rear side of</a>
+         <a href="#intersectRight" title="https://w3id.org/reloc#intersectRight">Intersects the right side of</a>
       </li>
       <li>
-         <a href="#Intersect_Right" title="https://w3id.org/reloc#Intersect_Right">Intersects with the right side of</a>
+         <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
       </li>
       <li>
-         <a href="#Intersect_Top" title="https://w3id.org/reloc#Intersect_Top">Intersects with the top of</a>
+         <a href="#intersectTop" title="https://w3id.org/reloc#intersectTop">Intersects with the top of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Front" title="https://w3id.org/reloc#ContainedIn_Front">is contained in the front area of</a>
+         <a href="#containedInFront" title="https://w3id.org/reloc#containedInFront">is contained in the front area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Left" title="https://w3id.org/reloc#ContainedIn_Left">is contained in the left area of</a>
+         <a href="#containedInLeft" title="https://w3id.org/reloc#containedInLeft">is contained in the left area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Longitudinal_Center"
-            title="https://w3id.org/reloc#ContainedIn_Longitudinal_Center">is contained in the longitudinal central area of</a>
+         <a href="#containedInLongitudinalCenter"
+            title="https://w3id.org/reloc#containedInLongitudinalCenter">is contained in the longitudinal central area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Bottom" title="https://w3id.org/reloc#ContainedIn_Bottom">is contained in the lower area of</a>
+         <a href="#containedInBottom" title="https://w3id.org/reloc#containedInBottom">is contained in the lower area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Rear" title="https://w3id.org/reloc#ContainedIn_Rear">is contained in the rear area of</a>
+         <a href="#containedInRear" title="https://w3id.org/reloc#containedInRear">is contained in the rear area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Right" title="https://w3id.org/reloc#ContainedIn_Right">is contained in the right area of</a>
+         <a href="#containedInRight" title="https://w3id.org/reloc#containedInRight">is contained in the right area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Transversal_Center"
-            title="https://w3id.org/reloc#ContainedIn_Transversal_Center">is contained in the transversal central area of</a>
+         <a href="#containedInTransversalCenter"
+            title="https://w3id.org/reloc#containedInTransversalCenter">is contained in the transversal central area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Top" title="https://w3id.org/reloc#ContainedIn_Top">is contained in the upper area of</a>
+         <a href="#containedInTop" title="https://w3id.org/reloc#containedInTop">is contained in the upper area of</a>
       </li>
       <li>
-         <a href="#ContainedIn_Vertical_Center"
-            title="https://w3id.org/reloc#ContainedIn_Vertical_Center">is contained in the vertical central area of</a>
+         <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
       </li>
       <li>
-         <a href="#Left" title="https://w3id.org/reloc#Left">Left</a>
+         <a href="#left" title="https://w3id.org/reloc#left">left</a>
       </li>
       <li>
-         <a href="#LongitudinalAxisRelation" title="https://w3id.org/reloc#LongitudinalAxisRelation">Longitudinal Axis Relation</a>
+         <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
       </li>
       <li>
-         <a href="#LongitudinalCenter" title="https://w3id.org/reloc#LongitudinalCenter">Longitudinal Center</a>
+         <a href="#longitudinalCenter" title="https://w3id.org/reloc#longitudinalCenter">longitudinal center</a>
       </li>
       <li>
-         <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
+         <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
       </li>
       <li>
-         <a href="#Rear" title="https://w3id.org/reloc#Rear">Rear</a>
+         <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
       </li>
       <li>
-         <a href="#Right" title="https://w3id.org/reloc#Right">Right</a>
+         <a href="#right" title="https://w3id.org/reloc#right">right</a>
       </li>
       <li>
-         <a href="#Top" title="https://w3id.org/reloc#Top">Top</a>
+         <a href="#top" title="https://w3id.org/reloc#top">top</a>
       </li>
       <li>
-         <a href="#TransversalAxisRelation" title="https://w3id.org/reloc#TransversalAxisRelation">TransversalAxisRelation</a>
+         <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
       </li>
       <li>
-         <a href="#TransversalCenter" title="https://w3id.org/reloc#TransversalCenter">TransversalCenter</a>
+         <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
       </li>
       <li>
-         <a href="#VerticalAxisRelation" title="https://w3id.org/reloc#VerticalAxisRelation">VerticalAxisRelation</a>
+         <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
       </li>
       <li>
-         <a href="#VerticalCenter" title="https://w3id.org/reloc#VerticalCenter">VerticalCenter</a>
+         <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
       </li>
    </ul>
    <div class="entity" id="2DTopologicalRelation">
-      <h3>2D Topological Relation<sup class="type-op" title="object property">op</sup>
+      <h3>2D topological relation<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/reloc#2DTopologicalRelation</p>
+      <div class="comment">
+         <span class="markdown">main topological property that defines the topological relationship between axis-related areas of two elements. The validity of the relationship is limited to one axis, and considering all three axis-related topological relationships is necessary to make statements about an entire element.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
                <a href="#hasRelativeSpatialRelationTo"
-                  title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has Relative Spatial Relation To</a>
+                  title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has relative spatial relation to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#equal" title="https://w3id.org/reloc#equal">equal</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Bottom">
-      <h3>Bottom<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="bottom">
+      <h3>bottom<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Bottom</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#bottom</p>
+      <div class="comment">
+         <span class="markdown">the property "bottom" should express that the located object has a relation to the lower part or bottom side of the reference object.The exact kind of relation is defined by the topological relation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#VerticalAxisRelation" title="https://w3id.org/reloc#VerticalAxisRelation">VerticalAxisRelation</a>
+               <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect_Bottom" title="https://w3id.org/reloc#Intersect_Bottom">Intersects with the bottom of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Bottom" title="https://w3id.org/reloc#Meet_Bottom">directly under</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Bottom" title="https://w3id.org/reloc#ContainedIn_Bottom">is contained in the lower area of</a>
+               <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInBottom" title="https://w3id.org/reloc#containedInBottom">is contained in the lower area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn">
-      <h3>Contained in<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="containedIn">
+      <h3>contained in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedIn</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in" expresses that the extension of the located object A is inside the extension/boundary of the reference object B for a specific axis (e.g. vertical axis)</span>
+      </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> transitive</p>
+            <strong>has characteristics:
+                </strong> transitive</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/reloc#2D2DTopologicalRelation">2 d2 d topological relation</span>
+               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#ContainedIn_Front" title="https://w3id.org/reloc#ContainedIn_Front">is contained in the front area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Left" title="https://w3id.org/reloc#ContainedIn_Left">is contained in the left area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Longitudinal_Center"
-                  title="https://w3id.org/reloc#ContainedIn_Longitudinal_Center">is contained in the longitudinal central area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Bottom" title="https://w3id.org/reloc#ContainedIn_Bottom">is contained in the lower area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Rear" title="https://w3id.org/reloc#ContainedIn_Rear">is contained in the rear area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Right" title="https://w3id.org/reloc#ContainedIn_Right">is contained in the right area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Transversal_Center"
-                  title="https://w3id.org/reloc#ContainedIn_Transversal_Center">is contained in the transversal central area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Top" title="https://w3id.org/reloc#ContainedIn_Top">is contained in the upper area of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Vertical_Center"
-                  title="https://w3id.org/reloc#ContainedIn_Vertical_Center">is contained in the vertical central area of</a>
+               <a href="#containedInFront" title="https://w3id.org/reloc#containedInFront">is contained in the front area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInLeft" title="https://w3id.org/reloc#containedInLeft">is contained in the left area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInLongitudinalCenter"
+                  title="https://w3id.org/reloc#containedInLongitudinalCenter">is contained in the longitudinal central area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInBottom" title="https://w3id.org/reloc#containedInBottom">is contained in the lower area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInRear" title="https://w3id.org/reloc#containedInRear">is contained in the rear area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInRight" title="https://w3id.org/reloc#containedInRight">is contained in the right area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInTransversalCenter"
+                  title="https://w3id.org/reloc#containedInTransversalCenter">is contained in the transversal central area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInTop" title="https://w3id.org/reloc#containedInTop">is contained in the upper area of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="DirectionalRelation">
-      <h3>Directional Relation<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="directionalRelation">
+      <h3>directional relation<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#DirectionalRelation</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#directionalRelation</p>
+      <div class="comment">
+         <span class="markdown">defines a directional / axis-related relative relationship between to objects.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
                <a href="#hasRelativeSpatialRelationTo"
-                  title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has Relative Spatial Relation To</a>
+                  title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has relative spatial relation to</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#LongitudinalAxisRelation" title="https://w3id.org/reloc#LongitudinalAxisRelation">Longitudinal Axis Relation</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#TransversalAxisRelation" title="https://w3id.org/reloc#TransversalAxisRelation">TransversalAxisRelation</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#VerticalAxisRelation" title="https://w3id.org/reloc#VerticalAxisRelation">VerticalAxisRelation</a>
+               <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Meet_Rear">
+   <div class="entity" id="meetRear">
       <h3>directly behind<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Meet_Rear</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#meetRear</p>
+      <div class="comment">
+         <span class="markdown">the property "meet rear" should express that the located object is in behind the reference object, with no (or almost no) distance to the rear side of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Rear" title="https://w3id.org/reloc#Rear">Rear</a>
+               <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#Meet_Front" title="https://w3id.org/reloc#Meet_Front">directly in front of</a>
+               <a href="#meetFront" title="https://w3id.org/reloc#meetFront">directly in front of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Meet_Front">
+   <div class="entity" id="meetFront">
       <h3>directly in front of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Meet_Front</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#meetFront</p>
+      <div class="comment">
+         <span class="markdown">the property "meet front" should express that the located object is in front of the reference object, with no (or almost no) distance to the front side of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Front" title="https://w3id.org/reloc#Front">Front</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
+               <a href="#front" title="https://w3id.org/reloc#front">front</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#Meet_Rear" title="https://w3id.org/reloc#Meet_Rear">directly behind</a>
+               <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Meet_Left">
+   <div class="entity" id="meetLeft">
       <h3>directly left of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Meet_Left</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#meetLeft</p>
+      <div class="comment">
+         <span class="markdown">the property "meet left" should express that the located object is to the left of the reference object, with no (or almost no) distance to the left side of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Left" title="https://w3id.org/reloc#Left">Left</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
+               <a href="#left" title="https://w3id.org/reloc#left">left</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#Meet_Right" title="https://w3id.org/reloc#Meet_Right">directly right of</a>
+               <a href="#meetRight" title="https://w3id.org/reloc#meetRight">directly right of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Meet_Top">
+   <div class="entity" id="meetTop">
       <h3>directly on top of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Meet_Top</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#meetTop</p>
+      <div class="comment">
+         <span class="markdown">the property "meet top" should express that the located object is in on top of the reference object, with no (or almost no) distance to the top of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Top" title="https://w3id.org/reloc#Top">Top</a>
+               <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#Meet_Bottom" title="https://w3id.org/reloc#Meet_Bottom">directly under</a>
+               <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Meet_Right">
+   <div class="entity" id="meetRight">
       <h3>directly right of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Meet_Right</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#meetRight</p>
+      <div class="comment">
+         <span class="markdown">the property "meet right" should express that the located object is to the right of the reference object, with no (or almost no) distance to the right side of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Right" title="https://w3id.org/reloc#Right">Right</a>
+               <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#Meet_Left" title="https://w3id.org/reloc#Meet_Left">directly left of</a>
+               <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Meet_Bottom">
+   <div class="entity" id="meetBottom">
       <h3>directly under<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Meet_Bottom</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#meetBottom</p>
+      <div class="comment">
+         <span class="markdown">the property "meet bottom" should express that the located object is under the reference object, with no (or almost no) distance to the bottom of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Bottom" title="https://w3id.org/reloc#Bottom">Bottom</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet" title="https://w3id.org/reloc#Meet">Meet</a>
+               <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#Meet_Top" title="https://w3id.org/reloc#Meet_Top">directly on top of</a>
+               <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Equal">
-      <h3>Equal<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="equal">
+      <h3>equal<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Equal</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#equal</p>
+      <div class="comment">
+         <span class="markdown">the property "equal" expresses that the extension of the located object A and the extension of the reference object B for a specific axis (e.g. vertical axis) are the same.</span>
+      </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> symmetric, transitive</p>
+            <strong>has characteristics:
+                </strong> symmetric, transitive</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.semanticweb.org/owl/owlapi/turtle#2DTopologicalRelation">2 d topological relation</span>
+               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Front">
-      <h3>Front<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="front">
+      <h3>front<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Front</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#front</p>
+      <div class="comment">
+         <span class="markdown">the property "front" should express that the located object has a relation to the front part or side of the reference object.The exact kind of relation is defined by the topological relation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#LongitudinalAxisRelation" title="https://w3id.org/reloc#LongitudinalAxisRelation">Longitudinal Axis Relation</a>
+               <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect_Front" title="https://w3id.org/reloc#Intersect_Front">Intersect with the front side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Front" title="https://w3id.org/reloc#Meet_Front">directly in front of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Front" title="https://w3id.org/reloc#ContainedIn_Front">is contained in the front area of</a>
+               <a href="#meetFront" title="https://w3id.org/reloc#meetFront">directly in front of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersectFront" title="https://w3id.org/reloc#intersectFront">intersects the front side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInFront" title="https://w3id.org/reloc#containedInFront">is contained in the front area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -754,659 +795,775 @@ This section provides details for each class and property defined by Relative Lo
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/reloc#hasRelativeLocationWithOffset</p>
+      <div class="comment">
+         <span class="markdown">links the located element to the abstract class (as instance :blank node) that defined the relative location and the offset value</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.semanticweb.org/owl/owlapi/turtle#RelativeLocationWithOffset">relative location with offset</span>
+               <a href="#RelativeLocationWithOffset"
+                  title="https://w3id.org/reloc#RelativeLocationWithOffset">relative location with Offset</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasRelativeSpatialRelationTo">
-      <h3>has Relative Spatial Relation To<sup class="type-op" title="object property">op</sup>
+      <h3>has relative spatial relation to<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/reloc#hasRelativeSpatialRelationTo</p>
+      <div class="comment">
+         <span class="markdown">main/root property of the RELOC Ontology that defines the spatial relationship between the located element A to the reference element B. This relationship should not reflect exact geometric dependencies or boundaries but rather represent the meaning of natural language location descriptions.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D Topological Relation</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#DirectionalRelation" title="https://w3id.org/reloc#DirectionalRelation">Directional Relation</a>
+               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Equal_Longitudinal">
+   <div class="entity" id="equalLongitudinal">
       <h3>has the same origin and lenght as<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Equal_Longitudinal</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#equalLongitudinal</p>
+      <div class="comment">
+         <span class="markdown">property that expresses that two objects have the same longitudinal extension and position</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.semanticweb.org/owl/owlapi/turtle#LongitudinalAxisRelation">longitudinal axis relation</span>
+               <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Equal_Transversal">
+   <div class="entity" id="equalTransversal">
       <h3>has the same origin and width as<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Equal_Transversal</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#equalTransversal</p>
+      <div class="comment">
+         <span class="markdown">property that expresses that two objects have the same transversal extension and position</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.semanticweb.org/owl/owlapi/turtle#TransversalAxisRelation">transversal axis relation</span>
+               <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Equal_Vertical">
+   <div class="entity" id="equalVertical">
       <h3>has the same vertical origin and height as<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Equal_Vertical</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#equalVertical</p>
+      <div class="comment">
+         <span class="markdown">property that expresses that two objects have the same vertical extension and position</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.semanticweb.org/owl/owlapi/turtle#VerticalAxisRelation">vertical axis relation</span>
+               <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Intersect">
-      <h3>Intersect<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="intersect">
+      <h3>intersect<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Intersect</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#intersect</p>
+      <div class="comment">
+         <span class="markdown">the property "intersect" expresses that the extension of the located object A is partially overlapping with the extension of the reference object B for a specific axis (e.g. vertical axis)</span>
+      </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> symmetric</p>
+            <strong>has characteristics:
+                </strong> symmetric</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D Topological Relation</a>
+               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect_Front" title="https://w3id.org/reloc#Intersect_Front">Intersect with the front side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Intersect_Bottom" title="https://w3id.org/reloc#Intersect_Bottom">Intersects with the bottom of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Intersect_Left" title="https://w3id.org/reloc#Intersect_Left">Intersects with the left side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Intersect_Rear" title="https://w3id.org/reloc#Intersect_Rear">Intersects with the rear side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Intersect_Right" title="https://w3id.org/reloc#Intersect_Right">Intersects with the right side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Intersect_Top" title="https://w3id.org/reloc#Intersect_Top">Intersects with the top of</a>
+               <a href="#intersectLeft" title="https://w3id.org/reloc#intersectLeft">Intersects the left side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersectRear" title="https://w3id.org/reloc#intersectRear">Intersects the rear side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersectRight" title="https://w3id.org/reloc#intersectRight">Intersects the right side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersectTop" title="https://w3id.org/reloc#intersectTop">Intersects with the top of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersectFront" title="https://w3id.org/reloc#intersectFront">intersects the front side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Intersect_Front">
-      <h3>Intersect with the front side of<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="intersectFront">
+      <h3>intersects the front side of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Intersect_Front</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#intersectFront</p>
+      <div class="comment">
+         <span class="markdown">the property "intersect front" should express that the located object  intersects the front part/side of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Front" title="https://w3id.org/reloc#Front">Front</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
+               <a href="#front" title="https://w3id.org/reloc#front">front</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Intersect_Bottom">
-      <h3>Intersects with the bottom of<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="intersectLeft">
+      <h3>Intersects the left side of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Intersect_Bottom</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#intersectLeft</p>
+      <div class="comment">
+         <span class="markdown">the property "intersect left" should express that the located object  intersects the left part/side of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Bottom" title="https://w3id.org/reloc#Bottom">Bottom</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
+               <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#left" title="https://w3id.org/reloc#left">left</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Intersect_Left">
-      <h3>Intersects with the left side of<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="intersectRear">
+      <h3>Intersects the rear side of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Intersect_Left</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#intersectRear</p>
+      <div class="comment">
+         <span class="markdown">the property "intersect rear" should express that the located object  intersects the rear part/side of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Left" title="https://w3id.org/reloc#Left">Left</a>
+               <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Intersect_Rear">
-      <h3>Intersects with the rear side of<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="intersectRight">
+      <h3>Intersects the right side of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Intersect_Rear</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#intersectRight</p>
+      <div class="comment">
+         <span class="markdown">the property "intersect right" should express that the located object  intersects the right part/side of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Rear" title="https://w3id.org/reloc#Rear">Rear</a>
+               <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Intersect_Right">
-      <h3>Intersects with the right side of<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="intersectBottom">
+      <h3>intersects with the bottom of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Intersect_Right</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#intersectBottom</p>
+      <div class="comment">
+         <span class="markdown">the property "intersect bottom" should express that the located object  intersects the bottom/ lower part of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Right" title="https://w3id.org/reloc#Right">Right</a>
+               <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Intersect_Top">
+   <div class="entity" id="intersectTop">
       <h3>Intersects with the top of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Intersect_Top</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#intersectTop</p>
+      <div class="comment">
+         <span class="markdown">the property "intersect top" should express that the located object  intersects the top /upper part of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Intersect" title="https://w3id.org/reloc#Intersect">Intersect</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Top" title="https://w3id.org/reloc#Top">Top</a>
+               <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Front">
+   <div class="entity" id="containedInFront">
       <h3>is contained in the front area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Front</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInFront</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in front" should express that the located object is inside the front part/area of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Front" title="https://w3id.org/reloc#Front">Front</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#front" title="https://w3id.org/reloc#front">front</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Left">
+   <div class="entity" id="containedInLeft">
       <h3>is contained in the left area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Left</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInLeft</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in left" should express that the located object is inside the left part/area of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Left" title="https://w3id.org/reloc#Left">Left</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#left" title="https://w3id.org/reloc#left">left</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Longitudinal_Center">
+   <div class="entity" id="containedInLongitudinalCenter">
       <h3>is contained in the longitudinal central area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Longitudinal_Center</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInLongitudinalCenter</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in longitudinal center" should express that the located object  is inside the longitudinal central part of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#LongitudinalCenter" title="https://w3id.org/reloc#LongitudinalCenter">Longitudinal Center</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#longitudinalCenter" title="https://w3id.org/reloc#longitudinalCenter">longitudinal center</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Bottom">
+   <div class="entity" id="containedInBottom">
       <h3>is contained in the lower area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Bottom</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInBottom</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in bottom" should express that the located object is inside the  lower area of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#Bottom" title="https://w3id.org/reloc#Bottom">Bottom</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
+               <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Rear">
+   <div class="entity" id="containedInRear">
       <h3>is contained in the rear area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Rear</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInRear</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in rear" should express that the located object is inside the rear part/area of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Rear" title="https://w3id.org/reloc#Rear">Rear</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Right">
+   <div class="entity" id="containedInRight">
       <h3>is contained in the right area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Right</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInRight</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in right" should express that the located object is inside the right part/area of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Right" title="https://w3id.org/reloc#Right">Right</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Transversal_Center">
+   <div class="entity" id="containedInTransversalCenter">
       <h3>is contained in the transversal central area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Transversal_Center</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInTransversalCenter</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in transversal center" should express that the located object  is inside the transversal central part of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#TransversalCenter" title="https://w3id.org/reloc#TransversalCenter">TransversalCenter</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Top">
+   <div class="entity" id="containedInTop">
       <h3>is contained in the upper area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Top</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInTop</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in top" should express that the located object is inside the upper area of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Top" title="https://w3id.org/reloc#Top">Top</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="ContainedIn_Vertical_Center">
+   <div class="entity" id="containedInVerticalCenter">
       <h3>is contained in the vertical central area of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#ContainedIn_Vertical_Center</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#containedInVerticalCenter</p>
+      <div class="comment">
+         <span class="markdown">the property "contained in vertical center" should express that the located object  is inside the vertical central part of the reference object</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#ContainedIn" title="https://w3id.org/reloc#ContainedIn">Contained in</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#VerticalCenter" title="https://w3id.org/reloc#VerticalCenter">VerticalCenter</a>
+               <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Left">
-      <h3>Left<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="left">
+      <h3>left<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Left</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#left</p>
+      <div class="comment">
+         <span class="markdown">the property "left" should express that the located object has a relation to the left part or side of the reference object.The exact kind of relation is defined by the topological relation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#TransversalAxisRelation" title="https://w3id.org/reloc#TransversalAxisRelation">TransversalAxisRelation</a>
+               <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect_Left" title="https://w3id.org/reloc#Intersect_Left">Intersects with the left side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Left" title="https://w3id.org/reloc#Meet_Left">directly left of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Left" title="https://w3id.org/reloc#ContainedIn_Left">is contained in the left area of</a>
+               <a href="#intersectLeft" title="https://w3id.org/reloc#intersectLeft">Intersects the left side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInLeft" title="https://w3id.org/reloc#containedInLeft">is contained in the left area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="LongitudinalAxisRelation">
-      <h3>Longitudinal Axis Relation<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="longitudinalAxisRelation">
+      <h3>longitudinal axis relation<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#LongitudinalAxisRelation</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#longitudinalAxisRelation</p>
+      <div class="comment">
+         <span class="markdown">super property of all relative spatial relationships referring to the longitudinal axis</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#DirectionalRelation" title="https://w3id.org/reloc#DirectionalRelation">Directional Relation</a>
+               <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Front" title="https://w3id.org/reloc#Front">Front</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#LongitudinalCenter" title="https://w3id.org/reloc#LongitudinalCenter">Longitudinal Center</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Rear" title="https://w3id.org/reloc#Rear">Rear</a>
+               <a href="#front" title="https://w3id.org/reloc#front">front</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#equalLongitudinal" title="https://w3id.org/reloc#equalLongitudinal">has the same origin and lenght as</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#longitudinalCenter" title="https://w3id.org/reloc#longitudinalCenter">longitudinal center</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="LongitudinalCenter">
-      <h3>Longitudinal Center<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="longitudinalCenter">
+      <h3>longitudinal center<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#LongitudinalCenter</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#longitudinalCenter</p>
+      <div class="comment">
+         <span class="markdown">the property "center" should express that the located object has a relation to the longitudinal central part of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#LongitudinalAxisRelation" title="https://w3id.org/reloc#LongitudinalAxisRelation">Longitudinal Axis Relation</a>
+               <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#ContainedIn_Longitudinal_Center"
-                  title="https://w3id.org/reloc#ContainedIn_Longitudinal_Center">is contained in the longitudinal central area of</a>
+               <a href="#containedInLongitudinalCenter"
+                  title="https://w3id.org/reloc#containedInLongitudinalCenter">is contained in the longitudinal central area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Meet">
-      <h3>Meet<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="meet">
+      <h3>meet<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Meet</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#meet</p>
+      <div class="comment">
+         <span class="markdown">the property "meet" expresses an adjacency relationship for one axis. There is no or almost no distance between the objects. They touch each other or are at least so close to each other that they are commonly regarded as (directly) neighbouring elements.</span>
+      </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> symmetric</p>
+            <strong>has characteristics:
+                </strong> symmetric</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D Topological Relation</a>
+               <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Meet_Rear" title="https://w3id.org/reloc#Meet_Rear">directly behind</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Front" title="https://w3id.org/reloc#Meet_Front">directly in front of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Left" title="https://w3id.org/reloc#Meet_Left">directly left of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Top" title="https://w3id.org/reloc#Meet_Top">directly on top of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Right" title="https://w3id.org/reloc#Meet_Right">directly right of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Bottom" title="https://w3id.org/reloc#Meet_Bottom">directly under</a>
+               <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetFront" title="https://w3id.org/reloc#meetFront">directly in front of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetRight" title="https://w3id.org/reloc#meetRight">directly right of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Rear">
-      <h3>Rear<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="rear">
+      <h3>rear<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Rear</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#rear</p>
+      <div class="comment">
+         <span class="markdown">the property "rear" should express that the located object has a relation to the rear part or side of the reference object.The exact kind of relation is defined by the topological relation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#LongitudinalAxisRelation" title="https://w3id.org/reloc#LongitudinalAxisRelation">Longitudinal Axis Relation</a>
+               <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect_Rear" title="https://w3id.org/reloc#Intersect_Rear">Intersects with the rear side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Rear" title="https://w3id.org/reloc#Meet_Rear">directly behind</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Rear" title="https://w3id.org/reloc#ContainedIn_Rear">is contained in the rear area of</a>
+               <a href="#intersectRear" title="https://w3id.org/reloc#intersectRear">Intersects the rear side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInRear" title="https://w3id.org/reloc#containedInRear">is contained in the rear area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Right">
-      <h3>Right<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="right">
+      <h3>right<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Right</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#right</p>
+      <div class="comment">
+         <span class="markdown">the property "right" should express that the located object has a relation to the right part or side of the reference object.The exact kind of relation is defined by the topological relation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#TransversalAxisRelation" title="https://w3id.org/reloc#TransversalAxisRelation">TransversalAxisRelation</a>
+               <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect_Right" title="https://w3id.org/reloc#Intersect_Right">Intersects with the right side of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Right" title="https://w3id.org/reloc#Meet_Right">directly right of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Right" title="https://w3id.org/reloc#ContainedIn_Right">is contained in the right area of</a>
+               <a href="#intersectRight" title="https://w3id.org/reloc#intersectRight">Intersects the right side of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetRight" title="https://w3id.org/reloc#meetRight">directly right of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInRight" title="https://w3id.org/reloc#containedInRight">is contained in the right area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="Top">
-      <h3>Top<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="top">
+      <h3>top<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#Top</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#top</p>
+      <div class="comment">
+         <span class="markdown">the property "top" should express that the located object has a relation to the upper part or top side of the reference object.The exact kind of relation is defined by the topological relation.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#VerticalAxisRelation" title="https://w3id.org/reloc#VerticalAxisRelation">VerticalAxisRelation</a>
+               <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Intersect_Top" title="https://w3id.org/reloc#Intersect_Top">Intersects with the top of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Meet_Top" title="https://w3id.org/reloc#Meet_Top">directly on top of</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#ContainedIn_Top" title="https://w3id.org/reloc#ContainedIn_Top">is contained in the upper area of</a>
+               <a href="#intersectTop" title="https://w3id.org/reloc#intersectTop">Intersects with the top of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#containedInTop" title="https://w3id.org/reloc#containedInTop">is contained in the upper area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="TransversalAxisRelation">
-      <h3>TransversalAxisRelation<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="transversalAxisRelation">
+      <h3>transversal axis relation<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#TransversalAxisRelation</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#transversalAxisRelation</p>
+      <div class="comment">
+         <span class="markdown">super property of all relative spatial relationships referring to the transversal axis, is horizontally orthogonal to longitudinal axis relations</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#DirectionalRelation" title="https://w3id.org/reloc#DirectionalRelation">Directional Relation</a>
+               <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Left" title="https://w3id.org/reloc#Left">Left</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Right" title="https://w3id.org/reloc#Right">Right</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#TransversalCenter" title="https://w3id.org/reloc#TransversalCenter">TransversalCenter</a>
+               <a href="#equalTransversal" title="https://w3id.org/reloc#equalTransversal">has the same origin and width as</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#left" title="https://w3id.org/reloc#left">left</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="TransversalCenter">
-      <h3>TransversalCenter<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="transversalCenter">
+      <h3>transversal center<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#TransversalCenter</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#transversalCenter</p>
+      <div class="comment">
+         <span class="markdown">the property "center" should express that the located object has a relation to the transversal central part of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#TransversalAxisRelation" title="https://w3id.org/reloc#TransversalAxisRelation">TransversalAxisRelation</a>
+               <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#ContainedIn_Transversal_Center"
-                  title="https://w3id.org/reloc#ContainedIn_Transversal_Center">is contained in the transversal central area of</a>
+               <a href="#containedInTransversalCenter"
+                  title="https://w3id.org/reloc#containedInTransversalCenter">is contained in the transversal central area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="VerticalAxisRelation">
-      <h3>VerticalAxisRelation<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="verticalAxisRelation">
+      <h3>vertical axis relation<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#VerticalAxisRelation</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#verticalAxisRelation</p>
+      <div class="comment">
+         <span class="markdown">super property of all relative spatial relationships referring to the vertical axis</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#DirectionalRelation" title="https://w3id.org/reloc#DirectionalRelation">Directional Relation</a>
+               <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#Bottom" title="https://w3id.org/reloc#Bottom">Bottom</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#Top" title="https://w3id.org/reloc#Top">Top</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#VerticalCenter" title="https://w3id.org/reloc#VerticalCenter">VerticalCenter</a>
+               <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#equalVertical" title="https://w3id.org/reloc#equalVertical">has the same vertical origin and height as</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="VerticalCenter">
-      <h3>VerticalCenter<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="verticalCenter">
+      <h3>vertical center<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/reloc#VerticalCenter</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#verticalCenter</p>
+      <div class="comment">
+         <span class="markdown">the property "center" should express that the located object has a relation to the vertical central part of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#VerticalAxisRelation" title="https://w3id.org/reloc#VerticalAxisRelation">VerticalAxisRelation</a>
+               <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#ContainedIn_Vertical_Center"
-                  title="https://w3id.org/reloc#ContainedIn_Vertical_Center">is contained in the vertical central area of</a>
+               <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-</div><div id="dataproperties">
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
          <a href="#hasOffsetValue" title="https://w3id.org/reloc#hasOffsetValue">has measured distance value</a>
+      </li>
+      <li>
+         <a href="#hasOffsetValueUnit" title="https://w3id.org/reloc#hasOffsetValueUnit">Indication of the offset value unit</a>
       </li>
    </ul>
    <div class="entity" id="hasOffsetValue">
@@ -1416,6 +1573,9 @@ This section provides details for each class and property defined by Relative Lo
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/reloc#hasOffsetValue</p>
+      <div class="comment">
+         <span class="markdown">the property indicates the measured offset/distance value of a located object to a relative location (e.g. front) of the reference object.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1426,53 +1586,39 @@ This section provides details for each class and property defined by Relative Lo
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>
    </div>
-</div><div id="annotationproperties">
-   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel">
-            <span>alt label</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
-            <span>creator</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
-            <span>title</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="http://www.w3.org/2004/02/skos/core#altLabel">
-      <h3>alt label<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+   <div class="entity" id="hasOffsetValueUnit">
+      <h3>Indication of the offset value unit<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#altLabel</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
-      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/elements/1.1/title">
-      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+         <strong>IRI:</strong> https://w3id.org/reloc#hasOffsetValueUnit</p>
+      <div class="comment">
+         <span class="markdown">the property indicates the documented unit of the measured offset/distance value as a string</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#RelativeLocationWithOffset"
+                  title="https://w3id.org/reloc#RelativeLocationWithOffset">relative location with Offset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -1480,7 +1626,6 @@ This section provides details for each class and property defined by Relative Lo
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
-<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
 </div>
@@ -1493,8 +1638,8 @@ This section provides details for each class and property defined by Relative Lo
 Add your references here. It is recommended to have them as a list.</span>
 
 </div>
-<div id="acknowledgements">
-<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>

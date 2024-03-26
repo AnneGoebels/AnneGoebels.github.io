@@ -1,0 +1,927 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/reloc#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-02-01"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Anne Göbels"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Relative Location Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "reloc"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/reloc#"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#2DTopologicalRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "main topological property that defines the topological relationship between axis-related areas of two elements. The validity of the relationship is limited to one axis, and considering all three axis-related topological relationships is necessary to make statements about an entire element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "2D Topologische Beziehung"
+  }, {
+    "@language" : "en",
+    "@value" : "2D topological relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#hasRelativeSpatialRelationTo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#RelativeLocationWithOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "abstract class to define an offset to a relative location , e.g.\"A is 10m away from the front front of element B\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "relative location with Offset"
+  }, {
+    "@language" : "de",
+    "@value" : "relativer Ort mit festem Abstand"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#bottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"bottom\" should express that the located object has a relation to the lower part or bottom side of the reference object.The exact kind of relation is defined by the topological relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bottom"
+  }, {
+    "@language" : "de",
+    "@value" : "unten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#verticalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in\" expresses that the extension of the located object A is inside the extension/boundary of the reference object B for a specific axis (e.g. vertical axis)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Enthalten in"
+  }, {
+    "@language" : "en",
+    "@value" : "contained in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInBottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in bottom\" should express that the located object is inside the  lower area of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the lower area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im unteren Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#bottom"
+  }, {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInFront",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in front\" should express that the located object is inside the front part/area of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the front area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im vorderen Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#front"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInLeft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in left\" should express that the located object is inside the left part/area of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the left area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im linken Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#left"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInLongitudinalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in longitudinal center\" should express that the located object  is inside the longitudinal central part of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the longitudinal central area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im zentralen Längsbereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#longitudinalCenter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInRear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in rear\" should express that the located object is inside the rear part/area of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the rear area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im hinteren Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInRight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in right\" should express that the located object is inside the right part/area of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the right area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im rechten Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInTop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in top\" should express that the located object is inside the upper area of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the upper area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im oberen Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInTransversalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in transversal center\" should express that the located object  is inside the transversal central part of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the transversal central area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im zentralen Querbereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#transversalCenter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#containedInVerticalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"contained in vertical center\" should express that the located object  is inside the vertical central part of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is contained in the vertical central area of"
+  }, {
+    "@language" : "de",
+    "@value" : "ist im zentralen vertikalen Bereich von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#containedIn"
+  }, {
+    "@id" : "https://w3id.org/reloc#verticalCenter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#directionalRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "defines a directional / axis-related relative relationship between to objects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Richtungsbezogene Relation"
+  }, {
+    "@language" : "en",
+    "@value" : "directional relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#hasRelativeSpatialRelationTo"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#equal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"equal\" expresses that the extension of the located object A and the extension of the reference object B for a specific axis (e.g. vertical axis) are the same."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Gleich"
+  }, {
+    "@language" : "en",
+    "@value" : "equal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#equalLongitudinal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that expresses that two objects have the same longitudinal extension and position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has the same origin and lenght as"
+  }, {
+    "@language" : "de",
+    "@value" : "hat den gleichen Ursprung und die gleiche Länge wie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#longitudinalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#equalTransversal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that expresses that two objects have the same transversal extension and position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has the same origin and width as"
+  }, {
+    "@language" : "de",
+    "@value" : "hat den gleichen Ursprung und die gleiche Breite wie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#transversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#equalVertical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "property that expresses that two objects have the same vertical extension and position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has the same vertical origin and height as"
+  }, {
+    "@language" : "de",
+    "@value" : "hat den gleiche Ursprung und die gleiche Höhe wie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#verticalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#front",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"front\" should express that the located object has a relation to the front part or side of the reference object.The exact kind of relation is defined by the topological relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "front"
+  }, {
+    "@language" : "de",
+    "@value" : "vorne"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#longitudinalAxisRelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Anfang"
+  }, {
+    "@language" : "de",
+    "@value" : "Vorderseite"
+  }, {
+    "@language" : "de",
+    "@value" : "Vorn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#hasOffsetValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property indicates the measured offset/distance value of a located object to a relative location (e.g. front) of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/reloc#RelativeLocationWithOffset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has measured distance value"
+  }, {
+    "@language" : "de",
+    "@value" : "hat gemessenen Abstandswert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#hasOffsetValueUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property indicates the documented unit of the measured offset/distance value as a string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/reloc#RelativeLocationWithOffset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Angabe der Maßeinheit des Abstandswert"
+  }, {
+    "@language" : "en",
+    "@value" : "Indication of the offset value unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#hasRelativeLocationWithOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "links the located element to the abstract class (as instance :blank node) that defined the relative location and the offset value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has relative location with Offset"
+  }, {
+    "@language" : "de",
+    "@value" : "hat festen Abstand zu einem relativen Ort"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/reloc#RelativeLocationWithOffset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#hasRelativeSpatialRelationTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "main/root property of the RELOC Ontology that defines the spatial relationship between the located element A to the reference element B. This relationship should not reflect exact geometric dependencies or boundaries but rather represent the meaning of natural language location descriptions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has relative spatial relation to"
+  }, {
+    "@language" : "de",
+    "@value" : "hat relativen räumlichen Bezug zu"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#intersect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"intersect\" expresses that the extension of the located object A is partially overlapping with the extension of the reference object B for a specific axis (e.g. vertical axis)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intersect"
+  }, {
+    "@language" : "de",
+    "@value" : "Überschneiden"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#intersectBottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"intersect bottom\" should express that the located object  intersects the bottom/ lower part of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intersects with the bottom of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die Unterseite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#bottom"
+  }, {
+    "@id" : "https://w3id.org/reloc#intersect"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#intersectFront",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"intersect front\" should express that the located object  intersects the front part/side of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "intersects the front side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die Vorderseite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#front"
+  }, {
+    "@id" : "https://w3id.org/reloc#intersect"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#intersectLeft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"intersect left\" should express that the located object  intersects the left part/side of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects the left side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die linke Seite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#left"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#intersectRear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"intersect rear\" should express that the located object  intersects the rear part/side of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects the rear side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die hintere Seite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#intersectRight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"intersect right\" should express that the located object  intersects the right part/side of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects the right side of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die rechte Seite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#intersectTop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"intersect top\" should express that the located object  intersects the top /upper part of the reference object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Intersects with the top of"
+  }, {
+    "@language" : "de",
+    "@value" : "schneidet die Oberseite von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#intersect"
+  }, {
+    "@id" : "https://w3id.org/reloc#top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#left",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"left\" should express that the located object has a relation to the left part or side of the reference object.The exact kind of relation is defined by the topological relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "inks"
+  }, {
+    "@language" : "en",
+    "@value" : "left"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#transversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#longitudinalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "super property of all relative spatial relationships referring to the longitudinal axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Längsachsenbezogene Relation"
+  }, {
+    "@language" : "en",
+    "@value" : "longitudinal axis relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#directionalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#longitudinalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"center\" should express that the located object has a relation to the longitudinal central part of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mitte der Längsachse"
+  }, {
+    "@language" : "en",
+    "@value" : "longitudinal center"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#longitudinalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#meet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"meet\" expresses an adjacency relationship for one axis. There is no or almost no distance between the objects. They touch each other or are at least so close to each other that they are commonly regarded as (directly) neighbouring elements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Berühren"
+  }, {
+    "@language" : "en",
+    "@value" : "meet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#2DTopologicalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#meetBottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"meet bottom\" should express that the located object is under the reference object, with no (or almost no) distance to the bottom of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly under"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt unter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#bottom"
+  }, {
+    "@id" : "https://w3id.org/reloc#meet"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/reloc#meetTop"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#meetFront",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"meet front\" should express that the located object is in front of the reference object, with no (or almost no) distance to the front side of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly in front of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt vor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#front"
+  }, {
+    "@id" : "https://w3id.org/reloc#meet"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/reloc#meetRear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#meetLeft",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"meet left\" should express that the located object is to the left of the reference object, with no (or almost no) distance to the left side of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly left of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt links von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#left"
+  }, {
+    "@id" : "https://w3id.org/reloc#meet"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/reloc#meetRight"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#meetRear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"meet rear\" should express that the located object is in behind the reference object, with no (or almost no) distance to the rear side of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly behind"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt hinter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#meet"
+  }, {
+    "@id" : "https://w3id.org/reloc#rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#meetRight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"meet right\" should express that the located object is to the right of the reference object, with no (or almost no) distance to the right side of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly right of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt rechts von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#meet"
+  }, {
+    "@id" : "https://w3id.org/reloc#right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#meetTop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"meet top\" should express that the located object is in on top of the reference object, with no (or almost no) distance to the top of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "directly on top of"
+  }, {
+    "@language" : "de",
+    "@value" : "direkt über"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#meet"
+  }, {
+    "@id" : "https://w3id.org/reloc#top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#rear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"rear\" should express that the located object has a relation to the rear part or side of the reference object.The exact kind of relation is defined by the topological relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hinten"
+  }, {
+    "@language" : "en",
+    "@value" : "rear"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#longitudinalAxisRelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Ende"
+  }, {
+    "@language" : "de",
+    "@value" : "Rückseite"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"right\" should express that the located object has a relation to the right part or side of the reference object.The exact kind of relation is defined by the topological relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rechts"
+  }, {
+    "@language" : "en",
+    "@value" : "right"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#transversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#top",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"top\" should express that the located object has a relation to the upper part or top side of the reference object.The exact kind of relation is defined by the topological relation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "oben"
+  }, {
+    "@language" : "en",
+    "@value" : "top"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#verticalAxisRelation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Auf"
+  }, {
+    "@language" : "de",
+    "@value" : "Oberseite"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#transversalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "super property of all relative spatial relationships referring to the transversal axis, is horizontally orthogonal to longitudinal axis relations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Querachsenbezogene Relation"
+  }, {
+    "@language" : "en",
+    "@value" : "transversal axis relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#directionalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#transversalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"center\" should express that the located object has a relation to the transversal central part of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mitte der Querachse"
+  }, {
+    "@language" : "en",
+    "@value" : "transversal center"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#transversalAxisRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#verticalAxisRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "super property of all relative spatial relationships referring to the vertical axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ort entlang der Vertikalachse"
+  }, {
+    "@language" : "en",
+    "@value" : "vertical axis relation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#directionalRelation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/reloc#verticalCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "the property \"center\" should express that the located object has a relation to the vertical central part of the reference object."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mitte der Vertikalachse"
+  }, {
+    "@language" : "en",
+    "@value" : "vertical center"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/reloc#verticalAxisRelation"
+  } ]
+} ]
