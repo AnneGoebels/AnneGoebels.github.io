@@ -28,13 +28,12 @@ img {
   object-fit: cover;
   overflow: hidden;
 }
-
-a:link img, a:visited img { 
-  border-style: none ;
-  width: auto;
-  height: auto;
-  padding-bottom: 0rem;
-} /* no border on img links */
+a:link img, a:visited img {
+   border-style: none;
+   width: auto;
+   height: auto;
+   padding-bottom: 0rem;
+   } /* no border on img links */
 
 a img { color: white; }        /* trick to hide the border in Netscape 4 */
 @media all {                   /* hide the next rule from Netscape 4 */
@@ -59,8 +58,7 @@ h2 { font: 140% sans-serif }
 h3 { font: 120% sans-serif }
 h4 { font: bold 100% sans-serif }
 h5 { font: bold 120% sans-serif ;
-     text-indent: 1rem;}
-h6 { font: small-caps 100% sans-serif }
+  text-indent: 1rem;}h6 { font: small-caps 100% sans-serif }
 
 .hide { display: none }
 

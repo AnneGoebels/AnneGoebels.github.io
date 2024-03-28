@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/reloc#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/reloc#","name":"Relative Location Ontology", "headline":"The Relative Location Ontology (RELOC) enables expressing the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.", "dateReleased":"2024-02-01", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Anne Göbels"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/reloc#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/reloc#","name":"Relative Location Ontology", "headline":"Document describing the ontology https://w3id.org/reloc#", "dateReleased":"2024-02-01", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Anne Göbels"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -78,28 +78,34 @@ $(function(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-The Relative Location Ontology (RELOC) enables expressing the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.</span>
+   The Relative Location Ontology (RELOC) enables the expression of the spatial relationship between two objects using directional-topological terms. The ontology is designed to be compatible with the natural language-based approach of describing relative locations, enabling the conversion of existing location descriptions into structured spatial graph representations. The ontology provides directional, axis-related properties (e.g., longitudinal axis: front, center, rear) and topological properties (e.g., meet, contained in, intersect). These properties are finally merged into combined properties (e.g., containedInFront) to reflect the spatial information of statements like 'A is in the front part of B'. The application context of the RELOC Ontology is the processing of existing damage documentation of bridges.
 </div>
-<div id="toc"></div>  
+<div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
-<div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-   <div id="namespacedeclarations">
-   <h3 id="ns" class="list">Namespace declarations</h3>
-   <div id="ns" align="center">
-   <table>
-   <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
-   <tbody>
-   <tr><td><b>reloc</b></td><td>&lt;https://w3id.org/reloc#&gt;</td></tr>
-   <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
-   <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
-   <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-   <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
-   </tbody>
-   </table>
-   </div>
-   </div>
-   </div>
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown"></span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>reloc</b></td><td>&lt;https://w3id.org/reloc#2&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
 
 <!--OVERVIEW SECTION-->
     <div id="overview"><h2 id="overv" class="list">Relative Location Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -112,6 +118,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#RelativeLocationWithOffset"
          title="https://w3id.org/reloc#RelativeLocationWithOffset">relative location with Offset</a>
+   </li>
+   <li>
+      <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -268,16 +277,18 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">Relative Location Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
       <div>
-   <div>
-   <h5>Graphical overview about the RELOC properties</h5> 
-   <img src="reloc_diagramm_tabellle.jpg" >
-   <h5>Technical overview about the RELOC Ontology</h5> 
-   <img src="technicalDiagramReloc.png" >
-   <h5>Application example of the RELOC Ontology</h5> 
-   <img src="beispielReloc.png" >
-</div>
+         <div>
+         <h5>Graphical overview about the RELOC properties</h5> 
+         <img src="reloc_diagramm_tabellle.jpg" >
+         <h5>Technical overview about the RELOC Ontology</h5> 
+         <img src="technicalDiagramReloc.png" >
+         <h5>Application example of the RELOC Ontology</h5> 
+         <img src="beispielReloc.png" >
+      </div>
+      
+      </div>
+         
 
-</div>
    
 
 <!--CROSSREF SECTION-->
@@ -291,6 +302,9 @@ This section provides details for each class and property defined by Relative Lo
       <li>
          <a href="#RelativeLocationWithOffset"
             title="https://w3id.org/reloc#RelativeLocationWithOffset">relative location with Offset</a>
+      </li>
+      <li>
+         <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
       </li>
    </ul>
    <div class="entity" id="RelativeLocationWithOffset">
@@ -315,6 +329,132 @@ This section provides details for each class and property defined by Relative Lo
             <a href="#hasRelativeLocationWithOffset"
                title="https://w3id.org/reloc#hasRelativeLocationWithOffset">has relative location with Offset</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SpatialEntity">
+      <h3>spatial entitiy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/reloc#SpatialEntity</p>
+      <div class="comment">
+         <span class="markdown">The "spatial entity" class includes all types of elements, objects, concepts, etc. that have spatial properties/features and can be located in 2- or 3-dimensional space. A building component would be a typical instance of a spatial entity, but zones/areas that have no concrete physical boundaries are also possible instances. </span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectLeft" title="https://w3id.org/reloc#intersectLeft">Intersects the left side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectRear" title="https://w3id.org/reloc#intersectRear">Intersects the rear side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectRight" title="https://w3id.org/reloc#intersectRight">Intersects the right side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectTop" title="https://w3id.org/reloc#intersectTop">Intersects with the top of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetFront" title="https://w3id.org/reloc#meetFront">directly in front of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetRight" title="https://w3id.org/reloc#meetRight">directly right of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equal" title="https://w3id.org/reloc#equal">equal</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#front" title="https://w3id.org/reloc#front">front</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRelativeLocationWithOffset"
+               title="https://w3id.org/reloc#hasRelativeLocationWithOffset">has relative location with Offset</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRelativeSpatialRelationTo"
+               title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has relative spatial relation to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equalLongitudinal" title="https://w3id.org/reloc#equalLongitudinal">has the same origin and lenght as</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equalTransversal" title="https://w3id.org/reloc#equalTransversal">has the same origin and width as</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equalVertical" title="https://w3id.org/reloc#equalVertical">has the same vertical origin and height as</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectFront" title="https://w3id.org/reloc#intersectFront">intersects the front side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInFront" title="https://w3id.org/reloc#containedInFront">is contained in the front area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInLeft" title="https://w3id.org/reloc#containedInLeft">is contained in the left area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInLongitudinalCenter"
+               title="https://w3id.org/reloc#containedInLongitudinalCenter">is contained in the longitudinal central area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInBottom" title="https://w3id.org/reloc#containedInBottom">is contained in the lower area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInRear" title="https://w3id.org/reloc#containedInRear">is contained in the rear area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInRight" title="https://w3id.org/reloc#containedInRight">is contained in the right area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInTransversalCenter"
+               title="https://w3id.org/reloc#containedInTransversalCenter">is contained in the transversal central area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInTop" title="https://w3id.org/reloc#containedInTop">is contained in the upper area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#left" title="https://w3id.org/reloc#left">left</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#longitudinalCenter" title="https://w3id.org/reloc#longitudinalCenter">longitudinal center</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectLeft" title="https://w3id.org/reloc#intersectLeft">Intersects the left side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectRear" title="https://w3id.org/reloc#intersectRear">Intersects the rear side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectRight" title="https://w3id.org/reloc#intersectRight">Intersects the right side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectTop" title="https://w3id.org/reloc#intersectTop">Intersects with the top of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#directionalRelation" title="https://w3id.org/reloc#directionalRelation">directional relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetFront" title="https://w3id.org/reloc#meetFront">directly in front of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetRight" title="https://w3id.org/reloc#meetRight">directly right of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equal" title="https://w3id.org/reloc#equal">equal</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#front" title="https://w3id.org/reloc#front">front</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRelativeSpatialRelationTo"
+               title="https://w3id.org/reloc#hasRelativeSpatialRelationTo">has relative spatial relation to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equalLongitudinal" title="https://w3id.org/reloc#equalLongitudinal">has the same origin and lenght as</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equalTransversal" title="https://w3id.org/reloc#equalTransversal">has the same origin and width as</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#equalVertical" title="https://w3id.org/reloc#equalVertical">has the same vertical origin and height as</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectFront" title="https://w3id.org/reloc#intersectFront">intersects the front side of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInFront" title="https://w3id.org/reloc#containedInFront">is contained in the front area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInLeft" title="https://w3id.org/reloc#containedInLeft">is contained in the left area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInLongitudinalCenter"
+               title="https://w3id.org/reloc#containedInLongitudinalCenter">is contained in the longitudinal central area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInBottom" title="https://w3id.org/reloc#containedInBottom">is contained in the lower area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInRear" title="https://w3id.org/reloc#containedInRear">is contained in the rear area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInRight" title="https://w3id.org/reloc#containedInRight">is contained in the right area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInTransversalCenter"
+               title="https://w3id.org/reloc#containedInTransversalCenter">is contained in the transversal central area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInTop" title="https://w3id.org/reloc#containedInTop">is contained in the upper area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#left" title="https://w3id.org/reloc#left">left</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#longitudinalCenter" title="https://w3id.org/reloc#longitudinalCenter">longitudinal center</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#RelativeLocationWithOffset"
+               title="https://w3id.org/reloc#RelativeLocationWithOffset">relative location with Offset</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -486,6 +626,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -512,6 +662,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#containedInBottom" title="https://w3id.org/reloc#containedInBottom">is contained in the lower area of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -551,6 +711,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -579,6 +749,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -599,6 +779,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -626,6 +816,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
@@ -651,6 +851,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#left" title="https://w3id.org/reloc#left">left</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -678,6 +888,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
@@ -704,6 +924,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
@@ -729,6 +959,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#meet" title="https://w3id.org/reloc#meet">meet</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -758,6 +998,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#2DTopologicalRelation" title="https://w3id.org/reloc#2DTopologicalRelation">2D topological relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -785,6 +1035,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#containedInFront" title="https://w3id.org/reloc#containedInFront">is contained in the front area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -800,6 +1060,11 @@ This section provides details for each class and property defined by Relative Lo
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#RelativeLocationWithOffset"
@@ -829,16 +1094,12 @@ This section provides details for each class and property defined by Relative Lo
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="http://www.w3.org/2002/07/owl#Thing"
-                  target="_blank"
-                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://www.w3.org/2002/07/owl#Thing"
-                  target="_blank"
-                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -861,6 +1122,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#longitudinalAxisRelation" title="https://w3id.org/reloc#longitudinalAxisRelation">longitudinal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -881,6 +1152,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#transversalAxisRelation" title="https://w3id.org/reloc#transversalAxisRelation">transversal axis relation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -900,6 +1181,16 @@ This section provides details for each class and property defined by Relative Lo
             <dd>
                <a href="#verticalAxisRelation" title="https://w3id.org/reloc#verticalAxisRelation">vertical axis relation</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -934,6 +1225,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#intersectBottom" title="https://w3id.org/reloc#intersectBottom">intersects with the bottom of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -954,6 +1255,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#front" title="https://w3id.org/reloc#front">front</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -976,6 +1287,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#left" title="https://w3id.org/reloc#left">left</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -996,6 +1317,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1018,6 +1349,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1038,6 +1379,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#bottom" title="https://w3id.org/reloc#bottom">bottom</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#intersect" title="https://w3id.org/reloc#intersect">intersect</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1060,6 +1411,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1080,6 +1441,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#front" title="https://w3id.org/reloc#front">front</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1102,6 +1473,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#left" title="https://w3id.org/reloc#left">left</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1122,6 +1503,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#longitudinalCenter" title="https://w3id.org/reloc#longitudinalCenter">longitudinal center</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1144,6 +1535,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1164,6 +1565,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1186,6 +1597,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#right" title="https://w3id.org/reloc#right">right</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1206,6 +1627,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1228,6 +1659,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#top" title="https://w3id.org/reloc#top">top</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1248,6 +1689,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#containedIn" title="https://w3id.org/reloc#containedIn">contained in</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1275,6 +1726,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#meetLeft" title="https://w3id.org/reloc#meetLeft">directly left of</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#containedInLeft" title="https://w3id.org/reloc#containedInLeft">is contained in the left area of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1304,6 +1765,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#rear" title="https://w3id.org/reloc#rear">rear</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1329,6 +1800,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#containedInLongitudinalCenter"
                   title="https://w3id.org/reloc#containedInLongitudinalCenter">is contained in the longitudinal central area of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1363,6 +1844,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#meetBottom" title="https://w3id.org/reloc#meetBottom">directly under</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1389,6 +1880,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#meetRear" title="https://w3id.org/reloc#meetRear">directly behind</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#containedInRear" title="https://w3id.org/reloc#containedInRear">is contained in the rear area of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1417,6 +1918,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#containedInRight" title="https://w3id.org/reloc#containedInRight">is contained in the right area of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1443,6 +1954,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#meetTop" title="https://w3id.org/reloc#meetTop">directly on top of</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#containedInTop" title="https://w3id.org/reloc#containedInTop">is contained in the upper area of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1472,6 +1993,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#transversalCenter" title="https://w3id.org/reloc#transversalCenter">transversal center</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1497,6 +2028,16 @@ This section provides details for each class and property defined by Relative Lo
                <a href="#containedInTransversalCenter"
                   title="https://w3id.org/reloc#containedInTransversalCenter">is contained in the transversal central area of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1526,6 +2067,16 @@ This section provides details for each class and property defined by Relative Lo
                <sup class="type-op" title="object property">op</sup>, <a href="#verticalCenter" title="https://w3id.org/reloc#verticalCenter">vertical center</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1550,6 +2101,16 @@ This section provides details for each class and property defined by Relative Lo
             <dd>
                <a href="#containedInVerticalCenter" title="https://w3id.org/reloc#containedInVerticalCenter">is contained in the vertical central area of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SpatialEntity" title="https://w3id.org/reloc#SpatialEntity">spatial entitiy</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1628,15 +2189,6 @@ This section provides details for each class and property defined by Relative Lo
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
 </div>
 </div>
-</div>
-    
-
-<!--REFERENCES SECTION-->
-  <div id="references">
-<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
-
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
