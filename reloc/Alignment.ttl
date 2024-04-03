@@ -1,0 +1,35 @@
+@prefix : <https://w3id.org/reloc/Alignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix brot: <https://w3id.org/brot#>.
+@prefix dot:  <https://w3id.org/dot#>.
+@prefix reloc: <https://w3id.org/reloc#> .
+@base <https://w3id.org/reloc/Alignment> .
+
+<https://w3id.org/reloc/Alignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "RELOC to BOT, DOT and BROT alignment."@en ;
+	dcterms:description "This ontology defines proposed alignments with the RELOC ontology."@en ;
+	dcterms:issued "2024-04-03"^^xsd:date ;
+    owl:versionInfo "v1.0.0" ;
+	dcterms:creator "Anne Göbels" ;
+	owl:imports 	<https://w3id.org/bot> ,
+                    <https://w3id.org/brot>,
+                    <https://w3id.org/dot>,
+                    <https://w3id.org/reloc>.
+
+#################################################################
+#    Alignments
+#################################################################
+
+bot:Element rdfs:subClassOf reloc:SpatialEntity.
+bot:Zone rdfs:subClassOf reloc:SpatialEntity.
+brot:Component rdfs:subClassOf reloc:SpatialEntity.
+brot:SpatialZone rdfs:subClassOf reloc:SpatialEntity.
+dot:DamageArea rdfs:subClassOf reloc:SpatialEntity.
+dot:DamgeElement rdfs:subClassOf reloc:SpatialEntity.
+dot:DamgePattern rdfs:subClassOf reloc:SpatialEntity.
